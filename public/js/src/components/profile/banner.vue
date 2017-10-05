@@ -85,12 +85,11 @@ export default {
     },
     unfollow: async function(){
       let {
-        user: { id, username } ,
+        user: { id } ,
         $store: { commit },
       } = this
       fn.unfollow({
         user: id,
-        username,
         update_followers: true,
         commit,
         done: () => this.is_following = false

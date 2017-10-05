@@ -24,7 +24,7 @@ export default {
   ],
   computed: {
     feeds(){
-      return this.f.feeds
+      return this.p.feeds
     }
   }
 }

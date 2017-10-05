@@ -52,7 +52,7 @@ A reactive mini-social-network created with Vue!!
 
 5. Now run the app
     ```javacript
-    localhost:[PORT] PORT=3916 (By default)
+    localhost:[PORT] PORT=3917 (By default)
     ```
 
 6. Enjoy!!

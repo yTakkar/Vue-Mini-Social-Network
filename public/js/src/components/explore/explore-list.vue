@@ -47,10 +47,9 @@ export default {
       })
     },
     unfollow(){
-      let { exp: { id, username } } = this
+      let { exp: { id } } = this
       fn.unfollow({
         user: id,
-        username,
         done: () => this.is_following = false
       })
     }

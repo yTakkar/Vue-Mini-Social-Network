@@ -122,8 +122,8 @@ const follow = async options => {
     defaults = {
       user: null,               // USER TO FOLLOW [MUST]
       username: null,           // USER'S USERNAME [MUST]
-      update_followers: false,  // PROVIDE WHEN FOLLOWERS ARRAY NEED TO BE UDATED. EG. FOLLOW ACTION ON BANNER COMPONENT
-      update_followings: false, // PROVIDE WHEN FOLLOWINGS ARRAY NEED TO BE UDATED. EG. FOLLOWERS/FOLLOWINGS'S FOLLOW COMPONENT
+      update_followers: false,  // PROVIDE WHEN FOLLOWERS DATA NEEDS TO BE UDATED. EG. FOLLOW ACTION ON BANNER COMPONENT
+      update_followings: false, // PROVIDE WHEN FOLLOWINGS DATA NEEDS TO BE UDATED. EG. FOLLOWERS/FOLLOWINGS COMPONENT'S FOLLOW ACTION
       commit: () => { return }, // PROVIDE WHEN [UPDATE_FOLLOWERS/UPDATE_FOLLOWINGS]=TRUE
       done: () => { return }    // FN TO BE EXECUTED WHEN USER IS FOLLOWED [MUST]
     },
@@ -159,16 +159,14 @@ const unfollow = async options => {
   let
     defaults = {
       user: null,                 // USER TO UNFOLLOW [MUST]
-      username: null,             // USER'S USERNAME. NEEDED ONLY FOR NOTIFICATION [MUST]
-      update_followers: false,    // PROVIDE WHEN FOLLOWERS ARRAY NEED TO BE UDATED. EG. FOLLOW ACTION ON BANNER COMPONENT
-      update_followings: false,   // PROVIDE WHEN FOLLOWINGS ARRAY NEED TO BE UDATED. EG. FOLLOWERS/FOLLOWINGS'S FOLLOW COMPONENT
+      update_followers: false,    // PROVIDE WHEN FOLLOWERS DATA NEEDS TO BE UDATED. EG. FOLLOW ACTION ON BANNER COMPONENT
+      update_followings: false,   // PROVIDE WHEN FOLLOWINGS DATA NEEDS TO BE UDATED. EG. FOLLOWERS/FOLLOWINGS COMPONENT'S FOLLOW ACTION
       commit: () => { return },   // PROVIDE WHEN [UPDATE_FOLLOWERS/UPDATE_FOLLOWINGS]=TRUE
       done: () => { return }      // FN TO BE EXECUTED WHEN USER IS UNFOLLOWED [MUST]
     },
     obj = { ...defaults, ...options },
     {
       user,
-      username,
       update_followers,
       update_followings,
       commit,
@@ -181,7 +179,7 @@ const unfollow = async options => {
   update_followers ? commit('UNFOLLOWER', session) : null
   update_followings ? commit('UNFOLLOWING', user) : null
 
-  Notify({ value: `Unfollowed ${username}!!` })
+  Notify({ value: 'Unfollowed!!' })
   done()
 
 }

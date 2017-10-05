@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     feeds_len(){
-      let len = this.f.feeds.length
+      let len = this.p.feeds.length
       return len == 0 ? 'No' : len
     }
   },

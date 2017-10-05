@@ -4,13 +4,11 @@ export default {
   state: {
     followers: [],
     followings: [],
-    feeds: [],
     views: 0,
   },
   mutations: {
     GET_FOLLOWERS: (state, payload) => state.followers = payload,
     GET_FOLLOWINGS: (state, payload) => state.followings = payload,
-    GET_FEEDS: (state, payload) => state.feeds = payload,
     GET_VIEWS: (state, payload) => state.views = payload,
     FOLLOWER: (state, payload) => state.followers.unshift(payload),
     UNFOLLOWER: (state, payload) => {

@@ -17,11 +17,6 @@ export default {
     commit('GET_FOLLOWINGS', data)
   },
 
-  getFeeds: async ({ commit }) => {
-    let { data } = await post('/api/get-feeds')
-    commit('GET_FEEDS', data)
-  },
-
   getViews: async ({ commit }, payload) => {
     let { data } = await post('/api/get-profile-views', { username: payload })
     commit('GET_VIEWS', data)

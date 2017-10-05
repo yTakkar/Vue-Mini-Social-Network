@@ -67,12 +67,11 @@ export default {
     unfollow(){
       let {
         u: { userDetails, session },
-        following: { follow_to, follow_to_username },
+        following: { follow_to },
         $store: { commit },
       } = this
       unfollow({
         user: follow_to,
-        username: follow_to_username,
         update_followings: userDetails.id == session.id,
         commit,
         done: () => this.is_following = false
