@@ -15,6 +15,7 @@ A reactive mini-social-network created with Vue!!
 # Screenshots
 ![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.16.51.png)
 ![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.18.27.png)
+![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-06%20at%2001.16.37.png)
 ![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.17.04.png)
 ![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.17.21.png)
 ![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.17.39.png)
