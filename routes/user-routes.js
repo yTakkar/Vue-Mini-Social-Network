@@ -46,10 +46,8 @@ app.post('/user/signup', async (req, res) => {
   } else {
 
     let
-      user_q = await db.query('SELECT COUNT(username) as usernameCount from users WHERE username = ?', [username]),
-      email_q = await db.query('SELECT COUNT(email) as emailCount from users WHERE email = ?', [email]),
-      [{ usernameCount }] = user_q,
-      [{ emailCount }] = email_q
+      [{ usernameCount }] = await db.query('SELECT COUNT(username) as usernameCount from users WHERE username = ?', [username]),
+      [{ emailCount }] = await db.query('SELECT COUNT(email) as emailCount from users WHERE email = ?', [email])
 
     if (usernameCount == 1){
       res.json({ mssg: 'Username already exists!!' })
