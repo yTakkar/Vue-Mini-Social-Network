@@ -3,12 +3,12 @@ A mini Social-Network created with Vue!!
 
 # Quick liks
 1. [Screenshots](#screenshots)
-2. [Own the project](#own-the-project)
+2. [Usage](#usage)
 
 # Screenshots
 
 
-# Own the project
+# Usage
 1. First install all dependencies with npm or Yarn:
     ```javascript
     npm install
@@ -32,12 +32,12 @@ A mini Social-Network created with Vue!!
 
 4. Start the server
     ```javascript
-    npm start
+    npm start [OR] yarn start
     ```
 
 5. Now run the app
     ```javacript
-    localhost:[PORT]     PORT = YOU DEFINED IN .ENV FILE. 3916 BY DEFAULT!!
+    localhost:[PORT] PORT=3916 (By default)
     ```
 
 6. Enjoy!!
