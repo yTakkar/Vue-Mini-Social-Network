@@ -62,8 +62,7 @@ app.post('/user/signup', async (req, res) => {
           password,
           joined: new Date().getTime()
         },
-        create_user = await db.create_user(newUser),
-        { insertId } = create_user,
+        { insertId } = await db.create_user(newUser),
         mkdir = promisify(fs.mkdir)
 
       await mkdir(dir + `/public/users/${insertId}`)
