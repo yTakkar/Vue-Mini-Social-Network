@@ -1,0 +1,17 @@
+import Vue from 'vue'
+import TimeAgo from 'handy-timeago'
+
+Vue.filter('timeAgo', value => {
+  return TimeAgo(value)
+})
+
+Vue.filter('to-uppercase', value => {
+  return value.charAt(0).toUpperCase() + value.substr(1)
+})
+
+Vue.filter('slice', value => {
+  let
+    len = value.length,
+    max = 200
+  return len > max ? `${value.substr(0, max - 2)}..` : len <= max ? value : null
+})
