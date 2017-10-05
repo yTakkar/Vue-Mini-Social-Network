@@ -1,5 +1,5 @@
 # Single-Page-Social-Network
-A mini Social-Network created with Vue!!
+A reactive mini-social-network created with Vue!!
 
 # Quick liks
 1. [Screenshots](#screenshots)
