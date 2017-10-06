@@ -3,6 +3,7 @@
   <div class='followers modal modal_big'>
     <div class='fer_header modal_header'>
       <span class='title'>Followings</span>
+      <Goto />
     </div>
     <div class='fer_middle modal_middle' :style='{ height: "450px" }' >
       <div class='modal_main' >

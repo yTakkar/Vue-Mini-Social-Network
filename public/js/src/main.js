@@ -16,6 +16,7 @@ import End from './components/others/end.vue'
 import Overlay from './components/others/overlay.vue'
 import Post from './components/post/post.vue'
 import Prompt from './components/others/prompt.vue'
+import Goto from './components/others/goto.vue'
 
 // Import Filters & Directives
 import './f&d/filters'
@@ -31,6 +32,7 @@ Vue.component('End', End)
 Vue.component('Overlay', Overlay)
 Vue.component('Post', Post)
 Vue.component('Prompt', Prompt)
+Vue.component('Goto', Goto)
 
 // Router setup
 const router = new VueRouter({

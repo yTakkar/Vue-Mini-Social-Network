@@ -843,35 +843,37 @@ select {
     border: 1px solid #54BBFF;
     padding: 5px 5px !important;
     border-radius: 2px; }
-  .view_note .v_n_bottom a {
-    margin-left: 5px; }
-  .view_note .v_n_bottom .v_n_cancel {
-    margin-right: 5px; }
-  .view_note .v_n_bottom .v_n_int {
-    position: absolute;
-    color: #66757f;
-    bottom: 10px;
-    left: 10px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-    .view_note .v_n_bottom .v_n_int span.like_unlike {
-      display: inline-block;
-      height: 24px;
-      cursor: pointer;
-      -webkit-transition: all .1s ease-in-out;
-      -o-transition: all .1s ease-in-out;
-      transition: all .1s ease-in-out; }
-      .view_note .v_n_bottom .v_n_int span.like_unlike:hover {
-        color: #1b2733;
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1); }
-    .view_note .v_n_bottom .v_n_int .like_unlike_disabled {
-      cursor: not-allowed !important;
-      pointer-events: none !important;
-      color: #d8c3c3 !important; }
+  .view_note .v_n_bottom {
+    margin-top: 1px; }
+    .view_note .v_n_bottom a {
+      margin-left: 5px; }
+    .view_note .v_n_bottom .v_n_cancel {
+      margin-right: 5px; }
+    .view_note .v_n_bottom .v_n_int {
+      position: absolute;
+      color: #66757f;
+      bottom: 10px;
+      left: 10px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .view_note .v_n_bottom .v_n_int span.like_unlike {
+        display: inline-block;
+        height: 24px;
+        cursor: pointer;
+        -webkit-transition: all .1s ease-in-out;
+        -o-transition: all .1s ease-in-out;
+        transition: all .1s ease-in-out; }
+        .view_note .v_n_bottom .v_n_int span.like_unlike:hover {
+          color: #1b2733;
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1); }
+      .view_note .v_n_bottom .v_n_int .like_unlike_disabled {
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+        color: #d8c3c3 !important; }
 
 .edit {
   position: relative;
@@ -1088,3 +1090,43 @@ select {
     display: block;
     left: -5px;
     /*top: -5px;*/ }
+
+.goto {
+  position: absolute;
+  right: 7px;
+  top: 6px;
+  height: 28px; }
+  .goto .goto_link .goto_label {
+    position: relative;
+    top: -7px;
+    right: 2px;
+    font-weight: 600; }
+  .goto .goto_link span.show_more {
+    display: inline-block;
+    height: 24px;
+    border: 1px solid #f9f9f9;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #66757f;
+    -webkit-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out; }
+    .goto .goto_link span.show_more:focus {
+      color: #1b2733; }
+  .goto .goto_options {
+    right: -2px;
+    top: 35px; }
+    .goto .goto_options::before {
+      content: "";
+      background: white;
+      width: 11px;
+      height: 11px;
+      top: -6px;
+      position: absolute;
+      border-top: 1px solid #DCDFE1;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      border-left: 1px solid #DCDFE1;
+      right: 9px;
+      z-index: -1; }

@@ -5,6 +5,7 @@
 
       <div class='c_n_header modal_header'>
         <span class='title'>Create Post</span>
+        <Goto />
       </div>
 
       <div class='c_n_middle modal_middle'>

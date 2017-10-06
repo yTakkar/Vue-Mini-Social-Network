@@ -6,6 +6,7 @@
     <div class='view_note modal'>
       <div class='v_n_header modal_header'>
         <span class='title'>View post</span>
+        <Goto />
       </div>
       <div class='v_n_middle modal_middle'>
         <div class='v_n_info'>
