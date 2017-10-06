@@ -27,7 +27,7 @@ app.post('/like', async (req, res) => {
 app.post('/unlike', async (req, res) => {
   let { session, body } = req
   await db.query('DELETE FROM likes WHERE post_id=? AND like_by=?', [ body.post, session.id ])
-  res.json('Hello, World!!')
+  res.json(null)
 })
 
 // GET LIKES OF THE NOTE

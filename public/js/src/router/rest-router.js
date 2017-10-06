@@ -5,6 +5,7 @@ import ViewPost from '../components/post/view-post.vue'
 import Likes from '../components/post/likes.vue'
 import Overlay from '../components/others/overlay.vue'
 import EditProfile from '../components/edit_profile/edit_profile.vue'
+import Deactivate from '../components/deactivate/deavtivate.vue'
 
 export const home = {
   path: '/',
@@ -48,6 +49,13 @@ export const editProfile = {
   name: 'edit-profile',
   component: EditProfile,
   meta: { title: 'Edit Profile' }
+}
+
+export const deactivate = {
+  path: '/deactivate',
+  name: 'deactivate',
+  component: Deactivate,
+  meta: { title: 'Deactivate your account' }
 }
 
 export const notFound = {

@@ -10,7 +10,7 @@
         </span>
       </div>
 
-      <div class='prompt-middle'>
+      <div class='prompt-middle' :style='removedBlur' >
         <span class='prompt-content'>{{ content }}</span>
       </div>
 
@@ -40,6 +40,17 @@ export default {
     actionText: {
       default: 'Action',
       type: String
+    },
+    blurredByChrome: {
+      default: false,
+      type: Boolean
+    }
+  },
+  data(){
+    return {
+      removedBlur: {
+        marginTop: this.blurredByChrome ? '9px' : null
+      }
     }
   },
   methods: {

@@ -5,6 +5,7 @@ import {
   error,
   viewPost,
   editProfile,
+  deactivate,
   notFound,
 } from './rest-router'
 
@@ -15,5 +16,6 @@ export default [
   error,
   viewPost,
   editProfile,
+  deactivate,
   notFound,
 ]

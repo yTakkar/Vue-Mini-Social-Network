@@ -465,7 +465,7 @@
   }
 
   & .v_n_bottom {
-    margin-top: 1px;
+    // margin-top: 1px;
 
     a{ margin-left: 5px; }
 
@@ -873,6 +873,30 @@
       border-left: 1px solid #DCDFE1;
       right: 9px;
       z-index: -1;
+    }
+
+  }
+
+}
+
+// DEACTIVATE
+.deactivate{
+  width: 500px;
+
+  & .deactivate_title{
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  & .deactivate_btn{
+    display: block;
+    margin-top: 11px;
+    text-align: right;
+
+    & a{
+      display: inline-block;
+      padding: 4px 10px;
     }
 
   }

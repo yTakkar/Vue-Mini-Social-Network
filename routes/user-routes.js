@@ -4,7 +4,8 @@ const
   { promisify } = require('util'),
   mw = require('../config/middlewares'),
   fs = require('fs'),
-  dir = process.cwd()
+  dir = process.cwd(),
+  { DeleteAllOfFolder } = require('handy-image-processor')
 
 app.get('/signup', mw.NotLoggedIn, (req, res) => {
   let options = { title: 'Signup For Free' }
@@ -114,6 +115,28 @@ app.post('/user/login', async (req, res) => {
 
   }
 
+})
+
+app.post('/api/deactivate', async (req, res) => {
+  let
+    { id } = req.session,
+    rmdir = promisify(fs.rmdir)
+
+  await db.query('DELETE FROM profile_views WHERE view_by=?', [id])
+  await db.query('DELETE FROM profile_views WHERE view_to=?', [id])
+  await db.query('DELETE FROM follow_system WHERE follow_by=?', [id])
+  await db.query('DELETE FROM follow_system WHERE follow_to=?', [id])
+  await db.query('DELETE FROM likes WHERE like_by=?', [id])
+  let notes = await db.query('SELECT post_id FROM posts WHERE user=?', [id])
+  notes.map(n => db.query('DELETE FROM likes WHERE post_id=?', [n.note_id]))
+  await db.query('DELETE FROM posts WHERE user=?', [id])
+  await db.query('DELETE FROM users WHERE id=?', [id])
+
+  await DeleteAllOfFolder(`${dir}/public/users/${id}/`)
+  await rmdir(`${dir}/public/users/${id}/`)
+
+  req.session.id = null
+  res.json(null)
 })
 
 module.exports = app
