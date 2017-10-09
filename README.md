@@ -2,7 +2,7 @@
 A reactive mini-social-network created with Vue!!
 
 # Another Versions
-**[React Version](https://github.com/yTakkar/Single-Page-Social-Network)**
+**[React Version](https://github.com/yTakkar/React-Mini-Social-Network)**
 
 **[Golang Version](https://github.com/yTakkar/Go-Mini-Social-Network)**
 
