@@ -89,18 +89,8 @@ export default {
       history.back()
     },
     _toggle(what) {
-      switch (what) {
-        case "editing":
-          this.editing = !this.editing
-          $('.v_n_edit').blur()
-          break
-        case "deleting":
-          this.deleting = !this.deleting
-          break
-        case "liked":
-          this.liked = !this.liked
-          break
-      }
+      this[what] = !this[what]
+      what == 'editing' ? $('.v_n_edit').blur() : null
     },
     deletePost: async function() {
       let {
