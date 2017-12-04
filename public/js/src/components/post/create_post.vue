@@ -35,7 +35,8 @@ export default {
       history.back()
     },
     createPost: async function() {
-      let {
+      let
+        {
           $refs: { title, content },
           $http,
           $store: { commit }

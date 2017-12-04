@@ -93,7 +93,8 @@ export default {
       what == 'editing' ? $('.v_n_edit').blur() : null
     },
     deletePost: async function() {
-      let {
+      let
+        {
           $route: { params: { post } },
           $http,
           $store: { commit }
@@ -137,7 +138,8 @@ export default {
     }
   },
   created: async function() {
-    let {
+    let
+      {
         $http,
         $route: { params: { post } },
         $router,
