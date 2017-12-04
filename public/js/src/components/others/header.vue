@@ -22,7 +22,3 @@ export default {
   mixins: [userMixin]
 }
 </script>
-
-<style scoped>
-
-</style>
