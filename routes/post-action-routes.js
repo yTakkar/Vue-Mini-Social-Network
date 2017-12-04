@@ -21,7 +21,11 @@ app.post('/like', async (req, res) => {
       like_time: new Date().getTime()
     },
     { insertId } = await db.query('INSERT INTO likes SET ?', insert)
-  res.json({ ...insert, like_id: insertId })
+
+  res.json({
+    ...insert,
+    like_id: insertId
+  })
 })
 
 app.post('/unlike', async (req, res) => {

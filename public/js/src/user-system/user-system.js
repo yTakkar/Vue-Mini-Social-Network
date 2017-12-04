@@ -13,9 +13,9 @@ $('form.form_register').submit(e => {
     password_again = $('.r_password_again').val()
 
   if (!username || !email || !password || !password_again) {
-    Notify({ value: 'Values are missing!' })
+    Notify({ value: 'Values are missing!!' })
   } else if (password != password_again) {
-    Notify({ value: 'Passwords don\'t match!' })
+    Notify({ value: 'Passwords don\'t match!!' })
   } else {
 
     let signupOpt = {

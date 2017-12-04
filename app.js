@@ -5,7 +5,7 @@ const
   express = require('express'),
   hbs = require('express-handlebars'),
   hl = require('handy-log'),
-  PORT = process.env.PORT,
+  { env: { PORT } } = process,
   favicon = require('serve-favicon'),
   path = require('path'),
   bodyParser = require('body-parser'),

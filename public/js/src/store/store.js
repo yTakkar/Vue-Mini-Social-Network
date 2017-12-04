@@ -12,10 +12,10 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   strict: true,
   modules: {
-    user: User,
-    post: Post,
-    follow: Follow,
-    explore: Explore,
+    user:     User,
+    post:     Post,
+    follow:   Follow,
+    explore:  Explore,
     post_int: PostInt,
   }
 })

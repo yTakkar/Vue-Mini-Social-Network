@@ -14,7 +14,7 @@ export default {
       return `/users/${this.user.id}/avatar.jpg`
     },
 
-    // returns if it's my profile page or not
+    // returns boolean if it's me
     me(){
       return this.session.id == this.user.id
     }

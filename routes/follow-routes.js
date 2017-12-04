@@ -25,7 +25,11 @@ app.post('/follow', async (req, res) => {
       follow_time: new Date().getTime(),
     },
     { insertId } = await db.query('INSERT INTO follow_system SET ?', insert)
-  res.json({ ...insert, follow_id: insertId })
+
+  res.json({
+    ...insert,
+    follow_id: insertId
+  })
 })
 
 app.post('/unfollow', async (req, res) => {

@@ -41,7 +41,9 @@ const router = new VueRouter({
 })
 
 // To change Title
-router.beforeEach((to, from, next) => fn.changeTitle(to, from, next) )
+router.beforeEach((to, from, next) => {
+  fn.changeTitle(to, from, next)
+})
 
 // Turn off vue's production tip
 Vue.config.productionTip = false

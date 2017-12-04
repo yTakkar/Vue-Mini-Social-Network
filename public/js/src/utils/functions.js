@@ -32,7 +32,10 @@ const commonLogin = options => {
     .then(s => {
       let { data: { mssg, success } } = s
       if (success) {
-        Notify({ value: mssg, done: () => location.href = redirect })
+        Notify({
+          value: mssg,
+          done: () => location.href = redirect
+        })
         btn.attr('value', 'Redirecting..')
         overlay2.show()
       } else {
@@ -70,6 +73,7 @@ const forProfile = async t => {
       session: { username: susername }
     } = t,
     { data: valid } = await post('/api/is-user-valid', { username })
+
   if (!valid){
     $router.push('/error/user')
   } else {

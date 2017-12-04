@@ -24,7 +24,10 @@ app.get('/logout', mw.LoggedIn, (req, res) => {
 })
 
 app.post('/user/signup', async (req, res) => {
-  let { body: { username, email, password, password_again }, session } = req
+  let {
+    body: { username, email, password, password_again },
+    session
+  } = req
 
   req.checkBody('username', 'Username is empty!!').notEmpty()
   req.checkBody('username', 'Username must contain only leters').isAlpha()
@@ -40,7 +43,7 @@ app.post('/user/signup', async (req, res) => {
 
   let errors = await req.getValidationResult()
 
-  if (!errors.isEmpty()){
+  if (!errors.isEmpty()) {
     let array = []
     errors.array().forEach(e => array.push(e.msg) )
     res.json({ mssg: array })
@@ -74,7 +77,10 @@ app.post('/user/signup', async (req, res) => {
       session.id = insertId
       session.username = username
 
-      res.json({ mssg: `Hello, ${username}!!`, success: true })
+      res.json({
+        mssg: `Hello, ${username}!!`,
+        success: true
+      })
 
     }
 
@@ -83,13 +89,16 @@ app.post('/user/signup', async (req, res) => {
 })
 
 app.post('/user/login', async (req, res) => {
-  let { body: { username: rusername, password: rpassword }, session } = req
+  let {
+    body: { username: rusername, password: rpassword },
+    session
+  } = req
 
   req.checkBody('username', 'Username is empty!!').notEmpty()
   req.checkBody('password', 'Password field is empty!!').notEmpty()
 
   let errors = await req.getValidationResult()
-  if(!errors.isEmpty()){
+  if(!errors.isEmpty()) {
     let array = []
     errors.array().forEach(e => array.push(e.msg) )
     res.json({ mssg: array })
@@ -106,10 +115,15 @@ app.post('/user/login', async (req, res) => {
       if (!same){
         res.json({ mssg: 'Wrong password!!' })
       } else {
+
         session.id = id
         session.username = rusername
+
         res.json({
-          mssg: `Hello, ${rusername}!!`, success: true })
+          mssg: `Hello, ${rusername}!!`,
+          success: true
+        })
+
       }
     }
 

@@ -31,7 +31,10 @@ app.post('/create-post', async (req, res) => {
     },
     { insertId } = await db.query('INSERT INTO posts SET ?', insert)
 
-  res.json({ ...insert, post_id: insertId })
+  res.json({
+    ...insert,
+    post_id: insertId
+  })
 })
 
 app.post('/valid-post', async (req, res) => {

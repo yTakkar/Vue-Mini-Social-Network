@@ -4,8 +4,8 @@ const
 
 // FOR CHECKING IF IT'S A VALID USER
 app.post('/is-user-valid', async (req, res) => {
-  let is = await db.query('SELECT COUNT(id) AS userCount FROM users WHERE username=? LIMIT 1', [req.body.username])
-  res.json(is[0].userCount == 1 ? true : false)
+  let [{ userCount }] = await db.query('SELECT COUNT(id) AS userCount FROM users WHERE username=? LIMIT 1', [req.body.username])
+  res.json(userCount == 1 ? true : false)
 })
 
 // FOR DETAILS OF GIVEN USER
