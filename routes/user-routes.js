@@ -18,7 +18,7 @@ app.get('/login', mw.NotLoggedIn, (req, res) => {
 })
 
 app.get('/logout', mw.LoggedIn, (req, res) => {
-  req.session.id = null
+  req.session = {}
   let url = (req.session.id == null) ? '/login' : '/'
   res.redirect(url)
 })
@@ -104,9 +104,7 @@ app.post('/user/login', async (req, res) => {
     res.json({ mssg: array })
   } else {
 
-    let
-      user = await db.query('SELECT COUNT(id) as userCount, id, password from users WHERE username = ? LIMIT 1', [rusername]),
-      [{ userCount, id, password }] = user
+    let [{ userCount, id, password }] = await db.query('SELECT COUNT(id) as userCount, id, password from users WHERE username=? LIMIT 1', [rusername])
 
     if(userCount == 0) {
       res.json({ mssg: 'User not found!!' })
