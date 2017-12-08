@@ -5,7 +5,7 @@ const
   express = require('express'),
   hbs = require('express-handlebars'),
   hl = require('handy-log'),
-  { env: { PORT } } = process,
+  { env: { PORT, SESSION_SECRET_LETTER } } = process,
   favicon = require('serve-favicon'),
   path = require('path'),
   bodyParser = require('body-parser'),
@@ -41,7 +41,7 @@ app.use(bodyParser.urlencoded({
 app.use(validator())
 app.use(session({
   cookieName: 'session',
-  secret: process.env.SESSION_SECRET_LETTER,
+  secret: SESSION_SECRET_LETTER,
   duration: 30 * 60 * 1000,
   activeDuration: 5 * 60 * 1000
 }))
