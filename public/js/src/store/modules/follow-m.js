@@ -10,15 +10,15 @@ export default {
     GET_FOLLOWERS: (state, payload) => state.followers = payload,
     GET_FOLLOWINGS: (state, payload) => state.followings = payload,
     GET_VIEWS: (state, payload) => state.views = payload,
-    FOLLOWER: (state, payload) => state.followers.unshift(payload),
-    UNFOLLOWER: (state, payload) => {
-      let n = state.followers.filter(e => e.follow_by != parseInt(payload) )
-      state.followers = n
+    FOLLOWER: ({ followers }, payload) => followers.unshift(payload),
+    UNFOLLOWER: ({ followers }, payload) => {
+      let n = followers.filter(e => e.follow_by != parseInt(payload) )
+      followers = n
     },
-    FOLLOWING: (state, payload) => state.followings.unshift(payload),
-    UNFOLLOWING: (state, payload) => {
-      let n = state.followings.filter(e => e.follow_to != parseInt(payload) )
-      state.followings = n
+    FOLLOWING: ({ followings }, payload) => followings.unshift(payload),
+    UNFOLLOWING: ({ followings }, payload) => {
+      let n = followings.filter(e => e.follow_to != parseInt(payload) )
+      followings = n
     },
   },
   actions
