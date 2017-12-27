@@ -24,12 +24,12 @@ A reactive mini-social-network created with Vue!!
 ![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.18.39.png)
 
 # Usage
-1. First install all dependencies with npm or Yarn:
-    ```javascript
+1. First install all dependencies:
+    ```bash
+    # with npm
     npm install
-    ```
-    or
-    ```javascript
+    
+    # or with yarn
     yarn
     ```
 
