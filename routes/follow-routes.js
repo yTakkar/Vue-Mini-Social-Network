@@ -87,7 +87,7 @@ app.post('/get-profile-views', async (req, res) => {
   let
     { username } = req.body,
     id = await db.getId(username),
-    [{ count }] = await db.query('SELECT COUNT(view_id) AS count FROM profile_views WHERE view_to = ? ORDER BY view_time DESC', [id])
+    [{ count }] = await db.query('SELECT COUNT(view_id) AS count FROM profile_views WHERE view_to = ?', [id])
   res.json(count)
 })
 
