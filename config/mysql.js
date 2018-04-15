@@ -1,3 +1,5 @@
+// MYSQL SETUP
+
 const
   mysql = require('mysql'),
   hl = require('handy-log'),

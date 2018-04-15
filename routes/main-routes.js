@@ -12,6 +12,7 @@ app.get('/404', mw.NotLoggedIn, (req, res) => {
   res.render('404', { options })
 })
 
+// FOR LOGGED IN USERS, REPONSIBLE FOR RENDERING VUE
 app.get('*', mw.LoggedIn, (req, res) => {
   let options = { title: 'Hello!!' }
   res.render('app', { options })

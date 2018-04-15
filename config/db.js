@@ -1,3 +1,5 @@
+// SOME HELPER FUNCTIONS
+
 const
   db = require('./mysql'),
   bcrypt = require('bcrypt-nodejs')

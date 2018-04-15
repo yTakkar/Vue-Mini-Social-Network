@@ -61,4 +61,6 @@ app.use('/api', postActionRoutes)
 app.use('/api', editProfileRoutes)
 app.use('/', mainR)
 
-app.listen(PORT, () => hl.rainbow('App running..') )
+app.listen(PORT, () =>
+  hl.rainbow('App running..')
+)

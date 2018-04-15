@@ -12,7 +12,10 @@ app.post('/get-posts', async (req, res) => {
 
 // GET ALL FEEDS
 app.post('/get-feeds', async (req, res) => {
-  let feed = await db.query('SELECT posts.post_id, posts.user, posts.username, posts.title, posts.content, posts.post_created FROM posts, follow_system WHERE follow_system.follow_by = ? AND follow_system.follow_to = posts.user ORDER BY posts.post_created DESC', [req.session.id])
+  let feed = await db.query(
+    'SELECT posts.post_id, posts.user, posts.username, posts.title, posts.content, posts.post_created FROM posts, follow_system WHERE follow_system.follow_by = ? AND follow_system.follow_to = posts.user ORDER BY posts.post_created DESC',
+    [req.session.id]
+  )
   res.json(feed)
 })
 
@@ -38,7 +41,10 @@ app.post('/create-post', async (req, res) => {
 })
 
 app.post('/valid-post', async (req, res) => {
-  let [{ count }] = await db.query('SELECT COUNT(post_id) AS count FROM posts WHERE post_id=? LIMIT 1', [ req.body.post ])
+  let [{ count }] = await db.query(
+    'SELECT COUNT(post_id) AS count FROM posts WHERE post_id=? LIMIT 1',
+    [ req.body.post ]
+  )
   res.json(count == 0 ? false : true)
 })
 

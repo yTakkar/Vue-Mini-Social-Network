@@ -49,8 +49,14 @@ app.post('/user/signup', async (req, res) => {
   } else {
 
     let
-      [{ usernameCount }] = await db.query('SELECT COUNT(username) as usernameCount from users WHERE username = ?', [username]),
-      [{ emailCount }] = await db.query('SELECT COUNT(email) as emailCount from users WHERE email = ?', [email])
+      [{ usernameCount }] = await db.query(
+        'SELECT COUNT(username) as usernameCount from users WHERE username = ?',
+        [username]
+      ),
+      [{ emailCount }] = await db.query(
+        'SELECT COUNT(email) as emailCount from users WHERE email = ?',
+        [email]
+      )
 
     if (usernameCount == 1){
       res.json({ mssg: 'Username already exists!!' })
@@ -103,7 +109,10 @@ app.post('/user/login', async (req, res) => {
     res.json({ mssg: array })
   } else {
 
-    let [{ userCount, id, password }] = await db.query('SELECT COUNT(id) as userCount, id, password from users WHERE username=? LIMIT 1', [rusername])
+    let [{ userCount, id, password }] = await db.query(
+      'SELECT COUNT(id) as userCount, id, password from users WHERE username=? LIMIT 1',
+      [rusername]
+    )
 
     if(userCount == 0) {
       res.json({ mssg: 'User not found!!' })

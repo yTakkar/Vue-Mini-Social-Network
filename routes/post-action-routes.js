@@ -6,7 +6,10 @@ const
 app.post('/liked-or-not', async (req, res) => {
   let
     { body, session } = req,
-    [{ l }] = await db.query('SELECT COUNT(like_id) AS l FROM likes WHERE like_by=? AND post_id=?', [ session.id, body.post ])
+    [{ l }] = await db.query(
+      'SELECT COUNT(like_id) AS l FROM likes WHERE like_by=? AND post_id=?',
+      [ session.id, body.post ]
+    )
   res.json(l == 0 ? false : true)
 })
 

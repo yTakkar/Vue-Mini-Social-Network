@@ -1,3 +1,5 @@
+// DIRECTIVES
+
 import Vue from 'vue'
 
 // Another way to change page's title

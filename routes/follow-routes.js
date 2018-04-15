@@ -50,13 +50,16 @@ app.post('/get-followers', async (req, res) => {
 app.post('/get-followings', async (req, res) => {
   let
     id = await db.getId(req.body.username),
-    followings = await db.query('SELECT * FROM follow_system WHERE follow_by=? ORDER BY follow_time DESC', [ id ])
+    followings = await db.query('SELECT * FROM follow_system WHERE follow_by=? ORDER BY follow_time DESC', [id])
   res.json(followings)
 })
 
 // GET NO OF FOLLOWERS
 app.post('/no-of-followers', async (req, res) => {
-  let [{ count }] = await db.query('SELECT COUNT(follow_id) AS count FROM follow_system WHERE follow_to=?', [ req.body.user ])
+  let [{ count }] = await db.query(
+    'SELECT COUNT(follow_id) AS count FROM follow_system WHERE follow_to=?',
+    [ req.body.user ]
+  )
   res.json(count)
 })
 
@@ -66,7 +69,10 @@ app.post('/view-profile', async (req, res) => {
     { username } = req.body,
     { id: session } = req.session,
     id = await db.getId(username),
-    [{ time: dtime }] = await db.query('SELECT MAX(view_time) as time FROM profile_views WHERE view_by=? AND view_to=?', [session, id]),
+    [{ time: dtime }] = await db.query(
+      'SELECT MAX(view_time) as time FROM profile_views WHERE view_by=? AND view_to=?',
+      [session, id]
+    ),
     time = parseInt(new Date().getTime() - parseInt(dtime))
 
   if (time >= 150000 || !dtime) {    // 120000 = 2.5 minutes

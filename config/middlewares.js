@@ -1,3 +1,5 @@
+// MIDDLWWARES
+
 const variables = (req, res, next) => {
   let loggedIn = (req.session.id) ? true : false
   res.locals.loggedIn = loggedIn

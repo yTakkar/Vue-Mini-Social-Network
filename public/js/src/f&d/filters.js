@@ -1,14 +1,19 @@
+// FILTERS
+
 import Vue from 'vue'
 import TimeAgo from 'handy-timeago'
 
+// TimeAgo filter
 Vue.filter('timeAgo', value => {
   return TimeAgo(value)
 })
 
+// To-Uppercase filter
 Vue.filter('to-uppercase', value => {
   return value.charAt(0).toUpperCase() + value.substr(1)
 })
 
+// Slice filter
 Vue.filter('slice', value => {
   let
     len = value.length,

@@ -1,3 +1,5 @@
+// ROUTES FOR PROFILE PAGE
+
 import Profile from '../components/profile/profile.vue'
 import CreatePost from '../components/post/create_post.vue'
 import Overlay from '../components/others/overlay.vue'

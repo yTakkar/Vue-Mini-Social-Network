@@ -1,3 +1,5 @@
+// ALL THE OTHER ROUTES
+
 import Home from '../components/home/home.vue'
 import Explore from '../components/explore/explore.vue'
 import Error from '../components/error/error.vue'
