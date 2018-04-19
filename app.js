@@ -4,7 +4,7 @@ require('dotenv').config()
 const
   express = require('express'),
   hbs = require('express-handlebars'),
-  hl = require('handy-log'),
+  { rainbow } = require('handy-log'),
   { env: { PORT, SESSION_SECRET_LETTER } } = process,
   favicon = require('serve-favicon'),
   path = require('path'),
@@ -62,5 +62,5 @@ app.use('/api', editProfileRoutes)
 app.use('/', mainR)
 
 app.listen(PORT, () =>
-  hl.rainbow('App running..')
+  rainbow('App running..')
 )

@@ -2,23 +2,43 @@ import $ from 'jquery'
 import Notify from 'handy-notification'
 import { post } from 'axios'
 
-// FUNCTION FOR SHORTENING
-const shortener = (elem, length) => {
+/**
+ *  Shortens what with string length
+ * @param {String} what
+ * @param {Number} length
+ */
+export const shortener = (what, length) => {
   let
     parse = parseInt(length),
-    len = elem.length
+    len = what.length
   if (!parse) { return }
-  return (len >= parse) ? `${elem.substr(0, length - 2)}..` : (len < parse) ? elem : null
+  return (len >= parse)
+    ? `${what.substr(0, length - 2)}..`
+    : (len < parse)
+      ? what
+      : null
 }
 
-// FUNCTION TO TOGGLE
-const toggle = el => {
+/**
+ * Toggles the element
+ * @param {HTMLElement} el element to toggle
+ */
+export const toggle = el => {
   let style = el.style.display
   style === 'none' ? el.style.display = 'block' : el.style.display = 'none'
 }
 
-// FUNCTION FOR COMMON LOGIN
-const commonLogin = options => {
+/**
+ * Common function for login & signup
+ *
+ * @param {Object} options Options
+ * @param {Object} options.data
+ * @param {jQuery} options.btn
+ * @param {String} options.url
+ * @param {String} options.redirect
+ * @param {String} options.defBtnValue
+ */
+export const commonLogin = options => {
   let
     { data, btn, url, redirect, defBtnValue } = options,
     overlay2 = $('.overlay-2')
@@ -50,13 +70,18 @@ const commonLogin = options => {
     .catch(e => console.log(e) )
 }
 
-// FUNCTION TO CAPITALIZE FIRST LETTER OF A WORD
-const c_first = str => {
+/**
+ * Capitalizes str
+ * @param {String} str
+ */
+export const c_first = str => {
   return str.charAt(0).toUpperCase() + str.substr(1)
 }
 
-// TO REMOVE LINE OF LAST ELEMENT
-const llr = () => {
+/**
+ * Removes hr of last element of modal
+ */
+export const llr = () => {
   let
     f = $('.modal_main').children(),
     s = $('.display_content').children().length - 1
@@ -64,7 +89,7 @@ const llr = () => {
 }
 
 // FUNCTION TO PROFILE'S ACTIONS
-const forProfile = async t => {
+export const forProfile = async t => {
   let
     {
       username,
@@ -88,20 +113,28 @@ const forProfile = async t => {
   }
 }
 
-// FUNCTION FOR CHECKING IS USER FOLLOWED/UNFOLLOWED
-const isFollowing = async username => {
+/**
+ * Checks if following user or not
+  * @param {String} username
+  * @returns {Boolean} Boolean
+  */
+export const isFollowing = async username => {
   let { data } = await post('/api/is-following', { username })
   return data
 }
 
-// FUNCTION TO RETURN NO OF POSTS
-const noOfFollowers = async user => {
+/**
+ * Returns no of followers of a user
+  * @param {Number} user
+  * @returns {Number} No of followers
+  */
+export const noOfFollowers = async user => {
   let { data } = await post('/api/no-of-followers', { user })
   return data
 }
 
 // FUNCTION TO CHANGE PAGE'S TITLE
-const changeTitle = (to, from, next) => {
+export const changeTitle = (to, from, next) => {
   let
     { name, meta, params: { username } } = to,
     title
@@ -121,7 +154,7 @@ const changeTitle = (to, from, next) => {
 }
 
 // FUNCTION TO FOLLOW
-const follow = async options => {
+export const follow = async options => {
   let
     defaults = {
       user: null,               // USER TO FOLLOW [MUST]
@@ -159,7 +192,7 @@ const follow = async options => {
 }
 
 // FUNCTION TO UNFOLLOW
-const unfollow = async options => {
+export const unfollow = async options => {
   let
     defaults = {
       user: null,                 // USER TO UNFOLLOW [MUST]
@@ -186,18 +219,4 @@ const unfollow = async options => {
   Notify({ value: 'Unfollowed!!' })
   done()
 
-}
-
-module.exports = {
-  shortener,
-  toggle,
-  commonLogin,
-  c_first,
-  forProfile,
-  isFollowing,
-  noOfFollowers,
-  changeTitle,
-  follow,
-  unfollow,
-  llr,
 }
