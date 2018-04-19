@@ -18,10 +18,6 @@ const query = (q, data) => {
   })
 }
 
-/**
- * creates a new user
- * @param {Object} User User details
- */
 const create_user = user => {
   return new Promise((resolve, reject) => {
     bcrypt.hash(user.password, null, null, (error, hash) => {
@@ -33,12 +29,6 @@ const create_user = user => {
   })
 }
 
-/**
- * compares password
- * @param {String} password Password
- * @param {String} hash Hash to be compared with password
- * @returns {Boolean} Boolean
- */
 const comparePassword = (password, hash) => {
   return new Promise((resolve, reject) => {
     bcrypt.compare(password, hash, (err, res) => {
@@ -47,11 +37,6 @@ const comparePassword = (password, hash) => {
   })
 }
 
-/**
- * Returns ID from user
- * @param {String} username Username
- * @returns {Number} ID
- */
 const getId = username => {
   return new Promise((resolve, reject) => {
     query('SELECT id FROM users WHERE username=? LIMIT 1', [username])
@@ -60,12 +45,6 @@ const getId = username => {
   })
 }
 
-/**
- * Returns whether session is following user
- * @param {Number} session Session ID
- * @param {Number} user User
- * @returns {Boolean} Boolean
- */
 const isFollowing = (session, user) => {
   return new Promise((resolve, reject) => {
     query('SELECT COUNT(follow_id) AS is_following FROM follow_system WHERE follow_by=? AND follow_to=? LIMIT 1', [session, user])
