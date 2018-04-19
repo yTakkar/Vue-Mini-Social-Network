@@ -2,11 +2,6 @@ import $ from 'jquery'
 import Notify from 'handy-notification'
 import { post } from 'axios'
 
-/**
- *  Shortens what with string length
- * @param {String} what
- * @param {Number} length
- */
 export const shortener = (what, length) => {
   let
     parse = parseInt(length),
@@ -19,25 +14,11 @@ export const shortener = (what, length) => {
       : null
 }
 
-/**
- * Toggles the element
- * @param {HTMLElement} el element to toggle
- */
 export const toggle = el => {
   let style = el.style.display
   style === 'none' ? el.style.display = 'block' : el.style.display = 'none'
 }
 
-/**
- * Common function for login & signup
- *
- * @param {Object} options Options
- * @param {Object} options.data
- * @param {jQuery} options.btn
- * @param {String} options.url
- * @param {String} options.redirect
- * @param {String} options.defBtnValue
- */
 export const commonLogin = options => {
   let
     { data, btn, url, redirect, defBtnValue } = options,
@@ -70,17 +51,10 @@ export const commonLogin = options => {
     .catch(e => console.log(e) )
 }
 
-/**
- * Capitalizes str
- * @param {String} str
- */
 export const c_first = str => {
   return str.charAt(0).toUpperCase() + str.substr(1)
 }
 
-/**
- * Removes hr of last element of modal
- */
 export const llr = () => {
   let
     f = $('.modal_main').children(),
@@ -113,21 +87,11 @@ export const forProfile = async t => {
   }
 }
 
-/**
- * Checks if following user or not
-  * @param {String} username
-  * @returns {Boolean} Boolean
-  */
 export const isFollowing = async username => {
   let { data } = await post('/api/is-following', { username })
   return data
 }
 
-/**
- * Returns no of followers of a user
-  * @param {Number} user
-  * @returns {Number} No of followers
-  */
 export const noOfFollowers = async user => {
   let { data } = await post('/api/no-of-followers', { user })
   return data
