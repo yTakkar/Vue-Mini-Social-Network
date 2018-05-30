@@ -5,17 +5,6 @@ A social network centered around user privacy and security!
 1. [Screenshots](#screenshots)
 2. [Usage](#usage)
 
-# Screenshots
-![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.16.51.png)
-![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.18.27.png)
-![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-06%20at%2001.16.37.png)
-![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.17.04.png)
-![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.17.21.png)
-![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.17.39.png)
-![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.17.48.png)
-![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.17.58.png)
-![alt text](https://raw.githubusercontent.com/yTakkar/Vue-Mini-Social-Network/master/screenshots/Snap%202017-10-05%20at%2020.18.39.png)
-
 # Usage
 1. First install all dependencies:
     ```bash
@@ -25,19 +14,18 @@ A social network centered around user privacy and security!
     # or with yarn
     yarn
     ```
-For Windows:
-2. Install PhpMyAdmin, create a database and import db.sql 
+2. For windows, Install PhpMyAdmin, create a database and import db.sql 
 
-For MACOS: 
-2. a. Install MySql and run the MySql server. Remember your password for 'root' 
-   b. Install the mysql cli using `brew install mysql`
-   c. Run the following:
+3. For MacOS,
+   - Install MySql and run the MySql server. Remember your password for 'root' 
+   - Install the mysql cli using `brew install mysql`
+   - Run the following:
         ```bash
            $ mysql -u root -p
            <enter password>
            create database peterbook
         ```
-   d. Import the database from db.sql
+   -  Import the database from db.sql
       ```bash
       $ mysql -u username -p peterbook < db.sql
 
