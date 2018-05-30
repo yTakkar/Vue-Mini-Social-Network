@@ -1,12 +1,5 @@
-# Single-Page-Social-Network
-A reactive mini-social-network created with Vue!!
-
-# Another Versions
-**[React Version](https://github.com/yTakkar/React-Mini-Social-Network)**
-
-**[Golang Version](https://github.com/yTakkar/Go-Mini-Social-Network)**
-
-**[Ruby On Rails Version](https://github.com/yTakkar/Rails-Mini-Social-Network)**
+# Peterbook
+A social network centered around user privacy and security!
 
 # Quick liks
 1. [Screenshots](#screenshots)
@@ -32,19 +25,34 @@ A reactive mini-social-network created with Vue!!
     # or with yarn
     yarn
     ```
+For Windows:
+2. Install PhpMyAdmin, create a database and import db.sql 
 
-2. Open PHPMyAdmin, create a DB & import `db.sql` file.
+For MACOS: 
+2. a. Install MySql and run the MySql server. Remember your password for 'root' 
+   b. Install the mysql cli using `brew install mysql`
+   c. Run the following:
+        ```bash
+           $ mysql -u root -p
+           <enter password>
+           create database peterbook
+        ```
+   d. Import the database from db.sql
+      ```bash
+      $ mysql -u username -p peterbook < db.sql
+
+
 3. Create a `.env` file and insert the following code. Replace values with yours!!
 
     ```javascript
     PORT=YOUR_PORT
-    MYSQL_HOST="host"
-    MYSQL_USER="user"
-    MYSQL_PASSWORD="password"
-    MYSQL_DATABASE="db"
+    MYSQL_HOST="localhost"
+    MYSQL_USER="root"
+    MYSQL_PASSWORD="your password"
+    MYSQL_DATABASE="peterbook"
     SESSION_SECRET_LETTER="anything-secret"
     ```
-
+    
 4. Start the server
     ```javascript
     npm start [OR] yarn start
