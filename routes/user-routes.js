@@ -69,6 +69,7 @@ app.post('/user/signup', async (req, res) => {
           username,
           email,
           password,
+          bio: "",
           joined: new Date().getTime()
         },
         { insertId } = await db.create_user(newUser),
