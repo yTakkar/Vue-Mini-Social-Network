@@ -16,8 +16,8 @@ export const home = {
   meta: { title: 'Home' },
   children: [
     {
-      path: 'create-post',
-      name: 'create-post',
+      path: 'create-post-home',
+      name: 'create-post-home',
       components: {
         'create-post': CreatePost,
         'overlay': Overlay,
