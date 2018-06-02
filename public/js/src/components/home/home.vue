@@ -6,6 +6,12 @@
       <router-link :to='{ name: "create-post", params: { username: session.username } }' class='pri_btn'>New Post</router-link>
     </div>
     <Feeds />
+
+    <router-view name='overlay' ></router-view>
+
+    <transition-group name='fade' >
+      <router-view name='create-post' key='create-post' ></router-view>
+    </transition-group>
   </div>
 
 </template>
