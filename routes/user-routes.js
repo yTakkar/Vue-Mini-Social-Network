@@ -102,7 +102,7 @@ app.post('/user/login', async (req, res) => {
 
   req.checkBody('username', 'Username is empty!!').notEmpty()
   req.checkBody('password', 'Password field is empty!!').notEmpty()
-
+  console.log(rusername);
   let errors = await req.getValidationResult()
   if(!errors.isEmpty()) {
     let array = []
@@ -111,7 +111,7 @@ app.post('/user/login', async (req, res) => {
   } else {
 
     let [{ userCount, id, password }] = await db.query(
-      'SELECT COUNT(id) as userCount, id, password from users WHERE username=? LIMIT 1',
+      'SELECT COUNT(id) as userCount, id, password from users WHERE username= BINARY ? LIMIT 1',
       [rusername]
     )
 

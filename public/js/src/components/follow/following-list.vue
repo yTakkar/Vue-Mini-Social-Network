@@ -74,7 +74,13 @@ export default {
         user: follow_to,
         update_followings: userDetails.id == session.id,
         commit,
-        done: () => this.is_following = false
+        done: () => {
+          if(userDetails.id == session.id){
+            location.reload()
+          }else{
+            this.is_following = false
+          }
+        }
       })
     }
   },
