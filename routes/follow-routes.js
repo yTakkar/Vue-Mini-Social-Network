@@ -13,6 +13,16 @@ app.post('/is-following', async (req, res) => {
   res.json(is)
 })
 
+app.post('/is-followed', async (req, res) => {
+  let {
+      body: { username },
+      session: { id: session }
+    } = req,
+    id = await db.getId(username),
+    is = await db.isFollowing(id, session)
+  res.json(is)
+})
+
 app.post('/follow', async (req, res) => {
   let
     { user, username } = req.body,
@@ -23,6 +33,7 @@ app.post('/follow', async (req, res) => {
       follow_to: user,
       follow_to_username: username,
       follow_time: new Date().getTime(),
+      confirmed: false,
     },
     { insertId } = await db.query('INSERT INTO follow_system SET ?', insert)
 

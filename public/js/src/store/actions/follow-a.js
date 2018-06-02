@@ -7,6 +7,11 @@ export default {
     commit('IS_FOLLOWING', data)
   },
 
+  isFollowed: async ({ commit }, payload) => {
+    let { data } = await post('/api/is-followed', { username: payload })
+    commit('IS_FOLLOWED', data)
+  },
+
   getFollowers: async ({ commit }, payload) => {
     let { data } = await post('/api/get-followers', { username: payload })
     commit('GET_FOLLOWERS', data)
