@@ -8,11 +8,22 @@ import Likes from '../components/post/likes.vue'
 import Overlay from '../components/others/overlay.vue'
 import EditProfile from '../components/edit_profile/edit_profile.vue'
 import Deactivate from '../components/deactivate/deavtivate.vue'
+import CreatePost from '../components/post/create_post.vue'
 
 export const home = {
   path: '/',
   component: Home,
-  meta: { title: 'Home' }
+  meta: { title: 'Home' },
+  children: [
+    {
+      path: 'create-post',
+      name: 'create-post',
+      components: {
+        'create-post': CreatePost,
+        'overlay': Overlay,
+      },
+      meta: { title: 'Create Post' }
+    }]
 }
 
 export const explore = {
