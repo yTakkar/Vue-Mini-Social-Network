@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "dev": "webpack -d --watch",
-    "build": "webpack -p --watch"
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",

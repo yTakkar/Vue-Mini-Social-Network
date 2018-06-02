@@ -2,22 +2,9 @@ language: node_js
 node_js:
 - lts/*
 script:
-  - "npm run coverage"
   - "npm run build"
 notifications:
    slack: "cse112sp18-team11:ilCzWpGFGum0jG5mnR6jJ0iD#notifications"
 cache:
   directories:
   - node_modules
-before_deploy:
-  - "npm run build"
-deploy:
-  provider: firebase
-  token:
-    secure: qlpfWrJ3RF+RSaHiZdy3c/2a5/6zJQQPHmo8HraJ9gnl0RJnhaOTE8rIvRtap4fM6uSYucnh4TUdvu02gvtzsuVf60AVtQhHsRPcxbbPXzQkqXiuM00m0agJ6XAf7rnjFDLoGd85p2HmXUtUiT+0G3b8fEnDgZREDNENB3YBs3ti4c9XDcsq/Q4z60ne1iYxAUfPSkEsdyLa0p+mYj6idJuGK3Hl6qqfrh+xfzftfQCRWi4uhwYLY1V6UXyJc7gt6w/9v42bjC4dcVQAc9kPrBDF+KYfesavvM8QOthNo8sGQpwxN7AmqwbtolofikBL2kkTsQ6EjBXZV55NPdaFfEoaK9Eb0TGgoRHwr5Uo+zAL8SeMaULSu0yX9uvMT+217Bp46a3NXopmUGAUbpOMKvlpLFsnwfjgGeAL00pmjrrbbONQJ/tQcV+ASbIv+99O6sot2bmrJ8/MpUMncmD3/lF11Y6AOJW60oG6RRBv785QwKnaXJaoWYU1XhQNMsIX/LJmO+rg/ZqTllGlI9K95gDsSpI3nCOvINWOQ3juMYQMxLu6mKEuoex1igc3pLL2MTuWuBPRa5Zf7r0UpM3YNXTkzk4Mme4bOa2w5DQfhY6IQFv5p9xh4yt9Hf6t9g4MHM22j0sh3+IIC1dSd81/0NkNIpKRD7MfuTTvwxBtCrQ=
-  on:
-    branch: master
-after_deploy:
-    - npm install webpagetest -g
-    - webpagetest  -k A.4fad81994bc79ea136ce4615cdc432fd test https://cse112-placeholder-name.firebaseapp.com --lighthouse --mobile
-    - webpagetest  -k A.4fad81994bc79ea136ce4615cdc432fd test https://cse112-placeholder-name.firebaseapp.com --lighthouse
