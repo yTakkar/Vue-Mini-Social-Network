@@ -58,7 +58,7 @@
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-plugin-vue": "^3.14.0",
-    "vue": "^2.5.13",
+    "vue": "^2.5.16",
     "vue-loader": "^14.2.3",
     "vue-template-compiler": "^2.5.16",
     "webpack-cli": "^3.0.0"
