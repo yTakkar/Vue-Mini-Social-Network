@@ -23,6 +23,7 @@ app.post('/follow', async (req, res) => {
       follow_to: user,
       follow_to_username: username,
       follow_time: new Date().getTime(),
+      confirmed: false,
     },
     { insertId } = await db.query('INSERT INTO follow_system SET ?', insert)
 

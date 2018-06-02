@@ -34,13 +34,23 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "express-validator": "^3.2.0",
+<<<<<<< HEAD
     "handy-image-processor": "^1.0.6",
     "handy-log": "^1.0.3",
+=======
+    "gm": "^1.23.1",
+    "handy-image-processor": "^1.0.6",
+    "handy-log": "^1.0.26",
+>>>>>>> 0c8ba1eb5517235f47bacb57c16015e455ea8d12
     "handy-notification": "^1.2.2",
     "handy-timeago": "^1.0.2",
     "jquery": "^3.3.1",
     "multer": "^1.3.0",
     "mysql": "^2.15.0",
+<<<<<<< HEAD
+=======
+    "nodemon": "^1.17.5",
+>>>>>>> 0c8ba1eb5517235f47bacb57c16015e455ea8d12
     "serve-favicon": "^2.5.0",
     "vue-resource": "^1.5.1",
     "vue-router": "^2.8.1",
@@ -58,6 +68,11 @@
     "eslint-plugin-vue": "^3.14.0",
     "vue": "^2.5.16",
     "vue-loader": "^14.2.3",
+<<<<<<< HEAD
     "vue-template-compiler": "^2.5.16"
+=======
+    "vue-template-compiler": "^2.5.16",
+    "webpack-cli": "^3.0.0"
+>>>>>>> 0c8ba1eb5517235f47bacb57c16015e455ea8d12
   }
 }
