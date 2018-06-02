@@ -32,7 +32,8 @@ CREATE TABLE `follow_system` (
   `follow_by_username` varchar(32) NOT NULL,
   `follow_to` int(11) NOT NULL,
   `follow_to_username` varchar(32) NOT NULL,
-  `follow_time` varchar(255) NOT NULL
+  `follow_time` varchar(255) NOT NULL,
+  `confirmed` bool DEFAULT true
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -136,7 +137,7 @@ CREATE TABLE `users` (
   `username` varchar(32) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `bio` text NOT NULL,
+  `bio` text NOT NULL DEFAULT "",
   `joined` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

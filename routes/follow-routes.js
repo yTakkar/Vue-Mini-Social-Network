@@ -13,6 +13,16 @@ app.post('/is-following', async (req, res) => {
   res.json(is)
 })
 
+app.post('/is-followed', async (req, res) => {
+  let {
+      body: { username },
+      session: { id: session }
+    } = req,
+    id = await db.getId(username),
+    is = await db.isFollowing(id, session)
+  res.json(is)
+})
+
 app.post('/follow', async (req, res) => {
   let
     { user, username } = req.body,
