@@ -539,6 +539,15 @@ select {
   background-image: url(../../images/landingpage.jpg);
 }
 
+#profileicon{
+    border:solid;
+    background-image: url('../../../../images/profileicon.png');
+    background-size: contain;
+    height: 35px;
+    width: 35px;
+    top:-10px;
+}
+
 #speakeasy{
     position: relative;
     top: 50%;
@@ -580,14 +589,14 @@ select {
 }
 
 .right a {
-border: 1px solid #eee;
+border: 1px solid white;
 outline: none;
 padding: 4px 16px;
 border-radius: 3px;
 font-size: 14px;
-margin-right: 5px;
-color: #3d464d;
-background: #fff;
+margin-right: 20px;
+color: #fff;
+/* background: #fff; */
 }
 
 .right a a[href='help'] {
@@ -595,25 +604,31 @@ background: #fff;
 .right a .index_header > .right > a[href="about"] {
         margin-right: 5px; }
 .right a:hover {
-        background: #f7f9fa; }
+        background: #f7f9fa;
+    }
 .right a:focus {
-        background: #f7f9fa; }
+        background: #f7f9fa;
+    }
 
 .header_loggedin {
   /* background: #fff; */
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
-  height: 45px;
+  height: 55px;
   /* background: white; */
   z-index: 2;
   top: 0px; }
   .header_loggedin a {
+      line-height: 50px;
+      height:50px;
+      margin-top:2px;
+      border:solid #fff 1px;
     font-size: 14px;
-    color: #1b2733;
-    margin-left: 7px;
-    padding: 5px 12px;
+    color: #fff;
+    margin-left: 25px;
+    padding: 0px 12px;
     border-radius: 3px;
     display: inline-block; }
     .header_loggedin a:hover {
@@ -623,12 +638,12 @@ background: #fff;
   .header_loggedin .left {
     display: inline-block;
     position: relative;
-    top: 8px;
-    left: 3%; }
+    /* top: 8px; */
+    left: 2%; }
   .header_loggedin .right {
     display: inline-block;
     position: absolute;
-    top: 8px;
+    top: 0px;
     right: 3%; }
 
 .display_text {
@@ -648,7 +663,8 @@ background: #fff;
     font-size: 14px; }
 
 .ha_active {
-  background: #f7f9fa; }
+  border: solid #FEDD32 1px;
+ }
 
 .cua {
   width: 300px;
@@ -680,7 +696,8 @@ background: #fff;
 .aligner {
   position: relative;
   width: 614px;
-  left: 367px; }
+  margin:auto;
+}
   .aligner .user_banner {
     text-align: center;
     position: relative;
@@ -974,7 +991,7 @@ background: #fff;
       position: absolute;
       right: 10px;
       padding: 4px 12px;
-      top: 10px; }
+      top: 15px; }
 
 .page_end {
   padding: 10px;
