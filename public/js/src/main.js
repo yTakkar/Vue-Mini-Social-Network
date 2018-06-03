@@ -39,7 +39,7 @@ Vue.component('Goto', Goto)
 // Router setup
 const router = new VueRouter({
   routes: Routes,
-  mode: 'history',
+  mode: 'history'
 })
 
 // To change Title
@@ -52,7 +52,7 @@ Vue.config.productionTip = false
 
 // Render if #app is present
 if (document.querySelector('#app')) {
-  new Vue({
+  Vue({
     el: '#app',
     render: h => h(App),
     router,

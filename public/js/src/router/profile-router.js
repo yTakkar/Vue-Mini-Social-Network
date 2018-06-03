@@ -18,7 +18,7 @@ export default {
       name: 'create-post',
       components: {
         'create-post': CreatePost,
-        'overlay': Overlay,
+        'overlay': Overlay
       },
       meta: { title: 'Create Post' }
     },
@@ -27,7 +27,7 @@ export default {
       name: 'confirm-followers',
       components: {
         'confirm-followers': ConfirmFollowers,
-        'overlay': Overlay,
+        'overlay': Overlay
       },
       meta: { title: 'Confirm Followers' }
     },
@@ -36,7 +36,7 @@ export default {
       name: 'delete-followers',
       components: {
         'delete-followers': DeleteFollowers,
-        'overlay': Overlay,
+        'overlay': Overlay
       },
       meta: { title: 'Delete Followers' }
     },
@@ -45,7 +45,7 @@ export default {
       name: 'followers',
       components: {
         'followers': Followers,
-        'overlay': Overlay,
+        'overlay': Overlay
       }
     },
     {

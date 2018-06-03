@@ -4,27 +4,27 @@ export default {
   computed: {
 
     // returns the state of post module
-    p() {
+    p () {
       return this.$store.state.post
     },
 
     // returns the state of follow module
-    f() {
+    f () {
       return this.$store.state.follow
     },
 
     // returns the state of user module
-    u() {
+    u () {
       return this.$store.state.user
     },
 
     // returns the state of explore module
-    e() {
+    e () {
       return this.$store.state.explore
     },
 
     // returns the state of post interaction (post_int) module
-    pi() {
+    pi () {
       return this.$store.state.post_int
     }
 

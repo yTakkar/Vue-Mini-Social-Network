@@ -8,7 +8,7 @@ import {
   viewPost,
   editProfile,
   deactivate,
-  notFound,
+  notFound
 } from './rest-router'
 
 export default [
@@ -19,5 +19,5 @@ export default [
   viewPost,
   editProfile,
   deactivate,
-  notFound,
+  notFound
 ]

@@ -3,9 +3,8 @@ import Notify from 'handy-notification'
 import { post } from 'axios'
 
 export const shortener = (what, length) => {
-  let
-    parse = parseInt(length),
-    len = what.length
+  let parse = parseInt(length)
+  let len = what.length
   if (!parse) { return }
   return (len >= parse)
     ? `${what.substr(0, length - 2)}..`
@@ -20,9 +19,8 @@ export const toggle = el => {
 }
 
 export const commonLogin = options => {
-  let
-    { data, btn, url, redirect, defBtnValue } = options,
-    overlay2 = $('.overlay-2')
+  let { data, btn, url, redirect, defBtnValue } = options
+  let overlay2 = $('.overlay-2')
 
   btn
     .attr('value', 'Please wait..')
@@ -35,7 +33,10 @@ export const commonLogin = options => {
       if (success) {
         Notify({
           value: mssg,
-          done: () => location.href = redirect
+          done: function () {
+            location.href = redirect
+            return location.href
+          }
         })
         btn.attr('value', 'Redirecting..')
         overlay2.show()
@@ -48,7 +49,7 @@ export const commonLogin = options => {
       }
       btn.blur()
     })
-    .catch(e => console.log(e) )
+    .catch(e => console.log(e))
 }
 
 export const c_first = str => {
@@ -56,27 +57,25 @@ export const c_first = str => {
 }
 
 export const llr = () => {
-  let
-    f = $('.modal_main').children(),
-    s = $('.display_content').children().length - 1
+  let f = $('.modal_main').children()
+  let s = $('.display_content').children().length - 1
   f.eq(s).find('hr').remove()
 }
 
 // FUNCTION TO PROFILE'S ACTIONS
 export const forProfile = async t => {
-  let
-    {
-      username,
-      $router,
-      $store: { dispatch },
-      session: { username: susername }
-    } = t,
-    { data: valid } = await post('/api/is-user-valid', { username })
+  let {
+    username,
+    $router,
+    $store: { dispatch },
+    session: { username: susername }
+  } = t
+  let { data: valid } = await post('/api/is-user-valid', { username })
 
-  if (!valid){
+  if (!valid) {
     $router.push('/error/user')
   } else {
-    if (username != susername) {
+    if (username !== susername) {
       post('/api/view-profile', { username })
     }
     dispatch('userDetails', username)
@@ -111,15 +110,14 @@ export const noOfFollowers = async user => {
 
 // FUNCTION TO CHANGE PAGE'S TITLE
 export const changeTitle = (to, from, next) => {
-  let
-    { name, meta, params: { username } } = to,
-    title
+  let { name, meta, params: { username } } = to
+  let title
 
-  if (name == 'profile') {
+  if (name === 'profile') {
     title = `@${username}`
-  } else if (name == 'followers') {
+  } else if (name === 'followers') {
     title = `${username}'s Followers`
-  } else if (name == 'followings') {
+  } else if (name === 'followings') {
     title = `${username}'s Followings`
   } else {
     title = meta.title
@@ -131,61 +129,58 @@ export const changeTitle = (to, from, next) => {
 
 // FUNCTION TO FOLLOW
 export const follow = async options => {
-  let
-    defaults = {
-      user: null,               // USER TO FOLLOW [MUST]
-      username: null,           // USER'S USERNAME [MUST]
-      update_followers: false,  // PROVIDE WHEN FOLLOWERS DATA NEEDS TO BE UDATED. EG. FOLLOW ACTION ON BANNER COMPONENT
-      update_followings: false, // PROVIDE WHEN FOLLOWINGS DATA NEEDS TO BE UDATED. EG. FOLLOWERS/FOLLOWINGS COMPONENT'S FOLLOW ACTION
-      commit: () => { return }, // PROVIDE WHEN [UPDATE_FOLLOWERS/UPDATE_FOLLOWINGS]=TRUE
-      done: () => { return }    // FN TO BE EXECUTED WHEN USER IS FOLLOWED [MUST]
-    },
-    obj = { ...defaults, ...options },
-    {
-      user,
-      username,
-      update_followers,
-      update_followings,
-      commit,
-      done
-    } = obj,
-    { data } = await post('/api/follow', { user, username }),
-    fwing = {
-      follow_id: data.follow_id,
-      follow_by: $('.data').data('session'),
-      follow_by_username: $('.data').data('username'),
-      follow_to: user,
-      follow_to_username: username,
-      follow_time: data.follow_time,
-    }
+  let defaults = {
+    user: null, // USER TO FOLLOW [MUST]
+    username: null, // USER'S USERNAME [MUST]
+    update_followers: false, // PROVIDE WHEN FOLLOWERS DATA NEEDS TO BE UDATED. EG. FOLLOW ACTION ON BANNER COMPONENT
+    update_followings: false, // PROVIDE WHEN FOLLOWINGS DATA NEEDS TO BE UDATED. EG. FOLLOWERS/FOLLOWINGS COMPONENT'S FOLLOW ACTION
+    commit: () => { }, // PROVIDE WHEN [UPDATE_FOLLOWERS/UPDATE_FOLLOWINGS]=TRUE
+    done: () => { } // FN TO BE EXECUTED WHEN USER IS FOLLOWED [MUST]
+  }
+  let obj = { ...defaults, ...options }
+  let {
+    user,
+    username,
+    update_followers,
+    update_followings,
+    commit,
+    done
+  } = obj
+  let { data } = await post('/api/follow', { user, username })
+  let fwing = {
+    follow_id: data.follow_id,
+    follow_by: $('.data').data('session'),
+    follow_by_username: $('.data').data('username'),
+    follow_to: user,
+    follow_to_username: username,
+    follow_time: data.follow_time
+  }
 
-  //update_followers ? commit('FOLLOWER', data) : null
-  //update_followings ? commit('FOLLOWING', fwing) : null
+  // update_followers ? commit('FOLLOWER', data) : null
+  // update_followings ? commit('FOLLOWING', fwing) : null
 
   Notify({ value: `Following request for ${username} is pending!!` })
   done()
-
 }
 
 // FUNCTION TO UNFOLLOW
 export const unfollow = async options => {
-  let
-    defaults = {
-      user: null,                 // USER TO UNFOLLOW [MUST]
-      update_followers: false,    // PROVIDE WHEN FOLLOWERS DATA NEEDS TO BE UDATED. EG. FOLLOW ACTION ON BANNER COMPONENT
-      update_followings: false,   // PROVIDE WHEN FOLLOWINGS DATA NEEDS TO BE UDATED. EG. FOLLOWERS/FOLLOWINGS COMPONENT'S FOLLOW ACTION
-      commit: () => { return },   // PROVIDE WHEN [UPDATE_FOLLOWERS/UPDATE_FOLLOWINGS]=TRUE
-      done: () => { return }      // FN TO BE EXECUTED WHEN USER IS UNFOLLOWED [MUST]
-    },
-    obj = { ...defaults, ...options },
-    {
-      user,
-      update_followers,
-      update_followings,
-      commit,
-      done,
-    } = obj,
-    session = $('.data').data('session')
+  let defaults = {
+    user: null, // USER TO UNFOLLOW [MUST]
+    update_followers: false, // PROVIDE WHEN FOLLOWERS DATA NEEDS TO BE UDATED. EG. FOLLOW ACTION ON BANNER COMPONENT
+    update_followings: false, // PROVIDE WHEN FOLLOWINGS DATA NEEDS TO BE UDATED. EG. FOLLOWERS/FOLLOWINGS COMPONENT'S FOLLOW ACTION
+    commit: () => { }, // PROVIDE WHEN [UPDATE_FOLLOWERS/UPDATE_FOLLOWINGS]=TRUE
+    done: () => { } // FN TO BE EXECUTED WHEN USER IS UNFOLLOWED [MUST]
+  }
+  let obj = { ...defaults, ...options }
+  let {
+    user,
+    update_followers,
+    update_followings,
+    commit,
+    done
+  } = obj
+  let session = $('.data').data('session')
 
   await post('/api/unfollow', { user })
 
@@ -194,20 +189,18 @@ export const unfollow = async options => {
 
   Notify({ value: 'Unfollowed!!' })
   done()
-
 }
 
 export const decline = async options => {
-  let
-    defaults = {
-      user: null,                 // USER TO UNFOLLOW [MUST]
-      done: () => { return }      // FN TO BE EXECUTED WHEN USER IS UNFOLLOWED [MUST]
-    },
-    obj = { ...defaults, ...options },
-    {
-      user,
-      done,
-    } = obj
+  let defaults = {
+    user: null, // USER TO UNFOLLOW [MUST]
+    done: () => { } // FN TO BE EXECUTED WHEN USER IS UNFOLLOWED [MUST]
+  }
+  let obj = { ...defaults, ...options }
+  let {
+    user,
+    done
+  } = obj
 
   await post('/api/decline-pending', { user })
 
@@ -216,19 +209,18 @@ export const decline = async options => {
 }
 
 export const accept = async options => {
-  let
-    defaults = {
-      user: null,                 // USER TO UNFOLLOW [MUST]
-      commit: () => { return },   // PROVIDE WHEN [UPDATE_FOLLOWERS/UPDATE_FOLLOWINGS]=TRUE
-      done: () => { return }      // FN TO BE EXECUTED WHEN USER IS UNFOLLOWED [MUST]
-    },
-    obj = { ...defaults, ...options },
-    {
-      user,
-      commit,
-      done,
-    } = obj,
-    session = $('.data').data('session')
+  let defaults = {
+    user: null, // USER TO UNFOLLOW [MUST]
+    commit: () => { }, // PROVIDE WHEN [UPDATE_FOLLOWERS/UPDATE_FOLLOWINGS]=TRUE
+    done: () => { } // FN TO BE EXECUTED WHEN USER IS UNFOLLOWED [MUST]
+  }
+  let obj = { ...defaults, ...options }
+  let {
+    user,
+    commit,
+    done
+  } = obj
+  let session = $('.data').data('session')
 
   await post('/api/accept-pending', { user })
 

@@ -9,10 +9,13 @@ export default {
       id: d.data('session'),
       username: d.data('username')
     },
-    userDetails: {},
+    userDetails: {}
   },
   mutations: {
-    USER_DETAILS: (state, payload) => state.userDetails = payload,
+    USER_DETAILS: function (state, payload) {
+      state.userDetails = payload
+      return state.userDetails
+    }
   },
-  actions,
+  actions
 }

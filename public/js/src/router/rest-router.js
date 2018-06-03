@@ -20,7 +20,7 @@ export const home = {
       name: 'create-post-home',
       components: {
         'create-post-home': CreatePost,
-        'overlay': Overlay,
+        'overlay': Overlay
       },
       meta: { title: 'Create Post' }
     }]
@@ -32,7 +32,7 @@ export const explore = {
   meta: { title: 'Explore' }
 }
 
-export const error =  {
+export const error = {
   path: '/error/:what',
   name: 'error',
   component: Error,
@@ -50,7 +50,7 @@ export const viewPost = {
       name: 'likes',
       components: {
         'likes': Likes,
-        'overlay': Overlay,
+        'overlay': Overlay
       },
       meta: { title: 'Likes' }
     }
