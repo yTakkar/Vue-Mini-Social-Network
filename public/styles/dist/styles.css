@@ -1,6 +1,17 @@
-* {
-  padding: 0px;
-  margin: 0px; }
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+    padding: 0px;
+    margin: 0px;
+},
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
 
 body {
   font-family: "Open Sans", "Roboto", Tahoma, arial, sans-serif;
@@ -526,35 +537,78 @@ select {
       margin-left: 5px; }
 
 .notes_wrapper {
-  margin-top: 70px; }
+  margin-top: 70px;
+  /* border:solid black 1px; */
+  /* background-image: url(../../images/landingpage.jpg); */
+}
+
+.landing_wrapper {
+  /* margin-top: 70px; */
+  /* border:solid black 1px; */
+
+  height:100vh;
+  width:100vw;
+  background-image: url(../../images/landingpage.jpg);
+}
+
+#speakeasy{
+    position: relative;
+    top: 50%;
+    font-size: 3em;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    height: 100%;
+}
+
+#easy{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#tagline{
+    width: 50vw;
+    float: left;
+    font-size: 3em;
+    /* border: solid black 1px; */
+}
+
+.bold{
+    font-weight: bold;
+}
 
 .index_header {
+    /* border:solid black 1px; */
   width: 100%;
   height: 50px;
   position: fixed;
   z-index: 1;
-  top: 0px; }
-  .index_header .right {
+}
+
+.right {
     float: right;
     position: relative;
     right: 70px;
-    top: 21px; }
-    .index_header .right a {
-      border: 1px solid #eee;
-      outline: none;
-      padding: 4px 16px;
-      border-radius: 3px;
-      font-size: 14px;
-      margin-right: 5px;
-      color: #3d464d;
-      background: #fff; }
-      .index_header .right a a[href='help'] {
+    top: 21px;
+}
+
+.right a {
+border: 1px solid #eee;
+outline: none;
+padding: 4px 16px;
+border-radius: 3px;
+font-size: 14px;
+margin-right: 5px;
+color: #3d464d;
+background: #fff;
+}
+
+.right a a[href='help'] {
         margin-right: 0px; }
-      .index_header .right a .index_header > .right > a[href="about"] {
+.right a .index_header > .right > a[href="about"] {
         margin-right: 5px; }
-      .index_header .right a:hover {
+.right a:hover {
         background: #f7f9fa; }
-      .index_header .right a:focus {
+.right a:focus {
         background: #f7f9fa; }
 
 .header_loggedin {
