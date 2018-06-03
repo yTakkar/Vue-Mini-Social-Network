@@ -10,9 +10,12 @@
       <template v-if='me'>
         <router-link :to="{ name: 'create-post', params: { username: user.username } }" class='pri_btn' >New Post</router-link>
         <router-link :to="{ name: 'edit-profile' }" class='pri_btn' >Edit Profile</router-link>
+        <router-link :to="{ name: 'confirm-followers' }" class='pri_btn' >Confirm Followers</router-link>
+        <router-link :to="{ name: 'delete-followers' }" class='pri_btn' >Delete Followers</router-link>
       </template>
       <template v-else >
         <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Unfollow</a>
+        <a v-else-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Pending</a>
         <a v-else href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
       </template>
     </div>
@@ -65,6 +68,7 @@ export default {
   data(){
     return {
       is_following: false,
+      is_pending: false
     }
   },
   computed: {
@@ -83,7 +87,9 @@ export default {
         username,
         update_followers: true,
         commit,
-        done: () => this.is_following = true,
+        done: () => {
+          this.is_pending = true
+        }
       })
     },
     unfollow: async function(){
@@ -95,15 +101,20 @@ export default {
         user: id,
         update_followers: true,
         commit,
-        done: () => this.is_following = false
+        done: () => {
+          this.is_following = false
+          this.is_pending = false
+        }
       })
     }
   },
   created: async function() {
     this.is_following = await fn.isFollowing(this.$route.params.username)
+    this.is_pending = await fn.isPending(this.$route.params.username)
   },
   updated: async function() {
     this.is_following = await fn.isFollowing(this.$route.params.username)
+    this.is_pending = await fn.isPending(this.$route.params.username)
   }
 }
 </script>

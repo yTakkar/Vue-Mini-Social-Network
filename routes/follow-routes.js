@@ -13,14 +13,20 @@ app.post('/is-following', async (req, res) => {
   res.json(is)
 })
 
-app.post('/is-followed', async (req, res) => {
+app.post('/is-pending', async (req, res) => {
   let {
       body: { username },
       session: { id: session }
     } = req,
     id = await db.getId(username),
-    is = await db.isFollowing(id, session)
+    is = await db.isPending(session, id)
   res.json(is)
+})
+
+app.post('/accept-pending', async (req, res) => {
+  let { session, body } = req
+  await db.query('UPDATE follow_system SET confirmed=1 WHERE follow_to=? AND follow_by=?', [ session.id, body.user ])
+  res.json('Confirmed')
 })
 
 app.post('/follow', async (req, res) => {
@@ -49,11 +55,24 @@ app.post('/unfollow', async (req, res) => {
   res.json({ mssg: 'Unfollowed!!' })
 })
 
+app.post('/decline-pending', async (req, res) => {
+  let { session, body } = req
+  await db.query('DELETE FROM follow_system WHERE follow_to=? AND follow_by=?', [ session.id, body.user ])
+  res.json({ mssg: 'Unfollowed!!' })
+})
+
 // TO GET FOLLOWERS
 app.post('/get-followers', async (req, res) => {
   let
     id = await db.getId(req.body.username),
-    followers = await db.query('SELECT * FROM follow_system WHERE follow_to=? ORDER BY follow_time DESC', [ id ])
+    followers = await db.query('SELECT * FROM follow_system WHERE follow_to=? AND confirmed=1 ORDER BY follow_time DESC', [ id ])
+  res.json(followers)
+})
+
+app.post('/get-pendings', async (req, res) => {
+  let
+    id = await db.getId(req.body.username),
+    followers = await db.query('SELECT * FROM follow_system WHERE follow_to=? AND confirmed=0 ORDER BY follow_time DESC', [ id ])
   res.json(followers)
 })
 
@@ -61,14 +80,14 @@ app.post('/get-followers', async (req, res) => {
 app.post('/get-followings', async (req, res) => {
   let
     id = await db.getId(req.body.username),
-    followings = await db.query('SELECT * FROM follow_system WHERE follow_by=? ORDER BY follow_time DESC', [id])
+    followings = await db.query('SELECT * FROM follow_system WHERE follow_by=? AND confirmed=1 ORDER BY follow_time DESC', [id])
   res.json(followings)
 })
 
 // GET NO OF FOLLOWERS
 app.post('/no-of-followers', async (req, res) => {
   let [{ count }] = await db.query(
-    'SELECT COUNT(follow_id) AS count FROM follow_system WHERE follow_to=?',
+    'SELECT COUNT(follow_id) AS count FROM follow_system WHERE follow_to=? AND confirmed=1',
     [ req.body.user ]
   )
   res.json(count)

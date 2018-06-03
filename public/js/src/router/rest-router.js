@@ -19,7 +19,7 @@ export const home = {
       path: 'create-post-home',
       name: 'create-post-home',
       components: {
-        'create-post': CreatePost,
+        'create-post-home': CreatePost,
         'overlay': Overlay,
       },
       meta: { title: 'Create Post' }
