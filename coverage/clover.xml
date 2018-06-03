@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1528068302833" clover="3.2.0">
+  <project timestamp="1528068302834" name="All files">
+    <metrics statements="573" coveredstatements="2" conditionals="229" coveredconditionals="0" methods="240" coveredmethods="1" elements="1042" coveredelements="3" complexity="0" loc="573" ncloc="573" packages="19" files="52" classes="52">
+      <package name="src">
+        <metrics statements="32" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <file name="main.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/main.js">
+          <metrics statements="30" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
+        </file>
+        <file name="sum.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/sum.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="App.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/App.vue">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.deactivate">
+        <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <file name="deavtivate.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/deactivate/deavtivate.vue">
+          <metrics statements="12" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="15" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.edit_profile">
+        <metrics statements="32" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="10" coveredmethods="0"/>
+        <file name="edit_profile.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/edit_profile/edit_profile.vue">
+          <metrics statements="32" coveredstatements="0" conditionals="20" coveredconditionals="0" methods="10" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="9" count="0" type="cond" truecount="0" falsecount="13"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="47" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="80" count="0" type="stmt"/>
+          <line num="81" count="0" type="stmt"/>
+          <line num="84" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.error">
+        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <file name="error.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/error/error.vue">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.explore">
+        <metrics statements="19" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <file name="explore-list.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/explore/explore-list.vue">
+          <metrics statements="15" coveredstatements="0" conditionals="5" coveredconditionals="0" methods="7" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="35" count="0" type="cond" truecount="0" falsecount="5"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+        </file>
+        <file name="explore.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/explore/explore.vue">
+          <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.follow">
+        <metrics statements="80" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="36" coveredmethods="0"/>
+        <file name="confirmFollower-list.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/follow/confirmFollower-list.vue">
+          <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+        </file>
+        <file name="confirmFollowers.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/follow/confirmFollowers.vue">
+          <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+        </file>
+        <file name="deleteFollower-list.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/follow/deleteFollower-list.vue">
+          <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+        </file>
+        <file name="deleteFollowers.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/follow/deleteFollowers.vue">
+          <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+        </file>
+        <file name="follower-list.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/follow/follower-list.vue">
+          <metrics statements="17" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="8" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
+          <line num="61" count="0" type="cond" truecount="0" falsecount="7"/>
+          <line num="62" count="0" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="65" count="0" type="stmt"/>
+        </file>
+        <file name="followers.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/follow/followers.vue">
+          <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+        </file>
+        <file name="following-list.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/follow/following-list.vue">
+          <metrics statements="19" coveredstatements="0" conditionals="9" coveredconditionals="0" methods="8" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="56" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="66" count="0" type="cond" truecount="0" falsecount="7"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="70" count="0" type="stmt"/>
+        </file>
+        <file name="followings.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/follow/followings.vue">
+          <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.home">
+        <metrics statements="8" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <file name="feeds.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/home/feeds.vue">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+        </file>
+        <file name="home.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/home/home.vue">
+          <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="21" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.others">
+        <metrics statements="14" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <file name="end.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/others/end.vue">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+        </file>
+        <file name="goto.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/others/goto.vue">
+          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+        </file>
+        <file name="header.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/others/header.vue">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+        </file>
+        <file name="nothing.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/others/nothing.vue">
+          <metrics statements="1" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="14" count="0" type="stmt"/>
+        </file>
+        <file name="overlay.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/others/overlay.vue">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="10" count="0" type="stmt"/>
+        </file>
+        <file name="prompt.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/others/prompt.vue">
+          <metrics statements="6" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.post">
+        <metrics statements="85" coveredstatements="0" conditionals="38" coveredconditionals="0" methods="34" coveredmethods="0"/>
+        <file name="create_post.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/post/create_post.vue">
+          <metrics statements="15" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="6" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="12" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="39" count="0" type="stmt"/>
+        </file>
+        <file name="like-list.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/post/like-list.vue">
+          <metrics statements="15" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="8" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="57" count="0" type="cond" truecount="0" falsecount="6"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+        </file>
+        <file name="likes.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/post/likes.vue">
+          <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+        </file>
+        <file name="post.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/post/post.vue">
+          <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="4" count="0" type="stmt"/>
+        </file>
+        <file name="view-post.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/post/view-post.vue">
+          <metrics statements="48" coveredstatements="0" conditionals="26" coveredconditionals="0" methods="16" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="36" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="51" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="53" count="0" type="stmt"/>
+          <line num="54" count="0" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+          <line num="62" count="0" type="stmt"/>
+          <line num="64" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="66" count="0" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="70" count="0" type="stmt"/>
+          <line num="72" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="74" count="0" type="stmt"/>
+          <line num="75" count="0" type="stmt"/>
+          <line num="76" count="0" type="stmt"/>
+          <line num="77" count="0" type="stmt"/>
+          <line num="78" count="0" type="stmt"/>
+          <line num="81" count="0" type="cond" truecount="0" falsecount="6"/>
+          <line num="84" count="0" type="stmt"/>
+          <line num="85" count="0" type="stmt"/>
+          <line num="86" count="0" type="stmt"/>
+          <line num="87" count="0" type="stmt"/>
+          <line num="89" count="0" type="stmt"/>
+          <line num="90" count="0" type="stmt"/>
+          <line num="91" count="0" type="stmt"/>
+          <line num="93" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="94" count="0" type="stmt"/>
+          <line num="95" count="0" type="stmt"/>
+          <line num="96" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components.profile">
+        <metrics statements="31" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="18" coveredmethods="0"/>
+        <file name="banner.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/profile/banner.vue">
+          <metrics statements="19" coveredstatements="0" conditionals="16" coveredconditionals="0" methods="12" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="23" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="38" count="0" type="cond" truecount="0" falsecount="3"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="54" count="0" type="cond" truecount="0" falsecount="5"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
+          <line num="58" count="0" type="cond" truecount="0" falsecount="5"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+        </file>
+        <file name="posts.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/profile/posts.vue">
+          <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+        </file>
+        <file name="profile.vue" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/components/profile/profile.vue">
+          <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.f&d">
+        <metrics statements="11" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <file name="directives.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/f&d/directives.js">
+          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+        </file>
+        <file name="filters.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/f&d/filters.js">
+          <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="cond" truecount="0" falsecount="4"/>
+        </file>
+      </package>
+      <package name="src.mixins">
+        <metrics statements="9" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <file name="module-mixin.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/mixins/module-mixin.js">
+          <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+        </file>
+        <file name="user-mixin.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/mixins/user-mixin.js">
+          <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.router">
+        <metrics statements="25" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="profile-router.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/router/profile-router.js">
+          <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+        </file>
+        <file name="rest-router.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/router/rest-router.js">
+          <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="74" count="0" type="stmt"/>
+        </file>
+        <file name="router.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/router/router.js">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.store">
+        <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="store.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/store.js">
+          <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.store.actions">
+        <metrics statements="38" coveredstatements="0" conditionals="44" coveredconditionals="0" methods="31" coveredmethods="0"/>
+        <file name="explore-a.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/actions/explore-a.js">
+          <metrics statements="4" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="5" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+        </file>
+        <file name="follow-a.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/actions/follow-a.js">
+          <metrics statements="19" coveredstatements="0" conditionals="24" coveredconditionals="0" methods="18" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="5" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="10" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="15" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="20" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="25" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="30" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+        </file>
+        <file name="post-a.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/actions/post-a.js">
+          <metrics statements="7" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="5" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="10" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+        </file>
+        <file name="post-int-a.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/actions/post-int-a.js">
+          <metrics statements="4" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="5" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+        </file>
+        <file name="user-a.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/actions/user-a.js">
+          <metrics statements="4" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="5" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.store.modules">
+        <metrics statements="37" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="23" coveredmethods="0"/>
+        <file name="explore-m.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/modules/explore-m.js">
+          <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+        </file>
+        <file name="follow-m.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/modules/follow-m.js">
+          <metrics statements="16" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+        </file>
+        <file name="post-int-m.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/modules/post-int-m.js">
+          <metrics statements="8" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="16" count="0" type="stmt"/>
+        </file>
+        <file name="post-m.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/modules/post-m.js">
+          <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+        </file>
+        <file name="user-m.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/store/modules/user-m.js">
+          <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="4" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.user-system">
+        <metrics statements="23" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <file name="user-system.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/user-system/user-system.js">
+          <metrics statements="23" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="15" count="0" type="cond" truecount="0" falsecount="6"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="47" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.utils">
+        <metrics statements="106" coveredstatements="0" conditionals="60" coveredconditionals="0" methods="43" coveredmethods="0"/>
+        <file name="functions.js" path="/Users/RachelSophia/CSE112/Vue-Mini-Social-Network/public/js/src/utils/functions.js">
+          <metrics statements="106" coveredstatements="0" conditionals="60" coveredconditionals="0" methods="43" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="22" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="54" count="0" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="60" count="0" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+          <line num="62" count="0" type="stmt"/>
+          <line num="66" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="69" count="0" type="stmt"/>
+          <line num="70" count="0" type="stmt"/>
+          <line num="71" count="0" type="stmt"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="74" count="0" type="stmt"/>
+          <line num="76" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="77" count="0" type="stmt"/>
+          <line num="79" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="80" count="0" type="stmt"/>
+          <line num="82" count="0" type="stmt"/>
+          <line num="83" count="0" type="stmt"/>
+          <line num="84" count="0" type="stmt"/>
+          <line num="85" count="0" type="stmt"/>
+          <line num="86" count="0" type="stmt"/>
+          <line num="87" count="0" type="stmt"/>
+          <line num="91" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="92" count="0" type="stmt"/>
+          <line num="96" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="97" count="0" type="stmt"/>
+          <line num="101" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="102" count="0" type="stmt"/>
+          <line num="103" count="0" type="stmt"/>
+          <line num="107" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="108" count="0" type="stmt"/>
+          <line num="113" count="0" type="stmt"/>
+          <line num="115" count="0" type="stmt"/>
+          <line num="118" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="119" count="0" type="stmt"/>
+          <line num="120" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="121" count="0" type="stmt"/>
+          <line num="122" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="123" count="0" type="stmt"/>
+          <line num="125" count="0" type="stmt"/>
+          <line num="128" count="0" type="stmt"/>
+          <line num="129" count="0" type="stmt"/>
+          <line num="133" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="135" count="0" type="stmt"/>
+          <line num="140" count="0" type="stmt"/>
+          <line num="141" count="0" type="stmt"/>
+          <line num="143" count="0" type="stmt"/>
+          <line num="145" count="0" type="stmt"/>
+          <line num="146" count="0" type="stmt"/>
+          <line num="147" count="0" type="stmt"/>
+          <line num="148" count="0" type="stmt"/>
+          <line num="149" count="0" type="stmt"/>
+          <line num="150" count="0" type="stmt"/>
+          <line num="152" count="0" type="stmt"/>
+          <line num="153" count="0" type="stmt"/>
+          <line num="165" count="0" type="stmt"/>
+          <line num="166" count="0" type="stmt"/>
+          <line num="171" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="173" count="0" type="stmt"/>
+          <line num="177" count="0" type="stmt"/>
+          <line num="178" count="0" type="stmt"/>
+          <line num="192" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="193" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="195" count="0" type="stmt"/>
+          <line num="196" count="0" type="stmt"/>
+          <line num="200" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="202" count="0" type="stmt"/>
+          <line num="204" count="0" type="stmt"/>
+          <line num="214" count="0" type="stmt"/>
+          <line num="215" count="0" type="stmt"/>
+          <line num="218" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="220" count="0" type="stmt"/>
+          <line num="222" count="0" type="stmt"/>
+          <line num="223" count="0" type="stmt"/>
+          <line num="235" count="0" type="stmt"/>
+          <line num="237" count="0" type="stmt"/>
+          <line num="238" count="0" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
