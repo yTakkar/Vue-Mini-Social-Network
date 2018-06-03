@@ -13,8 +13,8 @@
       </div>
     </div>
     <div class='exl_ff'>
-      <a v-if='!is_following' href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
-      <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Unfollow</a>
+      <a v-if='!is_pending' href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
+      <a v-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Pending</a>
     </div>
   </div>
 
@@ -33,7 +33,7 @@ export default {
   data(){
     return {
       imgSrc: `/users/${this.exp.id}/avatar.jpg`,
-      is_following: false,
+      is_pending: false,
       no_of_followers: 0
     }
   },
@@ -43,14 +43,14 @@ export default {
       fn.follow({
         user: id,
         username,
-        done: () => this.is_following = true
+        done: () => this.is_pending = true
       })
     },
     unfollow(){
       let { exp: { id } } = this
       fn.unfollow({
         user: id,
-        done: () => this.is_following = false
+        done: () => this.is_pending = false
       })
     }
   },
@@ -58,7 +58,7 @@ export default {
     let
       { exp, $http } = this,
       no = await fn.noOfFollowers(exp.id)
-    this.is_following = await fn.isFollowing(exp.username)
+    this.is_pending = await fn.isPending(exp.username)
     this.no_of_followers = no
   }
 }

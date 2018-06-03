@@ -93,6 +93,11 @@ export const isFollowing = async username => {
   return data
 }
 
+export const isPending = async username => {
+  let { data } = await post('/api/is-pending', { username })
+  return data
+}
+
 export const isFollowed = async username => {
   let { data } = await post('/api/is-followed', { username })
   console.log(data)
@@ -154,8 +159,8 @@ export const follow = async options => {
       follow_time: data.follow_time,
     }
 
-  update_followers ? commit('FOLLOWER', data) : null
-  update_followings ? commit('FOLLOWING', fwing) : null
+  //update_followers ? commit('FOLLOWER', data) : null
+  //update_followings ? commit('FOLLOWING', fwing) : null
 
   Notify({ value: `Following request for ${username} is pending!!` })
   done()

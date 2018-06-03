@@ -13,6 +13,7 @@
     <transition-group name='fade' >
       <router-view name='create-post' key='create-post' ></router-view>
       <router-view name='confirm-followers' key='confirm-followers' ></router-view>
+      <router-view name='delete-followers' key='delete-followers' ></router-view>
       <router-view name='followers' key='followers' ></router-view>
       <router-view name='followings' key='followings' ></router-view>
     </transition-group>

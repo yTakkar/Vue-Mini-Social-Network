@@ -102,7 +102,6 @@ app.post('/user/login', async (req, res) => {
 
   req.checkBody('username', 'Username is empty!!').notEmpty()
   req.checkBody('password', 'Password field is empty!!').notEmpty()
-  console.log(rusername);
   let errors = await req.getValidationResult()
   if(!errors.isEmpty()) {
     let array = []

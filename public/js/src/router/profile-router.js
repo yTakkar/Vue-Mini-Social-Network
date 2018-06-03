@@ -6,6 +6,7 @@ import Overlay from '../components/others/overlay.vue'
 import Followers from '../components/follow/followers.vue'
 import Followings from '../components/follow/followings.vue'
 import ConfirmFollowers from '../components/follow/confirmFollowers.vue'
+import DeleteFollowers from '../components/follow/deleteFollowers.vue'
 
 export default {
   path: '/profile/:username',
@@ -29,6 +30,15 @@ export default {
         'overlay': Overlay,
       },
       meta: { title: 'Confirm Followers' }
+    },
+    {
+      path: 'delete-followers',
+      name: 'delete-followers',
+      components: {
+        'delete-followers': DeleteFollowers,
+        'overlay': Overlay,
+      },
+      meta: { title: 'Delete Followers' }
     },
     {
       path: 'followers',
