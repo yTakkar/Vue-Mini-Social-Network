@@ -18,7 +18,9 @@ body {
   background: #fbfbfb;
   font-size: 13px;
   color: #3d464d;
-  font-weight: normal; }
+  font-weight: normal;
+  background-image: url('../../images/landingpage.jpg');
+}
 
 a {
   text-decoration: none;
@@ -274,8 +276,8 @@ input[type="submit"],
 input[type="button"],
 .pri_btn {
   font-weight: 600;
-  background: #1b9be9;
-  border: 1px solid #1b9be9;
+  /* background: #1b9be9; */
+  border: 1px solid white;
   /*#3e91b3*/
   color: #fff;
   border-radius: 3px;
@@ -284,6 +286,7 @@ input[type="button"],
   input[type="submit"]:hover,
   input[type="button"]:hover,
   .pri_btn:hover {
+      background: #1b9be9;
     opacity: .9; }
 
 input[type="submit"]:focus,
@@ -612,13 +615,13 @@ background: #fff;
         background: #f7f9fa; }
 
 .header_loggedin {
-  background: #fff;
+  /* background: #fff; */
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   height: 45px;
-  background: white;
+  /* background: white; */
   z-index: 2;
   top: 0px; }
   .header_loggedin a {
@@ -636,7 +639,7 @@ background: #fff;
     display: inline-block;
     position: relative;
     top: 8px;
-    left: 25px; }
+    left: 3%; }
   .header_loggedin .right {
     display: inline-block;
     position: absolute;
@@ -777,9 +780,11 @@ background: #fff;
   display: block;
   font-size: 14px;
   border: 1px solid #f7f5f5;
-  border-radius: 3px;
+  border-radius: 6px;
   margin-bottom: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  border: solid #E6E6E6 1px
+}
   .note:hover {
     border-color: #eee; }
   .note .note_header {
@@ -989,13 +994,13 @@ background: #fff;
 .home {
   position: relative;
   width: 607px;
-  margin-left: 365px;
+  margin: auto;
   margin-bottom: 60px; }
   .home .home_info {
     margin-bottom: 10px;
-    background: #fff;
+    /* background: #fff; */
     padding: 14px 10px;
-    border: 1px solid #f7f5f5;
+    /* border: 1px solid #f7f5f5; */
     border-radius: 3px;
     font-size: 15px; }
     .home .home_info a {
@@ -1009,17 +1014,23 @@ background: #fff;
   text-align: center;
   font-size: 14px;
   margin-top: 10px;
-  color: #66757f;
+  color: white;
   cursor: pointer;
   border-radius: 3px;
   border: 1px solid #fbfbfb; }
   .page_end:hover {
     border: 1px solid #eee; }
 
+.explore{
+    position:relative;
+    width:615px;
+    margin:auto;
+}
+
 .explore .explores {
   display: inline-block;
   width: 615px;
-  margin-left: 365px; }
+  }
   .explore .explores div.explores_list {
     position: relative;
     background: #fff;
