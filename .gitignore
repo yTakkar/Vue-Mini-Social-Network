@@ -1,3 +1,5 @@
 node_modules/
 .vscode/
 .env
+.sass-cache/
+public/styles/dist/styles.css.map
