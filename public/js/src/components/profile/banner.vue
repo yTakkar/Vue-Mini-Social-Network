@@ -7,7 +7,10 @@
     </div>
 
     <div class='user_buttons'>
-      <router-link v-if='me' :to="{ name: 'create-post', params: { username: user.username } }" class='pri_btn' >New Post</router-link>
+      <template v-if='me'>
+        <router-link :to="{ name: 'create-post', params: { username: user.username } }" class='pri_btn' >New Post</router-link>
+        <router-link :to="{ name: 'edit-profile' }" class='pri_btn' >Edit Profile</router-link>
+      </template>
       <template v-else >
         <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Unfollow</a>
         <a v-else href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
