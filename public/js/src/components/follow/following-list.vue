@@ -1,6 +1,6 @@
 <template>
 
-  <div class='modal_items fer_items'>
+  <div v-if='is_on' class='modal_items fer_items'>
     <div class='modal_it_img'>
       <img :src='imgSrc' />
     </div>
@@ -41,7 +41,8 @@ export default {
         name: "profile",
         params: { username: this.following.follow_to_username }
       },
-      is_following: false
+      is_following: false,
+      is_on: true
     }
   },
   computed: {
@@ -76,7 +77,7 @@ export default {
         commit,
         done: () => {
           if(userDetails.id == session.id){
-            location.reload()
+            this.is_on=false
           }else{
             this.is_following = false
           }

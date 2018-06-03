@@ -10,7 +10,7 @@
     <router-view name='overlay' ></router-view>
 
     <transition-group name='fade' >
-      <router-view name='create-post' key='create-post' ></router-view>
+      <router-view name='create-post-home' key='create-post-home' ></router-view>
     </transition-group>
   </div>
 

@@ -83,12 +83,19 @@ export const forProfile = async t => {
     dispatch('getPosts', username)
     dispatch('getFollowers', username)
     dispatch('getFollowings', username)
+    dispatch('getPendings', username)
     dispatch('getViews', username)
   }
 }
 
 export const isFollowing = async username => {
   let { data } = await post('/api/is-following', { username })
+  return data
+}
+
+export const isFollowed = async username => {
+  let { data } = await post('/api/is-followed', { username })
+  console.log(data)
   return data
 }
 
@@ -150,7 +157,7 @@ export const follow = async options => {
   update_followers ? commit('FOLLOWER', data) : null
   update_followings ? commit('FOLLOWING', fwing) : null
 
-  Notify({ value: `Followed ${username}!!` })
+  Notify({ value: `Following request for ${username} is pending!!` })
   done()
 
 }
@@ -183,4 +190,45 @@ export const unfollow = async options => {
   Notify({ value: 'Unfollowed!!' })
   done()
 
+}
+
+export const decline = async options => {
+  let
+    defaults = {
+      user: null,                 // USER TO UNFOLLOW [MUST]
+      done: () => { return }      // FN TO BE EXECUTED WHEN USER IS UNFOLLOWED [MUST]
+    },
+    obj = { ...defaults, ...options },
+    {
+      user,
+      done,
+    } = obj
+
+  await post('/api/decline-pending', { user })
+
+  Notify({ value: 'Declined!!' })
+  done()
+}
+
+export const accept = async options => {
+  let
+    defaults = {
+      user: null,                 // USER TO UNFOLLOW [MUST]
+      commit: () => { return },   // PROVIDE WHEN [UPDATE_FOLLOWERS/UPDATE_FOLLOWINGS]=TRUE
+      done: () => { return }      // FN TO BE EXECUTED WHEN USER IS UNFOLLOWED [MUST]
+    },
+    obj = { ...defaults, ...options },
+    {
+      user,
+      commit,
+      done,
+    } = obj,
+    session = $('.data').data('session')
+
+  await post('/api/accept-pending', { user })
+
+  commit('FOLLOWER', session)
+
+  Notify({ value: 'Accepted!!' })
+  done()
 }

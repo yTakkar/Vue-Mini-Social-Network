@@ -14,7 +14,14 @@ export default {
 
   getFollowers: async ({ commit }, payload) => {
     let { data } = await post('/api/get-followers', { username: payload })
+    console.log("followers")
     commit('GET_FOLLOWERS', data)
+  },
+
+  getPendings: async ({ commit }, payload) => {
+    let { data } = await post('/api/get-pendings', { username: payload })
+    console.log("pending")
+    commit('GET_PENDINGS', data)
   },
 
   getFollowings: async ({ commit }, payload) => {
