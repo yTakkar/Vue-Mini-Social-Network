@@ -1,6 +1,8 @@
 const
   app = require('express').Router(),
   db = require('../config/db')
+  forge = require('node-forge'),
+  rsa = forge.pki.rsa
 
 // TO CHECK IF SESSION FOLLOWING USER
 app.post('/is-following', async (req, res) => {
@@ -24,7 +26,16 @@ app.post('/is-pending', async (req, res) => {
 })
 
 app.post('/accept-pending', async (req, res) => {
-  let { session, body } = req
+  let { session, body } = req,
+  [{publickey:publickey}] = await db.query('SELECT publickey FROM keys_system WHERE user_id=?',[body.user])
+  publickey = forge.pki.publicKeyFromPem(JSON.parse(publickey))
+  let en_key = forge.util.bytesToHex(publickey.encrypt(session.aeskey)),
+    obj = {
+      follow_by: body.user,
+      follow_to: session.id,
+      encryptedkey: en_key
+    }
+  await db.query('INSERT INTO encrypted_keys_system SET ?', [obj])
   await db.query('UPDATE follow_system SET confirmed=1 WHERE follow_to=? AND follow_by=?', [ session.id, body.user ])
   res.json('Confirmed')
 })
@@ -52,12 +63,14 @@ app.post('/follow', async (req, res) => {
 app.post('/unfollow', async (req, res) => {
   let { session, body } = req
   await db.query('DELETE FROM follow_system WHERE follow_by=? AND follow_to=?', [ session.id, body.user ])
+  await db.query('DELETE FROM encrypted_keys_system WHERE follow_by=? AND follow_to=?', [ session.id, body.user ])
   res.json({ mssg: 'Unfollowed!!' })
 })
 
 app.post('/decline-pending', async (req, res) => {
   let { session, body } = req
   await db.query('DELETE FROM follow_system WHERE follow_to=? AND follow_by=?', [ session.id, body.user ])
+  await db.query('DELETE FROM encrypted_keys_system WHERE follow_to=? AND follow_by=?', [ session.id, body.user ])
   res.json({ mssg: 'Unfollowed!!' })
 })
 

@@ -5,6 +5,6 @@ node_modules/
 
 package-lock.json
 public/styles/dist/styles.css.map
-public/users/
+public/users/*
 public/tmp/
 public/js/dist/bundle.js

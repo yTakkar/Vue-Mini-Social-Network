@@ -100,7 +100,6 @@ export const isPending = async username => {
 
 export const isFollowed = async username => {
   let { data } = await post('/api/is-followed', { username })
-  console.log(data)
   return data
 }
 
