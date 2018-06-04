@@ -2,9 +2,9 @@ node_modules/
 .vscode/
 .env
 .sass-cache/
-
+*/.DS_Store
 package-lock.json
 public/styles/dist/styles.css.map
-public/users/
+public/users/*
 public/tmp/
 public/js/dist/bundle.js
