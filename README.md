@@ -3,9 +3,9 @@ A social network centered around user privacy and security!
 
 # Quick liks
 1. [Usage](#usage)
-2. [Common Issues](#common_issues)
-3. [Database Structure](#database_structure)
-4. [Backend Implementation](#backend_implementation)
+2. [Common Issues](#common-issues)
+3. [Database Structure](#database-structure)
+4. [Backend Implementation](#backend-implementation)
 
 # Usage
 1. First install all dependencies:
