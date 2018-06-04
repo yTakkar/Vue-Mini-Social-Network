@@ -6,7 +6,9 @@
   "scripts": {
     "start": "nodemon app.js",
     "dev": "webpack -d --watch",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "test": "jest",
+    "testCoverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -58,9 +60,21 @@
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-plugin-vue": "^3.14.0",
+    "jest": "^23.1.0",
     "vue": "^2.5.16",
     "vue-loader": "^14.2.3",
     "vue-template-compiler": "^2.5.16",
     "webpack-cli": "^3.0.0"
+  },
+  "jest":{
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor",
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "collectCoverageFrom": ["public/js/src/**/*"]
   }
 }
