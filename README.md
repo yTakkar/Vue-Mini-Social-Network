@@ -23,7 +23,7 @@ A social network centered around user privacy and security!
    - Install the mysql cli using `brew install mysql`
    - Import the database from db.sql. You can run the command whenever you want to reset the database
       ```bash
-      $ mysql -u username -p peterbook < db.sql
+      $ mysql -u username -p < db.sql
       ```
 
 
