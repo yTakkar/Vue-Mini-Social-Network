@@ -9,7 +9,7 @@
       <End />
     </template>
 
-    <Nothing v-if='feeds.length == 0' mssg="like you're new, Follow some to fill up your feed!!" />
+    <Nothing v-if='feeds.length == 0' mssg="Welcome to Peterbook. Your feed is currently empty. Follow someone to securely share information!" />
 
   </div>
 

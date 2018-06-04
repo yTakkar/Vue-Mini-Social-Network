@@ -6,7 +6,7 @@
       <router-link :to='{ name: "create-post-home", params: { username: session.username } }' class='pri_btn'>New Post</router-link>
     </div>
     <Feeds />
-    <Ad />
+    <Ad class='ad-container'/>
 
     <router-view name='overlay' ></router-view>
 
