@@ -34,7 +34,6 @@ export default {
   },
   computed: {
     followers(){
-      console.log(this.f.followers)
       return this.f.followers
     }
   },

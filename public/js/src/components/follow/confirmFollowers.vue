@@ -34,7 +34,6 @@ export default {
   },
   computed: {
     pendings(){
-      console.log(this.f.pendings)
       return this.f.pendings
     }
   },

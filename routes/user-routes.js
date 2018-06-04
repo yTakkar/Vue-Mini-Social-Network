@@ -5,7 +5,10 @@ const
   mw = require('../config/middlewares'),
   fs = require('fs'),
   dir = process.cwd(),
-  { DeleteAllOfFolder } = require('handy-image-processor')
+  { DeleteAllOfFolder } = require('handy-image-processor'),
+  forge = require('node-forge'),
+  rsa = forge.pki.rsa
+
 
 app.get('/signup', mw.NotLoggedIn, (req, res) => {
   let options = { title: 'Signup For Free' }
@@ -27,7 +30,6 @@ app.post('/user/signup', async (req, res) => {
     body: { username, email, password, password_again },
     session
   } = req
-
   req.checkBody('username', 'Username is empty!!').notEmpty()
   req.checkBody('username', 'Username must contain only leters').isAlpha()
   req.checkBody('username', 'Username must be greater than 4').isLength({ min: 4 })
@@ -82,11 +84,36 @@ app.post('/user/signup', async (req, res) => {
 
       session.id = insertId
       session.username = username
-
-      res.json({
-        mssg: `Hello, ${username}!!`,
-        success: true
-      })
+      rsa.generateKeyPair({bits: 1024, workers: -1}, function(err, keypair) {
+        let key = forge.util.createBuffer((password+"1qaz2wsx3edc4rfv").substr(0, 16)),
+          pubKey = keypair.publicKey,
+          priKey = keypair.privateKey,
+          cipher = forge.cipher.createCipher('AES-ECB', key),
+          pub = JSON.stringify(forge.pki.publicKeyToPem(pubKey)),
+          pri = JSON.stringify(forge.pki.privateKeyToPem(priKey)),
+          aeskey = forge.random.getBytesSync(16),
+          en_aeskey = forge.util.bytesToHex(pubKey.encrypt(aeskey))
+        cipher.start()
+        cipher.update(forge.util.createBuffer(pri))
+        cipher.finish()
+        privatekey = cipher.output.toHex()
+        let 
+          obj={
+          user_id: insertId,
+          publickey: pub,
+          privatekey: privatekey,
+          aeskey: en_aeskey
+        }
+        session.pubkey = pub
+        session.prikey = pri
+        session.aeskey = aeskey
+        db.query("INSERT INTO keys_system SET ?", obj)
+        
+        res.json({
+          mssg: `Hello, ${username}!!`,
+          success: true
+        })
+      });
 
     }
 
@@ -124,12 +151,27 @@ app.post('/user/login', async (req, res) => {
 
         session.id = id
         session.username = rusername
+        let obj = await db.query(
+          'SELECT publickey, privatekey, aeskey FROM keys_system WHERE user_id= ?', 
+          [id]
+        ),
+        [{ publickey: pubKey, privatekey: priKey, aeskey: aesKey }] = obj,
+          key = forge.util.createBuffer((rpassword+"1qaz2wsx3edc4rfv").substr(0, 16)),
+          decipher = forge.cipher.createDecipher('AES-ECB', key)
 
+        decipher.start()
+        decipher.update(forge.util.createBuffer(forge.util.hexToBytes(priKey)))
+        decipher.finish()
+        session.prikey = decipher.output.toString()
+        priKey = forge.pki.privateKeyFromPem(JSON.parse(session.prikey))
+        
+        aesKey = priKey.decrypt(forge.util.hexToBytes(aesKey))
+        session.pubkey = pubKey
+        session.aeskey = aesKey
         res.json({
           mssg: `Hello, ${rusername}!!`,
           success: true
         })
-
       }
     }
 
@@ -151,7 +193,9 @@ app.post('/api/deactivate', async (req, res) => {
   notes.map(n => db.query('DELETE FROM likes WHERE post_id=?', [n.note_id]))
   await db.query('DELETE FROM posts WHERE user=?', [id])
   await db.query('DELETE FROM users WHERE id=?', [id])
-
+  await db.query('DELETE FROM keys_system WHERE user_id=?', [id])
+  await db.query('DELETE FROM encrypted_keys_system WHERE follow_to=?', [id])
+  await db.query('DELETE FROM encrypted_keys_system WHERE follow_by=?', [id])
   await DeleteAllOfFolder(`${dir}/public/users/${id}/`)
   await rmdir(`${dir}/public/users/${id}/`)
 
