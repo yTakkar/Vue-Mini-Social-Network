@@ -15,8 +15,7 @@ Vue.filter('to-uppercase', value =>
 
 // Slice filter
 Vue.filter('slice', value => {
-  let
-    len = value.length,
-    max = 200
+  let len = value.length
+  let max = 200
   return len > max ? `${value.substr(0, max - 2)}..` : len <= max ? value : null
 })

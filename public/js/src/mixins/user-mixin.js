@@ -3,22 +3,22 @@
 export default {
   computed: {
 
-    user() {
+    user () {
       return this.$store.state.user.userDetails
     },
 
-    session() {
+    session () {
       return this.$store.state.user.session
     },
 
     // returns user's avatar
-    imgSrc(){
+    imgSrc () {
       return `/users/${this.user.id}/avatar.jpg`
     },
 
     // returns boolean if it's me
-    me(){
-      return this.session.id == this.user.id
+    me () {
+      return this.session.id === this.user.id
     }
 
   }

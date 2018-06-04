@@ -10,6 +10,6 @@ export default {
   getFeeds: async ({ commit }) => {
     let { data } = await post('/api/get-feeds')
     commit('GET_FEEDS', data)
-  },
+  }
 
 }
