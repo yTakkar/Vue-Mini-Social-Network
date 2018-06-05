@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1528160049340" clover="3.2.0">
-  <project timestamp="1528160049340" name="All files">
+<coverage generated="1528176894291" clover="3.2.0">
+  <project timestamp="1528176894291" name="All files">
     <metrics statements="573" coveredstatements="2" conditionals="229" coveredconditionals="0" methods="240" coveredmethods="1" elements="1042" coveredelements="3" complexity="0" loc="573" ncloc="573" packages="19" files="52" classes="52">
       <package name="src">
         <metrics statements="35" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
@@ -10,35 +10,35 @@
           <line num="5" count="0" type="stmt"/>
           <line num="6" count="0" type="stmt"/>
           <line num="7" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
           <line num="10" count="0" type="stmt"/>
-          <line num="11" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
           <line num="14" count="0" type="stmt"/>
           <line num="15" count="0" type="stmt"/>
           <line num="16" count="0" type="stmt"/>
-          <line num="17" count="0" type="stmt"/>
+          <line num="19" count="0" type="stmt"/>
           <line num="20" count="0" type="stmt"/>
           <line num="21" count="0" type="stmt"/>
           <line num="22" count="0" type="stmt"/>
           <line num="23" count="0" type="stmt"/>
           <line num="24" count="0" type="stmt"/>
-          <line num="25" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
           <line num="28" count="0" type="stmt"/>
-          <line num="29" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
           <line num="32" count="0" type="stmt"/>
           <line num="33" count="0" type="stmt"/>
-          <line num="34" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
           <line num="37" count="0" type="stmt"/>
           <line num="38" count="0" type="stmt"/>
           <line num="39" count="0" type="stmt"/>
           <line num="40" count="0" type="stmt"/>
           <line num="41" count="0" type="stmt"/>
-          <line num="42" count="0" type="stmt"/>
-          <line num="45" count="0" type="stmt"/>
-          <line num="51" count="0" type="stmt"/>
-          <line num="56" count="0" type="stmt"/>
-          <line num="59" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="60" count="0" type="stmt"/>
-          <line num="65" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
         </file>
         <file name="sum.js" path="/Users/mikey/Desktop/SpeakEasy/public/js/src/sum.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

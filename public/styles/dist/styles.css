@@ -24,7 +24,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #2895F1;
+  color:white;
   outline: none; }
 
 .a_disabled {
@@ -562,11 +562,65 @@ select {
     font-weight: bold;
 }
 
-#tagline{
-    width: 50vw;
+#tagline_wrapper{
+    position:relative;
+    width: 35vw;
     float: left;
+    top:40%;
+    left: 10%;
+}
+
+#tagline{
     font-size: 3em;
-    /* border: solid black 1px; */
+}
+
+.tagline_button{
+    margin-left: 5%;
+    float:left;
+    background-color: #279DE6;
+    border-radius: 50px;
+    height:50px;
+    width:150px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 1.3em;
+}
+
+.tagline_button:hover{
+    transition: background-color .3s ease-in-out;
+    cursor: pointer;
+    background-color: #4FA9DD;
+}
+
+#subtag{
+    font-size: 1.5em;
+}
+
+#main_points_wrapper{
+    position:relative;
+    width: 37vw;
+    height: 60vh;
+    float: right;
+    right: 7%;
+    top:20%;
+    /* border:solid black 1px; */
+    border-radius: 50px;
+    background-color: rgba(255,255,255, 0.3);
+    font-size: 1.5em;
+}
+
+#main_points_wrapper p{
+    margin-top: 15%;
+    margin-left: 25px;
+    margin-right: 50px;
+}
+
+#main_points_wrapper img{
+    margin-right: 30px;
+    height:60px;
+    width:60px;
+    float:left;
 }
 
 .bold{
