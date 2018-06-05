@@ -638,7 +638,7 @@ select {
 .right {
     float: right;
     position: relative;
-    right: 70px;
+    right: 1%;
     top: 21px;
 }
 
@@ -648,7 +648,7 @@ outline: none;
 padding: 4px 16px;
 border-radius: 3px;
 font-size: 14px;
-margin-right: 20px;
+/* margin-right: 20px; */
 color: #fff;
 /* background: #fff; */
 }
@@ -681,24 +681,24 @@ color: #fff;
       border:solid #fff 1px;
     font-size: 14px;
     color: #fff;
-    margin-left: 25px;
     padding: 0px 12px;
     border-radius: 3px;
     display: inline-block; }
     .header_loggedin a:hover {
-      background: #f7f9fa; }
+      background: #D2958D; }
     .header_loggedin a:focus {
       background: #f7f9fa; }
   .header_loggedin .left {
     display: inline-block;
     position: relative;
     /* top: 8px; */
-    left: 2%; }
+    left: 1%;
+ }
   .header_loggedin .right {
     display: inline-block;
-    position: absolute;
     top: 0px;
-    right: 3%; }
+    /* right: 1%; */
+}
 
 .display_text {
   text-align: center;
