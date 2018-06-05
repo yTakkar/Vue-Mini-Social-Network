@@ -1,7 +1,6 @@
 <template>
 
   <div class='feeds_wrapper'>
-
     <template v-if='feeds.length > 0'>
       <template v-for='feed in feeds'>
         <Post :key='feed.post_id' :post='feed' />
