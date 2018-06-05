@@ -717,7 +717,7 @@ color: #fff;
     font-size: 14px; }
 
 .ha_active {
-  border: solid #FEDD32 1px;
+    box-shadow: 2px 2px;
  }
 
 .cua {
