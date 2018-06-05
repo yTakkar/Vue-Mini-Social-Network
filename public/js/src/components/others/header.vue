@@ -7,8 +7,7 @@
       <router-link to='/deactivate' active-class='ha_active' >Deactivate</router-link>
     </div>
     <div class='right'>
-      <router-link :to='{ name: "edit-profile" }' active-class='ha_active' >Edit Profile</router-link>
-      <router-link :to="{ name: 'profile', params: { username: session.username } }" active-class='ha_active' >Profile</router-link>
+        <router-link :to="{ name: 'profile', params: { username: session.username } }" active-class='ha_active'>Profile</router-link>
       <a href='/logout'>Logout</a>
     </div>
   </div>

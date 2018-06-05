@@ -2,10 +2,17 @@
 
   <div class='home'>
     <div class='home_info'>
-      <span>{{ feeds_len }} Feeds</span>
-      <router-link :to='{ name: "create-post", params: { username: session.username } }' class='pri_btn'>New Post</router-link>
+      <h2>Your Feed</h2>
+      <!-- <span>{{ feeds_len }} Feeds</span> -->
+      <router-link :to='{ name: "create-post-home", params: { username: session.username } }' class='pri_btn'>Create Post</router-link>
     </div>
     <Feeds />
+
+    <router-view name='overlay' ></router-view>
+
+    <transition-group name='fade' >
+      <router-view name='create-post-home' key='create-post-home' ></router-view>
+    </transition-group>
   </div>
 
 </template>

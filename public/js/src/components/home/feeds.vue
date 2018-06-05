@@ -1,7 +1,9 @@
 <template>
 
   <div class='feeds_wrapper'>
-
+    <ui-alert @dismiss="showAlert1 = false" v-show="showAlert1">
+       Hi everybody! This is the default alert.
+    </ui-alert>
     <template v-if='feeds.length > 0'>
       <template v-for='feed in feeds'>
         <Post :key='feed.post_id' :post='feed' />

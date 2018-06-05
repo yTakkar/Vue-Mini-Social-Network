@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- lts/*
+script:
+  - "npm run build"
+notifications:
+   slack: "cse112sp18-team11:ilCzWpGFGum0jG5mnR6jJ0iD#notifications"
+cache:
+  directories:
+  - node_modules

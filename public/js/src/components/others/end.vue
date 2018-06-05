@@ -10,7 +10,7 @@ import $ from 'jquery'
 export default {
   props: {
     mssg: {
-      default: 'Looks like you\'ve reached the end',
+      default: "There aren't any more posts in your feed!",
       type: String
     }
   },

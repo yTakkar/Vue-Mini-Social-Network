@@ -1,6 +1,8 @@
 const
   app = require('express').Router(),
   db = require('../config/db')
+  forge = require('node-forge'),
+  rsa = forge.pki.rsa
 
 // TO CHECK IF SESSION FOLLOWING USER
 app.post('/is-following', async (req, res) => {
@@ -13,6 +15,31 @@ app.post('/is-following', async (req, res) => {
   res.json(is)
 })
 
+app.post('/is-pending', async (req, res) => {
+  let {
+      body: { username },
+      session: { id: session }
+    } = req,
+    id = await db.getId(username),
+    is = await db.isPending(session, id)
+  res.json(is)
+})
+
+app.post('/accept-pending', async (req, res) => {
+  let { session, body } = req,
+  [{publickey:publickey}] = await db.query('SELECT publickey FROM keys_system WHERE user_id=?',[body.user])
+  publickey = forge.pki.publicKeyFromPem(JSON.parse(publickey))
+  let en_key = forge.util.bytesToHex(publickey.encrypt(session.aeskey)),
+    obj = {
+      follow_by: body.user,
+      follow_to: session.id,
+      encryptedkey: en_key
+    }
+  await db.query('INSERT INTO encrypted_keys_system SET ?', [obj])
+  await db.query('UPDATE follow_system SET confirmed=1 WHERE follow_to=? AND follow_by=?', [ session.id, body.user ])
+  res.json('Confirmed')
+})
+
 app.post('/follow', async (req, res) => {
   let
     { user, username } = req.body,
@@ -23,6 +50,7 @@ app.post('/follow', async (req, res) => {
       follow_to: user,
       follow_to_username: username,
       follow_time: new Date().getTime(),
+      confirmed: false,
     },
     { insertId } = await db.query('INSERT INTO follow_system SET ?', insert)
 
@@ -35,6 +63,14 @@ app.post('/follow', async (req, res) => {
 app.post('/unfollow', async (req, res) => {
   let { session, body } = req
   await db.query('DELETE FROM follow_system WHERE follow_by=? AND follow_to=?', [ session.id, body.user ])
+  await db.query('DELETE FROM encrypted_keys_system WHERE follow_by=? AND follow_to=?', [ session.id, body.user ])
+  res.json({ mssg: 'Unfollowed!!' })
+})
+
+app.post('/decline-pending', async (req, res) => {
+  let { session, body } = req
+  await db.query('DELETE FROM follow_system WHERE follow_to=? AND follow_by=?', [ session.id, body.user ])
+  await db.query('DELETE FROM encrypted_keys_system WHERE follow_to=? AND follow_by=?', [ session.id, body.user ])
   res.json({ mssg: 'Unfollowed!!' })
 })
 
@@ -42,7 +78,14 @@ app.post('/unfollow', async (req, res) => {
 app.post('/get-followers', async (req, res) => {
   let
     id = await db.getId(req.body.username),
-    followers = await db.query('SELECT * FROM follow_system WHERE follow_to=? ORDER BY follow_time DESC', [ id ])
+    followers = await db.query('SELECT * FROM follow_system WHERE follow_to=? AND confirmed=1 ORDER BY follow_time DESC', [ id ])
+  res.json(followers)
+})
+
+app.post('/get-pendings', async (req, res) => {
+  let
+    id = await db.getId(req.body.username),
+    followers = await db.query('SELECT * FROM follow_system WHERE follow_to=? AND confirmed=0 ORDER BY follow_time DESC', [ id ])
   res.json(followers)
 })
 
@@ -50,14 +93,14 @@ app.post('/get-followers', async (req, res) => {
 app.post('/get-followings', async (req, res) => {
   let
     id = await db.getId(req.body.username),
-    followings = await db.query('SELECT * FROM follow_system WHERE follow_by=? ORDER BY follow_time DESC', [id])
+    followings = await db.query('SELECT * FROM follow_system WHERE follow_by=? AND confirmed=1 ORDER BY follow_time DESC', [id])
   res.json(followings)
 })
 
 // GET NO OF FOLLOWERS
 app.post('/no-of-followers', async (req, res) => {
   let [{ count }] = await db.query(
-    'SELECT COUNT(follow_id) AS count FROM follow_system WHERE follow_to=?',
+    'SELECT COUNT(follow_id) AS count FROM follow_system WHERE follow_to=? AND confirmed=1',
     [ req.body.user ]
   )
   res.json(count)
