@@ -224,11 +224,14 @@ li {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.1s ease-out; }
+  transition: opacity .2s ease-out;
+ }
 
 .fade-enter,
 .fade-leave-to {
-  opacity: 0; }
+  opacity: 0;
+  height:0px;
+ }
 
 input[type="range"] {
   outline: none; }
