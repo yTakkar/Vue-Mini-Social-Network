@@ -683,7 +683,9 @@ color: #fff;
     color: #fff;
     padding: 0px 12px;
     border-radius: 3px;
-    display: inline-block; }
+    display: inline-block;
+    margin-left: 5px;
+ }
     .header_loggedin a:hover {
       background: #D2958D; }
     .header_loggedin a:focus {
