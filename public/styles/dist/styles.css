@@ -973,7 +973,7 @@ color: #fff;
 .edit {
   position: relative;
   width: 400px;
-  left: 490px;
+  margin:auto;
   font-size: 14px; }
   .edit > * {
     display: block;
