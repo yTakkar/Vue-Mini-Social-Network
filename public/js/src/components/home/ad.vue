@@ -1,7 +1,7 @@
 <template>
   <div class='ad'>
     <img :src='imagePath' width="250px" height="250px"/>
-    <p>Advertisement</p>
+    <p><a>Advertise Here!</a></p>
   </div>
 </template>
 
@@ -19,6 +19,8 @@ export default {
 <style scoped>
   .ad {
     background-color: white;
-    width: 250px
+    width: 250px;
+    position: relative;
+    left: 780px;
   }
 </style>
