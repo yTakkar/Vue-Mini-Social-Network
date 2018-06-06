@@ -2,9 +2,7 @@
 
   <div class='header_loggedin'>
     <div class='left'>
-      <router-link to='/' :exact='true' active-class='ha_active'><ui-icon>home</ui-icon>Home</router-link>
-      <router-link to='/explore' active-class='ha_active' ><ui-icon>public</ui-icon>Explore</router-link>
-      <router-link to='/deactivate' active-class='ha_active' ><ui-icon>delete_forever</ui-icon>Deactivate</router-link>
+      <sidebar style="display: inline"/>
     </div>
     <div class='right'>
         <router-link :to="{ name: 'publish', params: { username: session.username }}" active-class="ha_active">SpeakEasy Ads</router-link>
@@ -17,8 +15,12 @@
 
 <script>
 import userMixin from '../../mixins/user-mixin'
+import Sidebar from './sidebar.vue'
 
 export default {
+  components: {
+    'sidebar': Sidebar
+  },
   mixins: [userMixin]
 }
 </script>
