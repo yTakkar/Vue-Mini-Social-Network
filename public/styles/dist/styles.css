@@ -11,8 +11,9 @@
 
 html {
     font-size: 100%;
-    overflow: overlay;
     min-height: 100vh;
+    overflow: hidden;
+    height: 100%;
 }
 
 .ui-alert--type-info .ui-alert__body {
@@ -30,6 +31,8 @@ body {
   font-weight: normal;
   /* background-image: url('../../images/landingpage.jpg'); */
   background: linear-gradient(to bottom right, #F8858B, #FCCA5C);
+  height: 100%;
+    overflow: auto;
 }
 
 a {
@@ -686,7 +689,7 @@ color: #fff;
   height: 55px;
   /* background: white; */
   z-index: 2;
-  top: 10px; 
+  top: 10px;
 }
   .header_loggedin a {
       line-height: 50px;
