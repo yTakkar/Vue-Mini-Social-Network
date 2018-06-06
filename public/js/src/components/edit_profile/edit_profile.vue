@@ -25,7 +25,7 @@
       <a href='#' class='pri_btn e_done ep_done' @click.prevent='editProfile' >Done editing</a>
     </div>
     <div class='e_joined'>
-      <span>You joined Notes App {{ user.joined | timeAgo }}</span>
+      <span>You joined SpeakEasy {{ user.joined | timeAgo }}</span>
     </div>
 
   </div>

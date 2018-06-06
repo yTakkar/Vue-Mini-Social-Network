@@ -47,7 +47,15 @@ const getId = username => {
 
 const isFollowing = (session, user) => {
   return new Promise((resolve, reject) => {
-    query('SELECT COUNT(follow_id) AS is_following FROM follow_system WHERE follow_by=? AND follow_to=? LIMIT 1', [session, user])
+    query('SELECT COUNT(follow_id) AS is_following FROM follow_system WHERE follow_by=? AND follow_to=? AND confirmed=1 LIMIT 1', [session, user])
+      .then(is => resolve((is[0].is_following == 1) ? true : false))
+      .catch(e => reject(e))
+  })
+}
+
+const isPending = (session, user) => {
+  return new Promise((resolve, reject) => {
+    query('SELECT COUNT(follow_id) AS is_following FROM follow_system WHERE follow_by=? AND follow_to=? AND confirmed=0 LIMIT 1', [session, user])
       .then(is => resolve((is[0].is_following == 1) ? true : false))
       .catch(e => reject(e))
   })
@@ -59,4 +67,5 @@ module.exports = {
   comparePassword,
   getId,
   isFollowing,
+  isPending,
 }
