@@ -72,12 +72,12 @@ CREATE TABLE `posts` (
   `username` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
+  `img_id` text DEFAULT '',
   `post_created` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `posts`
---
 -- --------------------------------------------------------
 
 --

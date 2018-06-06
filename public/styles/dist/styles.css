@@ -879,20 +879,29 @@ color: #fff;
         top: -1px; }
   .note .note_title, .note .note_content {
     color: #1b2733; }
+  .note .note_photo{
+    width: 100%;
+  }
   .note .note_title {
     margin-bottom: 4px;
     font-weight: 600; }
 
 .create_note {
   width: 380px; }
-  .create_note input[type='text'], .create_note textarea {
+  .create_note input[type='text'], .create_note textarea, .create_note input[type='file'] {
     padding: 7px !important;
     width: 94%;
     font-size: 14px; }
-  .create_note input[type="text"] {
+  .create_note input[type='text'] {
     margin-bottom: 9px; }
   .create_note textarea {
     height: 250px; }
+  .create_note input[type='file'] {
+    height: 30px;
+    opacity: 1;
+    position: relative;
+    z-index: 0;
+  }
   .create_note .c_n_bottom {
     margin-top: 1px; }
     .create_note .c_n_bottom input[type='submit'] {
