@@ -1,7 +1,9 @@
 <template>
 
   <div class='feeds_wrapper'>
-
+    <ui-alert @dismiss="showAlert1 = false" v-show="showAlert1">
+       Hi! Welcome to SpeakEasy, your private network!
+    </ui-alert>
     <template v-if='feeds.length > 0'>
       <template v-for='feed in feeds'>
         <Post :key='feed.post_id' :post='feed' />
@@ -19,6 +21,16 @@
 import moduleMixin from '../../mixins/module-mixin'
 
 export default {
+    data() {
+        return {
+            showAlert1: true,
+        };
+    },
+    methods: {
+        resetAlerts() {
+            this.showAlert1 = true;
+        }
+    },
   mixins: [
     moduleMixin
   ],

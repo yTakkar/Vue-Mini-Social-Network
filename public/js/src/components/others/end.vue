@@ -1,6 +1,6 @@
 <template>
   <div class='page_end' @click='ToTop'>
-    <span>{{ mssg }}</span>
+    <span><ui-icon>arrow_upward</ui-icon>{{ mssg }}</span>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import $ from 'jquery'
 export default {
   props: {
     mssg: {
-      default: "There aren't any more posts in your feed!",
+      default: "   There aren't any more posts in your feed!",
       type: String
     }
   },

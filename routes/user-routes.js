@@ -76,8 +76,9 @@ app.post('/user/signup', async (req, res) => {
         },
         { insertId } = await db.create_user(newUser),
         mkdir = promisify(fs.mkdir)
-
-      await mkdir(dir + `/public/users/${insertId}`)
+      if(!fs.existsSync(dir + `/public/users/${insertId}`)){
+        await mkdir(dir + `/public/users/${insertId}`)
+      }
       fs
         .createReadStream(dir + '/public/images/spacecraft.jpg')
         .pipe(fs.createWriteStream(dir + `/public/users/${insertId}/avatar.jpg`))
