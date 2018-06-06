@@ -11,6 +11,16 @@
 
 html {
     font-size: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    height: 100%;
+}
+
+.ui-alert--type-info .ui-alert__body {
+  font-family: "Open Sans", "Roboto", Tahoma, arial, sans-serif;
+  background-color: rgba(33, 150, 243, 0.12);
+  border-radius: 8px;
+  color:white;
 }
 
 body {
@@ -19,7 +29,10 @@ body {
   font-size: 13px;
   color: #3d464d;
   font-weight: normal;
-  background-image: url('../../images/landingpage.jpg');
+  /* background-image: url('../../images/landingpage.jpg'); */
+  background: linear-gradient(to bottom right, #F8858B, #FCCA5C);
+  height: 100%;
+    overflow: auto;
 }
 
 a {
@@ -669,14 +682,15 @@ color: #fff;
 
 .header_loggedin {
   /* background: #fff; */
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  /* -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); */
+  /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); */
   position: fixed;
   width: 100%;
   height: 55px;
   /* background: white; */
   z-index: 2;
-  top: 0px; }
+  top: 10px;
+}
   .header_loggedin a {
       line-height: 50px;
       height:50px;
@@ -1082,6 +1096,7 @@ color: #fff;
 .explore .explores {
   display: inline-block;
   width: 615px;
+  margin-top: 6%;
   }
   .explore .explores div.explores_list {
     position: relative;
