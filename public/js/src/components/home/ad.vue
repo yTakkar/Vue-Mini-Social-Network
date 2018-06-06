@@ -1,7 +1,7 @@
 <template>
   <div class='ad'>
     <img :src='imagePath' width="250px" height="250px"/>
-    <p><a>Advertise Here!</a></p>
+    <p><a style="color: black;" href="/publish">Advertise Here!</a></p>
   </div>
 </template>
 
