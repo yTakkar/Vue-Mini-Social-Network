@@ -1,7 +1,7 @@
 <template>
   <div>
-    <app-header />
-    <div class='notes_wrapper'>
+    <app-header/>
+    <div class='notes_wrapper' style="margin-top: 50px">
       <transition name='fade' >
         <router-view></router-view>
       </transition>
@@ -11,7 +11,6 @@
 
 <script>
 import Header from './others/header.vue'
-
 export default {
   components: {
     'app-header': Header

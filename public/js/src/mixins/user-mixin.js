@@ -19,6 +19,10 @@ export default {
     // returns boolean if it's me
     me(){
       return this.session.id == this.user.id
+    },
+
+    myImgSrc(){
+      return `/users/${this.session.id}/avatar.jpg`
     }
 
   }

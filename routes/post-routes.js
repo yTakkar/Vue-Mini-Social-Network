@@ -5,15 +5,18 @@ const
 // FOR GETTING ALL THE USER POSTS
 app.post('/get-posts', async (req, res) => {
   let
+    session = req.session.id,
     id = await db.getId(req.body.username),
+    [{count}] = await db.query('SELECT COUNT(confirmed) AS count FROM follow_system WHERE follow_by = ? AND follow_to = ? AND confirmed=1',[session,id]),
     posts = await db.query('SELECT * FROM posts WHERE user = ? ORDER BY post_id DESC', [id])
+  posts=count==0&&session!=id?[]:posts
   res.json(posts)
 })
 
 // GET ALL FEEDS
 app.post('/get-feeds', async (req, res) => {
   let feed = await db.query(
-    'SELECT posts.post_id, posts.user, posts.username, posts.title, posts.content, posts.post_created FROM posts, follow_system WHERE follow_system.follow_by = ? AND follow_system.follow_to = posts.user ORDER BY posts.post_created DESC',
+    'SELECT posts.post_id, posts.user, posts.username, posts.title, posts.content, posts.post_created FROM posts, follow_system WHERE follow_system.follow_by = ? AND follow_system.follow_to = posts.user AND follow_system.confirmed = true ORDER BY posts.post_created DESC',
     [req.session.id]
   )
   res.json(feed)
