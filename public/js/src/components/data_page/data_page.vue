@@ -5,7 +5,7 @@
       <div class='user_banner' padding='10px'>
         <h2> Your Data Page </h2>
         <div class='user_bio'>
-          This is all the data SpeakEasy has on you. If you delete it here it is gone for good.
+          This is all the information you have posted throughout SpeakEasy in one simple place. <br/> Here you can edit or delete your information as you see fit.
         </div>
         <div class='profile_img_div'>
           <img :src='imgSrc' alt='Your Data Page' >
