@@ -9,6 +9,7 @@ import Overlay from '../components/others/overlay.vue'
 import EditProfile from '../components/edit_profile/edit_profile.vue'
 import Deactivate from '../components/deactivate/deavtivate.vue'
 import CreatePost from '../components/post/create_post.vue'
+import PublishAds from '../components/ads/publish.vue'
 
 export const home = {
   path: '/',
@@ -69,6 +70,13 @@ export const deactivate = {
   name: 'deactivate',
   component: Deactivate,
   meta: { title: 'Deactivate your account' }
+}
+
+export const createAd = {
+  path: '/publish',
+  name: 'publish',
+  component: PublishAds,
+  meta: { title: 'Ads on SpeakEasy'}
 }
 
 export const notFound = {

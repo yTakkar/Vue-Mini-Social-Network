@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/yTakkar/Vue-Mini-Social-Network#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
     "axios": "^0.16.1",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.3",

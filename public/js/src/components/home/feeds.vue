@@ -11,7 +11,7 @@
       <End />
     </template>
 
-    <Nothing v-if='feeds.length == 0' mssg="Looks like you're new, Follow some to fill up your feed!!" />
+    <Nothing v-if='feeds.length == 0' mssg="Welcome to Speakeasy. Your feed is currently empty. Follow someone to securely share information!" />
 
   </div>
 
