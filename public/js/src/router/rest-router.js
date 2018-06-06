@@ -76,7 +76,7 @@ export const createAd = {
   path: '/publish',
   name: 'publish',
   component: PublishAds,
-  meta: { title: 'Display your own Ads on SpeakEasy!'}
+  meta: { title: 'Ads on SpeakEasy'}
 }
 
 export const notFound = {
