@@ -1,3 +1,12 @@
 node_modules/
+coverage/
 .vscode/
 .env
+.sass-cache/
+public/users/
+*/.DS_Store
+package-lock.json
+public/styles/dist/styles.css.map
+public/tmp/
+public/js/dist/bundle.js
+sendgrid.env

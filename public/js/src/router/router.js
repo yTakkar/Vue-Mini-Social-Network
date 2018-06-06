@@ -9,6 +9,7 @@ import {
   editProfile,
   deactivate,
   notFound,
+  createAd
 } from './rest-router'
 
 export default [
@@ -20,4 +21,5 @@ export default [
   editProfile,
   deactivate,
   notFound,
+  createAd
 ]
