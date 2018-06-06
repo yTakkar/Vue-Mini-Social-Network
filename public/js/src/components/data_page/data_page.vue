@@ -46,17 +46,20 @@ export default {
       username: this.$route.params.username
     }
   },
+  watch: {
+    '$route' (to, from) {
+      this.username = to.params.username
+    }
+  },
+  created(){
+    fn.forDataPage(this)
+  },
   computed: {
     posts_len(){
       return this.p.posts.length
     },
     posts(){
         return this.p.posts
-    }
-  },
-  watch: {
-    '$route' (to, from) {
-      this.username = to.params.username
     }
   }
 }
