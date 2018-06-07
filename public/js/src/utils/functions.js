@@ -124,7 +124,7 @@ export const changeTitle = (to, from, next) => {
     title = meta.title
   }
 
-  document.title = `${title} • Mini Social Network`
+  document.title = `${title} • SpeakEasy`
   next()
 }
 

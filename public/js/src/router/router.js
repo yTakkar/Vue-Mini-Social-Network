@@ -10,6 +10,7 @@ import {
   dataPage,
   deactivate,
   notFound,
+  createAd
 } from './rest-router'
 
 export default [
@@ -22,4 +23,5 @@ export default [
   dataPage,
   deactivate,
   notFound,
+  createAd
 ]

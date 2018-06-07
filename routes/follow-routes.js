@@ -1,6 +1,6 @@
 const
   app = require('express').Router(),
-  db = require('../config/db')
+  db = require('../config/db'),
   forge = require('node-forge'),
   rsa = forge.pki.rsa
 

@@ -10,6 +10,9 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 SET time_zone = "+00:00";
+DROP DATABASE IF EXISTS `peterbook`;
+CREATE DATABASE `peterbook`;
+USE `peterbook`;
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -69,12 +72,12 @@ CREATE TABLE `posts` (
   `username` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
+  `img_id` text DEFAULT '',
   `post_created` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `posts`
---
 -- --------------------------------------------------------
 
 --
