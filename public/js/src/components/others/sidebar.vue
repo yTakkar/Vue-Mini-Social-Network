@@ -12,6 +12,7 @@
       <router-link to='/explore' active-class='ha_active' ><ui-icon>public</ui-icon>Explore</router-link>
       <!--<router-link to='/404' :exact='true' active-class='ha_active' >Home</router-link>-->
       <router-link to='/deactivate' active-class='ha_active' ><ui-icon>delete_forever</ui-icon>Deactivate</router-link>
+      <router-link :to="{ name: 'publish', params: { username: session.username }}" active-class="ha_active">SpeakEasy Ads</router-link>
     </div>
   </div>
 </template>
