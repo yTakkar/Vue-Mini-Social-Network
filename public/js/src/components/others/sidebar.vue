@@ -143,6 +143,10 @@
 
   .sidenav .closebtn:hover{
       cursor: pointer;
+      color: black;
+      background-color: white;
+      transition:all .2s;
+      transform: rotate(180deg);
   }
 
   @media screen and (max-height: 450px) {
