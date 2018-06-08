@@ -7,6 +7,7 @@ import {
   error,
   viewPost,
   editProfile,
+  dataPage,
   deactivate,
   notFound,
   createAd
@@ -19,6 +20,7 @@ export default [
   error,
   viewPost,
   editProfile,
+  dataPage,
   deactivate,
   notFound,
   createAd

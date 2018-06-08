@@ -236,3 +236,21 @@ export const accept = async options => {
   Notify({ value: 'Accepted!!' })
   done()
 }
+
+export const forDataPage = async t => {
+  let
+    {
+      $router,
+      $store: { dispatch },
+      session: { username: susername }
+    } = t,
+    { username } = t.session,
+    { data: valid } = await post('/api/is-user-valid', { username })
+
+  if (!valid){
+    $router.push('/error/user')
+  } else {
+    dispatch('userDetails', username)
+    dispatch('getPosts', username)
+  }
+}
