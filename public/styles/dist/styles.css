@@ -981,7 +981,7 @@ color: #fff;
     margin-right: 5px; }
   .view_note .v_n_bottom .v_n_int {
     position: absolute;
-    color: #66757f;
+    color: rgb(255, 82, 152);;
     bottom: 10px;
     left: 10px;
     display: flex; }
@@ -991,7 +991,7 @@ color: #fff;
       cursor: pointer;
       transition: all .1s ease-in-out; }
       .view_note .v_n_bottom .v_n_int span.like_unlike:hover {
-        color: #1b2733;
+        color: lightgrey;
         transform: scale(1.1); }
     .view_note .v_n_bottom .v_n_int .like_unlike_disabled {
       cursor: not-allowed !important;
