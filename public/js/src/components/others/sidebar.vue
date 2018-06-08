@@ -94,16 +94,17 @@
 
   .sidenav {
     z-index:10;
-    height: 100%;
+    height: 100vh;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: white;
+    background-color: #FFFFFF;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    border-radius: 0px 15px 10px 0px;
   }
 
   .sidenav a {
@@ -114,7 +115,7 @@
     color: black;
     display: block;
     transition: 0.3s;
-    border-radius: 0px;
+    border-radius: 10px;
   }
 
   .sidenav .ha_active{
@@ -124,7 +125,7 @@
 
   .sidenav a:hover {
     color: #f1f1f1;
-    background-color: black;
+    background-color: #556674;
   }
 
   .sidenav .closebtn {
