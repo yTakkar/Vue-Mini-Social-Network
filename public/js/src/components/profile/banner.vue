@@ -30,6 +30,11 @@
           <span v-else >{{ user.username }} has no bio!!</span>
         </template>
       </div>
+      <div class='user_buttons'>
+        <template v-if='me'>
+          <router-link :to="{ name: 'data-page'}" class='pri_btn' color=''>Data Page</router-link>
+        </template>
+      </div>
       <hr />
       <div class='user_stats'>
         <div class='stat_post'>
