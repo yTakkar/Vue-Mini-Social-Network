@@ -29,6 +29,8 @@ module.exports = {
     'no-console': 'off',
     'no-ternary': 0,
     'no-nested-ternary': 0,
-    'multiline-ternary': 0
+    'multiline-ternary': 0,
+    'no-undef': 0,
+    'no-unused-vars': 0
   }
 };
