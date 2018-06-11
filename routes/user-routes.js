@@ -71,7 +71,7 @@ app.post('/user/signup', async (req, res) => {
           username,
           email,
           password,
-          bio: "",
+          bio: '',
           joined: new Date().getTime()
         },
         { insertId } = await db.create_user(newUser),
@@ -86,7 +86,7 @@ app.post('/user/signup', async (req, res) => {
       session.id = insertId
       session.username = username
       rsa.generateKeyPair({bits: 1024, workers: -1}, function(err, keypair) {
-        let key = forge.util.createBuffer((password+"1qaz2wsx3edc4rfv").substr(0, 16)),
+        let key = forge.util.createBuffer((password+'1qaz2wsx3edc4rfv').substr(0, 16)),
           pubKey = keypair.publicKey,
           priKey = keypair.privateKey,
           cipher = forge.cipher.createCipher('AES-ECB', key),
@@ -100,21 +100,21 @@ app.post('/user/signup', async (req, res) => {
         privatekey = cipher.output.toHex()
         let 
           obj={
-          user_id: insertId,
-          publickey: pub,
-          privatekey: privatekey,
-          aeskey: en_aeskey
-        }
+            user_id: insertId,
+            publickey: pub,
+            privatekey: privatekey,
+            aeskey: en_aeskey
+          }
         session.pubkey = pub
         session.prikey = pri
         session.aeskey = aeskey
-        db.query("INSERT INTO keys_system SET ?", obj)
+        db.query('INSERT INTO keys_system SET ?', obj)
         
         res.json({
           mssg: `Hello, ${username}!!`,
           success: true
         })
-      });
+      })
 
     }
 
@@ -153,11 +153,11 @@ app.post('/user/login', async (req, res) => {
         session.id = id
         session.username = rusername
         let obj = await db.query(
-          'SELECT publickey, privatekey, aeskey FROM keys_system WHERE user_id= ?', 
-          [id]
-        ),
-        [{ publickey: pubKey, privatekey: priKey, aeskey: aesKey }] = obj,
-          key = forge.util.createBuffer((rpassword+"1qaz2wsx3edc4rfv").substr(0, 16)),
+            'SELECT publickey, privatekey, aeskey FROM keys_system WHERE user_id= ?', 
+            [id]
+          ),
+          [{ publickey: pubKey, privatekey: priKey, aeskey: aesKey }] = obj,
+          key = forge.util.createBuffer((rpassword+'1qaz2wsx3edc4rfv').substr(0, 16)),
           decipher = forge.cipher.createDecipher('AES-ECB', key)
 
         decipher.start()

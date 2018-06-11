@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "dev": "webpack -d --watch",
-    "build": "webpack -p && eslint public/js/src/ --fix",
+    "build": "eslint routes public/js/src/ --fix && webpack -p",
     "test": "jest",
     "testCoverage": "jest --coverage"
   },

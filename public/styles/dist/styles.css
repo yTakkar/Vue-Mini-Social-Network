@@ -19,7 +19,7 @@ html {
   font-family: 'Roboto', Helvetica, sans-serif;
   background-color: rgba(33, 150, 243, 0.12);
   border-radius: 8px;
-  font-weight: 300;  
+  font-weight: 300;
   color: white;
 }
 
@@ -302,7 +302,7 @@ input[type=range]::-moz-focus-outer {
 input[type="text"], input[type="email"], input[type="password"], textarea {
   border: 1px solid #eee;
   border-radius: 4px;
-  /*font-family: "Open Sans", "Roboto", Tahoma, arial, sans-serif;*/
+  font-family: "Roboto", Helvetica, sans-serif;
   color: #3d464d;
   outline: none;
   padding: 5px 5px;
@@ -323,7 +323,8 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focu
   box-shadow: 0px 0px 5px 1px #c8def0;
     /*-webkit-box-shadow: 0px 0px 5px 0px #bed3dc;
      -moz-box-shadow: 0px 0px 5px 0px #bed3dc;
-    */;
+    */
+  ;
 }
 
 input[type="submit"], input[type="button"], .pri_btn {
@@ -336,12 +337,12 @@ input[type="submit"], input[type="button"], .pri_btn {
 
 input[type="submit"]:hover, input[type="button"]:hover, .pri_btn:hover {
   background: #1eaaff;
-  border:  1px solid #1eaaff;
+  border: 1px solid #1eaaff;
 }
 
 input[type="submit"]:focus, input[type="button"]:focus, .pri_btn:focus {
   background: #1eaaff;
-  border:  1px solid white;
+  border: 1px solid white;
 }
 
 input[type="submit"]:disabled, input[type="button"]:disabled {
@@ -441,7 +442,8 @@ input[type="range"]::-ms-track {
     /*border: 1px solid #ecf0f1;
     */
     /*margin-top: -10px;
-    */;
+    */
+  ;
 }
 
 input[type="range"]::-ms-fill-lower {
@@ -477,15 +479,11 @@ input[type="file"] {
 
 select {
   font-size: 14px;
-  font-family: "Open Sans", "Roboto", Tahoma, arial, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
   border-radius: 3px;
   border: 1px solid #eee;
   cursor: pointer;
   outline: none;
-    /*-moz-appearance: none;
-    */
-    /*-webkit-appearance: none;
-    */;
 }
 
 select:focus {
@@ -679,7 +677,8 @@ select:focus {
     /* border:solid black 1px;
      */
     /* background-image: url(../../images/landingpage.jpg);
-     */;
+     */
+  ;
 }
 
 #profileicon {
@@ -711,9 +710,7 @@ select:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 75vw;
-
   content: "";
   display: table;
   clear: both;
@@ -722,7 +719,6 @@ select:focus {
 #right_wrapper {
   float: left;
   width: 47%;
-
   background-color: rgba(255,255,255, 0.3);
   font-size: 1.5em;
 }
@@ -735,7 +731,6 @@ select:focus {
 #left_wrapper {
   float: left;
   width: 47%;
-
   position: relative;
 }
 
@@ -884,7 +879,8 @@ select:focus {
   display: inline-block;
   top: 0px;
     /* right: 1%;
-     */;
+     */
+  ;
 }
 
 .display_text {
@@ -967,9 +963,7 @@ select:focus {
 
 .aligner .user_banner .user_buttons > a {
   padding: 5px 15px;
-  font-size: 14px;
   display: inline-block;
-  margin-right: 5px;
 }
 
 .aligner .user_banner .profile_img_div {
@@ -987,10 +981,15 @@ select:focus {
 }
 
 .aligner .user_banner .user_info a.user_main_link {
+  font-family: Abril Fatface, serif;
   font-weight: 600;
   color: #1b2733;
   display: block;
-  font-size: 16px;
+  font-size: 3em;
+}
+
+.aligner .user_banner .user_info a.user_main_link::first-letter {
+  text-transform: uppercase;
 }
 
 .aligner .user_banner .user_info .user_no_notes {
@@ -1096,18 +1095,25 @@ select:focus {
 }
 
 .note .note_header .note_h_left .note_username {
-  display: block;
+  display: inline-block;
   color: #1b2733;
   font-weight: 600;
   position: relative;
-  top: 2px;
+  top: -10px;
+  font-size: 1.2em;
+}
+
+.note .note_header .note_h_left .note_username::first-letter {
+  text-transform: uppercase;
 }
 
 .note .note_header .note_h_left .note_time {
   font-size: 13px;
   color: #66757f;
   position: relative;
-  top: -1px;
+  top: -7px;
+  float: right;
+  right: -10px;
 }
 
 .note .note_title, .note .note_content {
@@ -1116,6 +1122,7 @@ select:focus {
 
 .note .note_photo {
   width: 100%;
+  margin-top: 15px;
 }
 
 .note .note_title {
@@ -1239,6 +1246,46 @@ select:focus {
   top: -2px;
 }
 
+.view_note {
+  width: 600px;
+}
+
+.view_note .v_n_middle .v_n_info {
+  margin-bottom: 5px;
+}
+
+.view_note .v_n_middle .v_n_info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.view_note .v_n_middle .v_n_info .v_n_left {
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  top: -5px;
+}
+
+.view_note .v_n_middle .v_n_info .v_n_left .v_n_username {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  color: inherit;
+}
+
+.view_note .v_n_middle .v_n_info .v_n_left .v_n_username:hover, .view_note .v_n_middle .v_n_info .v_n_left .v_n_username:focus {
+  text-decoration: underline;
+}
+
+.view_note .v_n_middle .v_n_info .v_n_left .v_n_time {
+  font-size: 13px;
+  color: #66757f;
+  position: relative;
+  top: -2px;
+}
+
 .view_note .v_n_middle .v_n_title {
   font-weight: 600;
   display: block;
@@ -1250,6 +1297,10 @@ select:focus {
 .view_note .v_n_middle .v_n_content {
   display: block;
   outline: none;
+}
+
+.view_note .v_n_photo {
+  height: 50vh;
 }
 
 .view_note .v_n_middle .v_n_title[contenteditable='true'], .view_note .v_n_middle .v_n_content[contenteditable='true'] {
@@ -1590,7 +1641,8 @@ select:focus {
   display: block;
   left: -5px;
     /*top: -5px;
-    */;
+    */
+  ;
 }
 
 .goto {
@@ -1684,10 +1736,11 @@ select:focus {
 }
 
 #sidebar_profile_name {
+  font-family: Abril Fatface, serif;
   margin-top: 20px;
   text-decoration: none;
   text-align: center;
-  font-size: 25px;
+  font-size: 2.5em;
   color: white;
   display: block;
   transition: 0.3s;
@@ -1768,6 +1821,7 @@ select:focus {
   .sidenav {
     padding-top: 15px;
   }
+
   .sidenav a {
     font-size: 18px;
   }
