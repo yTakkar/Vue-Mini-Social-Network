@@ -302,7 +302,7 @@ input[type=range]::-moz-focus-outer {
 input[type="text"], input[type="email"], input[type="password"], textarea {
   border: 1px solid #eee;
   border-radius: 4px;
-  font-family: "Open Sans", "Roboto", Tahoma, arial, sans-serif;
+  /*font-family: "Open Sans", "Roboto", Tahoma, arial, sans-serif;*/
   color: #0b867a;
   outline: none;
   padding: 5px 5px;
@@ -327,22 +327,21 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focu
 }
 
 input[type="submit"], input[type="button"], .pri_btn {
-  font-weight: 600;
+  font-weight: 400;
   background: #1b9be9;
   border: 1px solid #1b9be9;
-    /*#3e91b3*/
   color: #fff;
-  border-radius: 3px;
   cursor: pointer;
-  outline: none;
 }
 
 input[type="submit"]:hover, input[type="button"]:hover, .pri_btn:hover {
-  opacity: .9;
+  background: #1eaaff;
+  border:  1px solid #1eaaff;
 }
 
 input[type="submit"]:focus, input[type="button"]:focus, .pri_btn:focus {
-  background: #198bd0;
+  background: #1eaaff;
+  border:  1px solid white;
 }
 
 input[type="submit"]:disabled, input[type="button"]:disabled {
@@ -822,16 +821,10 @@ select:focus {
 }
 
 .right a {
-  border: 1px solid white;
   outline: none;
   padding: 4px 16px;
-  border-radius: 3px;
   font-size: 14px;
-    /* margin-right: 20px;
-     */
   color: #fff;
-    /* background: #fff;
-     */;
 }
 
 .right a a[href='help'] {
@@ -840,14 +833,6 @@ select:focus {
 
 .right a .index_header > .right > a[href="about"] {
   margin-right: 5px;
-}
-
-.right a:hover {
-  background: #f7f9fa;
-}
-
-.right a:focus {
-  background: #f7f9fa;
 }
 
 .header_loggedin {
@@ -909,7 +894,7 @@ select:focus {
 
 .display_text > span {
   font-size: 23px;
-  color: #0b867a;
+  color: #3d464d;
 }
 
 .log_sign {
