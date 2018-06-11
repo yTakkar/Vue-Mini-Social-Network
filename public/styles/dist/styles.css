@@ -303,7 +303,7 @@ input[type="text"], input[type="email"], input[type="password"], textarea {
   border: 1px solid #eee;
   border-radius: 4px;
   /*font-family: "Open Sans", "Roboto", Tahoma, arial, sans-serif;*/
-  color: #0b867a;
+  color: #3d464d;
   outline: none;
   padding: 5px 5px;
 }
@@ -855,21 +855,21 @@ select:focus {
   line-height: 50px;
   height: 50px;
   margin-top: 2px;
-  border: solid #fff 1px;
   font-size: 14px;
   color: #fff;
   padding: 0px 12px;
-  border-radius: 3px;
   display: inline-block;
   margin-left: 5px;
 }
 
 .header_loggedin a:hover {
-  background: #D2958D;
+  /*background: #D2958D;*/
+  background: rgba(255, 255, 255,.3);
 }
 
 .header_loggedin a:focus {
-  background: #f7f9fa;
+  /*background: #f7f9fa;*/
+  background: rgba(255, 255, 255,.3);
 }
 
 .header_loggedin .left {
@@ -909,9 +909,9 @@ select:focus {
   font-size: 14px;
 }
 
-.ha_active {
+/*.ha_active {
   box-shadow: 2px 2px;
-}
+}*/
 
 .cua {
   width: 300px;
