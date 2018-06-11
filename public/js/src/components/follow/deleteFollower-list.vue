@@ -10,7 +10,7 @@
         <span class='modal_it_light'>{{ follower.follow_time | timeAgo }}</span>
       </div>
       <div class='modal_ff'>
-        <a href='#' class='pri_btn follow' @click.prevent='delete_follower' >Delete</a>
+        <a href='#' class='pri_btn follow' @click.prevent='delete_follower' >Remove friend</a>
       </div>
     </div>
     <hr />

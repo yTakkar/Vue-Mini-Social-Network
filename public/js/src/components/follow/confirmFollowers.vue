@@ -2,7 +2,7 @@
 
   <div class='followers modal modal_big'>
     <div class='fer_header modal_header'>
-      <span class='title'>Confirm Pending Followers</span>
+      <span class='title'>Confirm Friend Requests</span>
       <Goto />
     </div>
     <div class='fer_middle modal_middle' :style='{ height: "450px" }' >

@@ -2,7 +2,7 @@
 
   <div class='followers modal modal_big'>
     <div class='fer_header modal_header'>
-      <span class='title'>Delete Followers</span>
+      <span class='title'>Remove Friends</span>
       <Goto />
     </div>
     <div class='fer_middle modal_middle' :style='{ height: "450px" }' >
