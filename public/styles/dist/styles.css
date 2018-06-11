@@ -29,7 +29,6 @@ body {
   font-size: 13px;
   color: #3d464d;
   font-weight: 300;
-  background-image: url('../../images/landingpage.jpg');
   background: linear-gradient(to bottom right, #F8858B, #FCCA5C);
   height: 100%;
   overflow: auto;
@@ -674,11 +673,6 @@ select:focus {
 
 .notes_wrapper {
   margin-top: 70px;
-    /* border:solid black 1px;
-     */
-    /* background-image: url(../../images/landingpage.jpg);
-     */
-  ;
 }
 
 #profileicon {
@@ -703,6 +697,8 @@ select:focus {
   height: 100vh;
   width: 100vw;
   position: relative;
+  background-image: url('../../images/landingpage.jpg');
+  background-opacity: .8;
 }
 
 #landing_wrapper {
@@ -1720,13 +1716,14 @@ select:focus {
   transition: all .2s;
   padding: 2px;
   text-align: center;
-  line-height: 30px;
+  line-height: 60px;
+  color: white;
 }
 
 #open_sidebar_button:hover {
   transition: all .2s;
   color: white;
-  transform: rotate(180deg);
+  /*transform: rotate(180deg);*/
 }
 
 #sidenav_img {
@@ -1807,14 +1804,15 @@ select:focus {
   height: 50px;
   position: relative;
   font-size: 36px;
-  top: -55px;
+  top: -45px;
+  color: white;
 }
 
 .sidenav .closebtn:hover {
   cursor: pointer;
-  color: black;
+  color: white;
   background-color: rgba(0,0,0,0);
-  transition: all .2s;
+  /*transition: all .2s;*/
 }
 
 @media screen and (max-height: 450px) {
