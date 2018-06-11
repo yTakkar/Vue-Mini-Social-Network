@@ -13,8 +13,8 @@
       </div>
     </div>
     <div class='exl_ff'>
-      <a v-if='!is_pending' href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
-      <a v-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Pending</a>
+      <a v-if='!is_pending' href='#' class='pri_btn follow' @click.prevent='follow' >Add Friend</a>
+      <a v-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Friend request sent</a>
     </div>
   </div>
 
