@@ -2,14 +2,17 @@
 
   <div class='followers modal modal_big'>
     <div class='fer_header modal_header'>
-      <span class='title'>Followers</span>
+      <span class='title'>Friends</span>
       <Goto />
     </div>
     <div class='fer_middle modal_middle' :style='{ height: "450px" }' >
       <div class='modal_main' >
-        <template v-if='followers.length > 0' >
+        <template v-if='followers.length > 0 || followings.length > 0' >
           <template  v-for='f in followers' >
             <Follower-list :key='f.follow_id' :follower='f' />
+          </template>
+          <template v-for='f in followings' >
+            <Following-list :key='f.follow_id' :following='f' />
           </template>
         </template>
         <Nothing v-if='followers.length == 0' :showMssg='false' />
@@ -25,16 +28,21 @@
 <script>
 import moduleMixin from '../../mixins/module-mixin'
 import FollowerList from './follower-list.vue'
+import FollowingList from './following-list.vue'
 import { llr } from '../../utils/functions'
 
 export default {
   mixins: [moduleMixin],
   components: {
-    'Follower-list': FollowerList
+    'Follower-list': FollowerList,
+    'Following-list': FollowingList
   },
   computed: {
     followers(){
       return this.f.followers
+    },
+    followings(){
+      return this.f.followings
     }
   },
   methods: {

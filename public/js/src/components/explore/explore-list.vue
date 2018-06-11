@@ -8,7 +8,7 @@
         <div class='exl_desc'>
           <span class='exl_email'>{{ exp.email }}</span>
           <span class='exl_desc_sep'>•</span>
-          <span class='exl_followers'>{{ no_of_followers }} Followers</span>
+          <span class='exl_followers'>{{ no_of_followers }} Friends</span>
         </div>
       </div>
     </div>
