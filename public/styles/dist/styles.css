@@ -971,6 +971,9 @@ color: #fff;
   .view_note .v_n_middle .v_n_content {
     display: block;
     outline: none; }
+  .view_note .v_n_photo {
+    height: 50vh;
+  }
   .view_note .v_n_middle .v_n_title[contenteditable='true'], .view_note .v_n_middle .v_n_content[contenteditable='true'] {
     border: 1px solid #54BBFF;
     padding: 5px 5px !important;
