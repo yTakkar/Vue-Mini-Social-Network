@@ -21,16 +21,16 @@
 import moduleMixin from '../../mixins/module-mixin'
 
 export default {
-    data() {
-        return {
-            showAlert1: true,
-        };
-    },
-    methods: {
-        resetAlerts() {
-            this.showAlert1 = true;
-        }
-    },
+  data() {
+      return {
+          showAlert1: true,
+      };
+  },
+  methods: {
+      resetAlerts() {
+          this.showAlert1 = true;
+      }
+  },
   mixins: [
     moduleMixin
   ],

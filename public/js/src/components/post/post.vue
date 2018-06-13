@@ -34,7 +34,7 @@ export default {
 
   computed: {
     hasPhoto: function () {
-      return this.post.img_id != ''
+      return this.post.img_id != '' && this.post.img_id !== undefined
     }
   },
 

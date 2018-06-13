@@ -12,9 +12,9 @@
       <div class='modal_ff'>
         <router-link v-if='me' :to='link' class='pri_btn follow'>Profile</router-link>
         <template v-else >
-          <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Unfollow</a>
+          <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Remove friend</a>
           <a v-else-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Pending</a>
-          <a v-else href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
+          <a v-else href='#' class='pri_btn follow' @click.prevent='follow' >Add friend</a>
         </template>
       </div>
     </div>
