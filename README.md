@@ -1,5 +1,16 @@
 # SpeakEasy
 A social network centered around user privacy and security!
+<!-- Logo -->
+<p align="center">
+  <a href="https://github.com/dedmeme-2018/SpeakEasy">
+    <img height="128" width="128" src="https://github.com/dedmeme-2018/SpeakEasy/logo.PNG">
+  </a>
+</p>
+<!-- Name -->
+<h1 align="center">
+  <a href="https://github.com/Qolzam/react-social-network">React Social Network </a>:rocket:<span style="font-variant-caps: petite-caps;font-size: 30px;font-weight: 400;"> Version NEXT! </span>:rocket:
+</h1>
+
 
 # Quick liks
 1. [Usage](#usage)
