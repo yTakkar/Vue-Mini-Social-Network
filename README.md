@@ -8,12 +8,12 @@ A social network centered around user privacy and security!
 4. [Backend Implementation](#backend-implementation)
 
 # Usage
-1. <b>First install all dependencies:</b>
+1. <b>First install all dependencies. Make sure you have Node.js & npm on your machine:</b>
+    Install Node.js and npm first. 
+    Node: https://nodejs.org/en/download/current/ 
+    npm: https://www.npmjs.com/get-npm
+    
     ```bash
-    # Install Node.js and npm first. 
-    # Node: https://nodejs.org/en/download/current/ 
-    # npm: https://www.npmjs.com/get-npm
-
     # with npm
     npm install
     
