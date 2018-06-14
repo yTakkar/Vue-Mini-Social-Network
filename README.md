@@ -8,7 +8,7 @@ A social network centered around user privacy and security!
 4. [Backend Implementation](#backend-implementation)
 
 # Usage
-1. <mark>First install all dependencies:</mark>
+1. <mark>First install all dependencies:</mark> black pather
     ```bash
     # Install Node.js and npm first. 
     # Node: https://nodejs.org/en/download/current/ 
