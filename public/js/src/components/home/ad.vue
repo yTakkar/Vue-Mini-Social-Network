@@ -20,7 +20,8 @@ export default {
   .ad {
     background-color: white;
     width: 250px;
-    position: relative;
+    position: absolute;
     left: 780px;
+    top: 30px;
   }
 </style>

@@ -65,6 +65,8 @@ li {
   list-style: none;
 }
 
+
+
 .sec_btn {
   border: 1px solid #eee;
   background: #fbfbfb;
@@ -72,18 +74,14 @@ li {
   border-radius: 3px;
   cursor: pointer;
   font-weight: 600;
-  outline: none;
+  outline: none; 
 }
-
-.sec_btn:hover {
-  color: #1b2733;
-  background-color: #fff7f7;
-}
-
-.sec_btn:focus {
-  color: #1b2733;
-  background: #f7ebeb;
-}
+  .sec_btn:hover {
+    color: #1b2733;
+    background-color: #fff7f7; }
+  .sec_btn:focus {
+    color: #1b2733;
+    background: #f7ebeb; }
 
 .tir_btn {
   border: 1px solid #eee;
@@ -533,8 +531,36 @@ select:focus {
   border-radius: 3px;
   z-index: 2;
   background: #fff;
-  font-size: 14px;
-}
+  font-size: 14px; }
+  .modal .modal_no {
+    text-align: center;
+    position: relative;
+    top: 30px; }
+    .modal .modal_no img {
+      width: 150px; }
+  .modal .modal_header {
+    background: #f9f9f9;
+    border-bottom: 1px solid #f7f5f5;
+    padding: 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+    .modal .modal_header span.title {
+      font-weight: 600; }
+  .modal .modal_middle {
+    position: relative;
+    padding: 10px; }
+  .modal .modal_bottom {
+    display: block;
+    text-align: right;
+    padding: 9px 5px 8px 5px;
+    border-top: 1px solid #eee;
+    margin-top: 0px;
+    /* height:60px; */
+ }
+    .modal .modal_bottom a, .modal .modal_bottom input[type='submit'] {
+      display: inline-block;
+      padding: 4px 10px;
+      font-weight: 600; }
 
 .modal .modal_no {
   text-align: center;
@@ -1328,16 +1354,70 @@ select:focus {
   transition: all .1s ease-in-out;
 }
 
-.view_note .v_n_bottom .v_n_int span.like_unlike:hover {
-  color: #1b2733;
-  transform: scale(1.1);
-}
-
-.view_note .v_n_bottom .v_n_int .like_unlike_disabled {
-  cursor: not-allowed !important;
-  pointer-events: none !important;
-  color: #d8c3c3 !important;
-}
+.view_note {
+  width: 600px; }
+  .view_note .v_n_middle .v_n_info {
+    margin-bottom: 5px; }
+    .view_note .v_n_middle .v_n_info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: inline-block; }
+    .view_note .v_n_middle .v_n_info .v_n_left {
+      display: inline-block;
+      margin-left: 5px;
+      position: relative;
+      top: -5px; }
+      .view_note .v_n_middle .v_n_info .v_n_left .v_n_username {
+        display: block;
+        font-weight: 600;
+        font-size: 15px;
+        color: inherit; }
+        .view_note .v_n_middle .v_n_info .v_n_left .v_n_username:hover, .view_note .v_n_middle .v_n_info .v_n_left .v_n_username:focus {
+          text-decoration: underline; }
+      .view_note .v_n_middle .v_n_info .v_n_left .v_n_time {
+        font-size: 13px;
+        color: #66757f;
+        position: relative;
+        top: -2px; }
+  .view_note .v_n_middle .v_n_title {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 15px;
+    outline: none; }
+  .view_note .v_n_middle .v_n_content {
+    display: block;
+    outline: none; }
+  .view_note .v_n_photo {
+    height: 50vh;
+  }
+  .view_note .v_n_middle .v_n_title[contenteditable='true'], .view_note .v_n_middle .v_n_content[contenteditable='true'] {
+    border: 1px solid #54BBFF;
+    padding: 5px 5px !important;
+    border-radius: 2px; }
+  .view_note .v_n_bottom a {
+    margin-left: 5px; }
+  .view_note .v_n_bottom .v_n_cancel {
+    margin-right: 5px; }
+  .view_note .v_n_bottom .v_n_int {
+    position: absolute;
+    color: rgb(255, 82, 152);;
+    bottom: 10px;
+    left: 10px;
+    display: flex; }
+    .view_note .v_n_bottom .v_n_int span.like_unlike {
+      display: inline-block;
+      height: 24px;
+      cursor: pointer;
+      transition: all .1s ease-in-out; }
+      .view_note .v_n_bottom .v_n_int span.like_unlike:hover {
+        color: lightgrey;
+        transform: scale(1.1); }
+    .view_note .v_n_bottom .v_n_int .like_unlike_disabled {
+      cursor: not-allowed !important;
+      pointer-events: none !important;
+      color: #d8c3c3 !important; }
 
 .edit {
   position: relative;
@@ -1741,6 +1821,7 @@ select:focus {
   color: white;
   display: block;
   transition: 0.3s;
+  padding-left: 34%;
 }
 
 #sidebar_profile_name::first-letter {
