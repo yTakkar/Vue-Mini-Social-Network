@@ -16,7 +16,7 @@
 
             <div class='c_n_bottom modal_bottom'>
                 <transition name="lock-in">
-                    <div class="wrapper" title="Private and encrypted.">
+                    <div class="wrapper" title="This post is private and encrypted.">
                         <div class="base">
                             <div class="base-bottom">
                             </div>
@@ -163,7 +163,7 @@ export default {
       border-radius: 10px;
       position: absolute;
       left:-100%;
-      width:auto;
+      width:150px;
     }
 
     .base {
