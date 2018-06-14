@@ -10,6 +10,10 @@ A social network centered around user privacy and security!
 # Usage
 1. First install all dependencies:
     ```bash
+    # Install Node.js and npm first. 
+    # Node: https://nodejs.org/en/download/current/ 
+    # npm: https://www.npmjs.com/get-npm
+    
     # with npm
     npm install
     
