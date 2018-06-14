@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <Overlay type='colored' />
+    <Overlay type='white' />
 
     <div class='view_note modal'>
       <div class='v_n_header modal_header'>
@@ -43,7 +43,7 @@
     <Prompt
       v-if='deleting'
       title='Delete post'
-      content="This post will be deleted. There's no undo so you won't be able to find it."
+      content="This post will be deleted permanently from this universe, for all time, and all eyes. Is this what you want? "
       actionText='Delete'
       @back='_toggle("deleting")'
       @action='deletePost'
