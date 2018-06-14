@@ -9,10 +9,9 @@ A social network centered around user privacy and security!
 
 # Usage
 1. <b>First install all dependencies. Make sure you have Node.js & npm on your machine:</b>
-    Install Node.js and npm first. 
-    Node: https://nodejs.org/en/download/current/ 
-    npm: https://www.npmjs.com/get-npm
-    
+    - Node: https://nodejs.org/en/download/current/ 
+    - npm: https://www.npmjs.com/get-npm
+
     ```bash
     # with npm
     npm install
