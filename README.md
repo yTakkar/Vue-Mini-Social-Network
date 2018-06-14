@@ -19,9 +19,12 @@ A social network centered around user privacy and security!
     # or with yarn
     yarn
     ```
-2. For windows, Install PhpMyAdmin, import db.sql.
 
-3. For MacOS,
+After done with dependencies, we can set up the database. We use MySql as the database for our project.
+
+2. For <b>Windows</b>, Install PhpMyAdmin, import db.sql in repository.
+
+3. For <b>MacOS</b>,
    - [Install MySql](https://dev.mysql.com/downloads/mysql/) and run the MySql server. Remember your password for 'root' 
    - Install the mysql cli using `brew install mysql`
    - Import the database from db.sql. You can run the command whenever you want to reset the database
