@@ -910,6 +910,11 @@ color: #fff;
       margin-right: 6px;
       font-size: 14px; }
 
+  .data_post_icons span {
+    color: #1b2733;
+    float: right;
+  }
+
 .welcome_div {
   position: absolute;
   top: 50%;
