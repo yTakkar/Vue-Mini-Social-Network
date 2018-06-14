@@ -9,6 +9,7 @@
             </div>
 
             <div class='c_n_middle modal_middle'>
+                <input type='text' placeholder='Title..' ref='title' required spellCheck='false' autoComplete='false' autoFocus class='cp_title' />
                 <textarea placeholder='Your post..' ref='content' required spellCheck='false' autoComplete='false'></textarea>
                 <input type='file' id='photo' ref='photo'/>
             </div>
