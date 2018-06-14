@@ -8,7 +8,7 @@ A social network centered around user privacy and security!
 4. [Backend Implementation](#backend-implementation)
 
 # Usage
-1. <mark>First install all dependencies:</mark>a
+1. <mark>First install all dependencies:</mark>
     ```bash
     # Install Node.js and npm first. 
     # Node: https://nodejs.org/en/download/current/ 
@@ -17,7 +17,7 @@ A social network centered around user privacy and security!
     # with npm
     npm install
     
-    # or with yarn
+    # or with yarnasdfas
     yarn
     ```
 2. For windows, Install PhpMyAdmin, import db.sql.
