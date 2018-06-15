@@ -741,6 +741,14 @@ select:focus {
   margin-top: 70px;
 }
 
+.data_post_icons span {
+  position: relative;
+  top: -7px;
+  float: right;
+  right: -10px;
+  color: #1b2733;
+}
+
 #profileicon {
   border: solid;
   background-image: url('../../../../images/profileicon.png');
@@ -750,7 +758,7 @@ select:focus {
   top: -10px;
 }
 
-#speakeasy {
+.speakeasy {
   position: relative;
   top: 50%;
   font-size: 5em;
@@ -1179,7 +1187,6 @@ select:focus {
   position: relative;
   top: -7px;
   float: right;
-  right: -10px;
 }
 
 .note .note_title,
@@ -1908,7 +1915,8 @@ select:focus {
   color: white;
   display: block;
   transition: 0.3s;
-  padding-left: 34%;
+  padding: 8px 8px 8px 8px;
+  width: 230px;
 }
 
 #sidebar_profile_name::first-letter {
