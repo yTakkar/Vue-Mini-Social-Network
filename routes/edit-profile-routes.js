@@ -1,11 +1,27 @@
 const
   app = require('express').Router(),
   db = require('../config/db'),
+  gm = require('gm').subClass({ imageMagick: true }),
   dir = process.cwd(),
   upload = require('multer')({
     dest: `${dir}/public/tmp/`
   }),
-  { ProcessImage, DeleteAllOfFolder } = require('handy-image-processor')
+  { DeleteAllOfFolder } = require('handy-image-processor')
+
+const ProcessImage = options => {
+  return new Promise((resolve, reject) => {
+    let { srcFile, width, height, destFile } = options
+    gm(srcFile)
+      .resize(width, height)
+      .gravity('center')
+      .quality(100)
+      .write(destFile, err =>
+        err
+          ? reject(err)
+          : resolve('Processed!!')
+      )
+  })
+}
 
 // FOR GETTING THE COUNT OF GIVEN FIELD
 app.post('/what-exists', async (req, res) => {

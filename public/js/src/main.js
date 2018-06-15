@@ -3,6 +3,9 @@ import './user-system/user-system'
 
 // FOR LOGGED-IN USERS
 import Vue from 'vue'
+import KeenUI from 'keen-ui'
+import 'keen-ui/dist/keen-ui.css'
+
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 
@@ -27,6 +30,7 @@ import './f&d/directives'
 // Middlewares
 Vue.use(VueResource)
 Vue.use(VueRouter)
+Vue.use(KeenUI)
 
 // Register components
 Vue.component('Nothing', Nothing)
@@ -53,6 +57,9 @@ Vue.config.productionTip = false
 // Render if #app is present
 if (document.querySelector('#app')) {
   new Vue({
+    components: {
+      // all Keen UI components already registered
+    },
     el: '#app',
     render: h => h(App),
     router,
