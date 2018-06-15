@@ -1,5 +1,16 @@
-# SpeakEasy
-A social network centered around user privacy and security!
+<!-- Logo -->
+<p align="center">
+  <a href="https://github.com/dedmeme-2018/SpeakEasy">
+    <img height="128" width="128" src="https://github.com/dedmeme-2018/SpeakEasy/logo.png">
+  </a>
+</p>
+<!-- Name -->
+<h1 align="center">
+  <a href="https://github.com/dedmeme-2018/SpeakEasy">SpeakEasy</a>:rocket:<span style="font-variant-caps: petite-caps;font-size: 30px;font-weight: 400;"> Version 1.1! </span>:rocket:
+</h1>
+
+[![Build Status](https://travis-ci.org/dedmeme-2018/SpeakEasy.svg?branch=master)](https://travis-ci.org/dedmeme-2018/SpeakEasy)
+
 
 # Quick liks
 1. [Usage](#usage)
@@ -8,7 +19,10 @@ A social network centered around user privacy and security!
 4. [Backend Implementation](#backend-implementation)
 
 # Usage
-1. First install all dependencies:
+1. <b>First install all dependencies. Make sure you have Node.js & npm on your machine:</b>
+    - Node: https://nodejs.org/en/download/current/ 
+    - npm: https://www.npmjs.com/get-npm
+
     ```bash
     # with npm
     npm install
@@ -16,9 +30,12 @@ A social network centered around user privacy and security!
     # or with yarn
     yarn
     ```
-2. For windows, Install PhpMyAdmin, import db.sql.
 
-3. For MacOS,
+After done with dependencies, we can set up the database. We use MySql as the database for our project.
+
+2. For <b>Windows</b>, Install PhpMyAdmin, import db.sql in repository.
+
+3. For <b>MacOS</b>,
    - [Install MySql](https://dev.mysql.com/downloads/mysql/) and run the MySql server. Remember your password for 'root' 
    - Install the mysql cli using `brew install mysql`
    - Import the database from db.sql. You can run the command whenever you want to reset the database
