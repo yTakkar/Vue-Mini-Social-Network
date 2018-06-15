@@ -70,7 +70,7 @@ After done with dependencies, we can set up the database. We use MySql as the da
 
 5. <b>Start the server</b>
     ```javascript
-    npm start [OR] yarn start
+    npm start
     ```
 
 6. <b>Now open the app in browser by entering</b> 
