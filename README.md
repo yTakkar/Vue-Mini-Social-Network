@@ -96,13 +96,13 @@ print("hello world!")
 <details><summary>Tables</summary>
 <p>
 
-<details><summary>***users*** </summary>
-<p>
+<details><summary> ***users*** </summary>
+
   | id | username | email | password | bio | joined |
 | ---------- | ----------- | ---------- | ----------- | ---------- | ----------- |
 | Unique | Unique | Unique | Hash value of user's password | Text | The time when user joined |
 
-</p></details>
+</details>
 
 1. Table ***users***  
 
