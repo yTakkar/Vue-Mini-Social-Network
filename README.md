@@ -1,5 +1,3 @@
-# SpeakEasy
-
 <!-- Logo -->
 <p align="center">
   <a href="https://github.com/dedmeme-2018/SpeakEasy">
@@ -10,6 +8,7 @@
 <h1 align="center">
   <a href="https://github.com/dedmeme-2018/SpeakEasy">SpeakEasy</a>:rocket:<span style="font-variant-caps: petite-caps;font-size: 30px;font-weight: 400;"> Version 1.1! </span>:rocket:
 </h1>
+[![Build Status](https://travis-ci.org/dedmeme-2018/SpeakEasy.svg?branch=master)](https://travis-ci.org/dedmeme-2018/SpeakEasy)
 
 
 # Quick liks
