@@ -78,7 +78,8 @@ After done with dependencies, we can set up the database. We use MySql as the da
       mysql> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
     ```
 
-<details><summary># Database Structure</summary>
+# Database Structure
+<details><summary>Tables in backend</summary>
 <p>
 1. Table ***users***  
 
