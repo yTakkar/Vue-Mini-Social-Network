@@ -56,7 +56,7 @@ After done with dependencies, we can set up the database. We use MySql as the da
     SESSION_SECRET_LETTER=[ANYTHING_SECRET]
 ```
 
-  - Example `.env` file would looks like:
+    - Example `.env` file would looks like:
 
 ```javascript
     PORT=3000
