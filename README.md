@@ -47,25 +47,25 @@ After done with dependencies, we can set up the database. We use MySql as the da
 
 4. Create a `.env` file and insert the following code. Replace values with yours!!
 
-    ```javascript
+```javascript
     PORT=[YOUR_PORT]
     MYSQL_HOST="localhost"
     MYSQL_USER="root"
     MYSQL_PASSWORD=[YOUR_PASSWORD]
     MYSQL_DATABASE="peterbook"
     SESSION_SECRET_LETTER=[ANYTHING_SECRET]
-    ```
+```
 
   Example `.env` file would looks like:
 
-    ```javascript
+```javascript
     PORT=3000
     MYSQL_HOST=localhost
     MYSQL_USER=root
     MYSQL_PASSWORD=pswd
     MYSQL_DATABASE=peterbook
     SESSION_SECRET_LETTER=secret_letter
-    ```
+```
 5. Start the server
     ```javascript
     npm start [OR] yarn start
