@@ -80,6 +80,8 @@ After done with dependencies, we can set up the database. We use MySql as the da
 
 # Database Structure
 <details><summary>Tables</summary>
+<p>
+
 ####Table ***users***  
 
 | id | username | email | password | bio | joined |
@@ -122,6 +124,8 @@ After done with dependencies, we can set up the database. We use MySql as the da
 | --------- | --------- | ------------ |
 |Follower's id|Followed user's id|The AES key to decrypt Followed user's posts. It is encrypted by follower's public key|
 
+
+</p>
 </details>
 
 # Backend Implementation
