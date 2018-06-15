@@ -55,6 +55,7 @@ After done with dependencies, we can set up the database. We use MySql as the da
     MYSQL_DATABASE="peterbook"
     SESSION_SECRET_LETTER=[ANYTHING_SECRET]
 ```
+
   - Example `.env` file would looks like:
 
 ```javascript
@@ -65,14 +66,16 @@ After done with dependencies, we can set up the database. We use MySql as the da
     MYSQL_DATABASE=peterbook
     SESSION_SECRET_LETTER=secret_letter
 ```
-5. Start the server
+
+
+5. <b>Start the server</b>
     ```javascript
     npm start [OR] yarn start
     ```
 
-6. Now run the app
+6. Now open the app in browser by entering 
     ```javacript
-    localhost:[PORT] PORT=3917 (By default)
+    localhost:[PORT]
     ```
 
 7. Enjoy!!
