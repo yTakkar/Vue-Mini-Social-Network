@@ -19,7 +19,7 @@ SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index
 # Quick liks
 1. [Usage](#usage)
 2. [Common Issues](#common-issues)
-3. [Database Structure](#database-structure)
+3. [Database Structure](#database)
 4. [Backend Implementation](#backend-implementation)
 
 # Getting Start
