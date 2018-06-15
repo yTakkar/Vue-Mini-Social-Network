@@ -12,9 +12,7 @@
 [![Build Status](https://travis-ci.org/dedmeme-2018/SpeakEasy.svg?branch=master)](https://travis-ci.org/dedmeme-2018/SpeakEasy)
 
 
-SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index.html) a javascript library for building the user interface.
-<!-- https://vuejs.org/v2/guide/installation.html#Vue-Devtools -->
-<!-- https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2 -->
+SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index.html) a javascript library for building the user interface. If you are not familiar with Vue, here are two resources that you can check out. [Official Docs](https://vuejs.org/v2/guide/installation.html#Vue-Devtools) and [Quick Intro](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2).
 
 # Quick liks
 1. [Getting Start](#getting-start)
