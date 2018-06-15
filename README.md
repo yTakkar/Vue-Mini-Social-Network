@@ -45,7 +45,7 @@ After done with dependencies, we can set up the database. We use MySql as the da
       ```
 
 
-4. Create a `.env` file and insert the following code. Replace values with yours!!
+4. <b>Create a `.env` file and insert the following code. Replace values with yours!!</b>
 
 ```javascript
     PORT=[YOUR_PORT]
