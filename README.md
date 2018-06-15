@@ -73,7 +73,7 @@ After done with dependencies, we can set up the database. We use MySql as the da
     npm start [OR] yarn start
     ```
 
-6. Now open the app in browser by entering 
+6. <b>Now open the app in browser by entering</b> 
     ```javacript
     localhost:[PORT]
     ```
