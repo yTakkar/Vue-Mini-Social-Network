@@ -12,8 +12,9 @@
       <div class='modal_ff'>
         <router-link v-if='me' :to='link' class='pri_btn follow'>Profile</router-link>
         <template v-else >
-          <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Unfollow</a>
-          <a v-if='!is_following' href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
+          <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Remove friend</a>
+          <a v-else-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Pending</a>
+          <a v-else href='#' class='pri_btn follow' @click.prevent='follow' >Add friend</a>
         </template>
       </div>
     </div>
@@ -24,7 +25,7 @@
 
 <script>
 import moduleMixin from '../../mixins/module-mixin'
-import { follow, unfollow, isFollowing } from '../../utils/functions.js'
+import { follow, unfollow, isFollowing, isPending } from '../../utils/functions.js'
 
 export default {
   mixins: [moduleMixin],
@@ -41,7 +42,8 @@ export default {
         name: "profile",
         params: { username: this.follower.follow_by_username }
       },
-      is_following: false
+      is_following: false,
+      is_pending: false
     }
   },
   computed: {
@@ -61,7 +63,7 @@ export default {
         username: follow_by_username,
         update_followings: userDetails.id == session.id,
         commit,
-        done: () => this.is_following = true
+        done: () => this.is_pending = true
       })
     },
     unfollow(){
@@ -74,7 +76,10 @@ export default {
         user: follow_by,
         update_followings: userDetails.id == session.id,
         commit,
-        done: () => this.is_following = false
+        done: () => {
+          this.is_following = false
+          this.is_pending = false
+        }
       })
     }
   },
@@ -82,6 +87,7 @@ export default {
     let { u: { session }, follower } = this
     if (session.id != follower.follow_by){
       this.is_following = await isFollowing(follower.follow_by_username)
+      this.is_pending = await isPending(follower.follow_by_username)
     }
   }
 }

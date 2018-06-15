@@ -9,11 +9,12 @@
           <span class='note_time'>{{ post.post_created | timeAgo }}</span>
         </div>
       </div>
-      <div class='note_title'>
+      <!-- <div class='note_title'>
         <span>{{ post.title | to-uppercase }}</span>
       </div>
-      <div class='note_content'>
+ -->      <div id='content' class='note_content'>
         <span>{{ post.content | slice }}</span>
+        <img v-if="hasPhoto" class='note_photo' :src="photoSrc" />
       </div>
     </div>
   </router-link>
@@ -21,17 +22,39 @@
 </template>
 
 <script>
+import db from '../firebaseInit'
+
 export default {
-  data(){
+  data () {
     return {
-      imgSrc: `/users/${this.post.user}/avatar.jpg`
+      imgSrc: `/users/${this.post.user}/avatar.jpg`,
+      photoSrc: '',
     }
   },
+
+  computed: {
+    hasPhoto: function () {
+      return this.post.img_id != '' && this.post.img_id !== undefined
+    }
+  },
+
+  created: function () {
+    var vm = this;
+
+    if(this.hasPhoto){
+      db.ref().child('images/' + this.post.img_id)
+      .getDownloadURL().then(function(url){
+         vm.photoSrc = url;
+      })
+    }
+  },
+
   props: {
     post: {
       type: Object,
       required: true
-    }
+    },
   }
 }
+
 </script>

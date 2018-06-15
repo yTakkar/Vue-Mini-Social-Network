@@ -1,9 +1,38 @@
+{{> tophead }}
 {{> nHeader }}
-
-<div class="notes_wrapper">
-  <div class="welcome_div">
-    <img src="/images/omg.png" alt="">
+<div id="landing">
+  <div id="landing_wrapper">
+    <div id="left_wrapper">
+      <br/>
+      <p id="tagline">Be <span class = "bold">social</span>, but stay in <span class="bold">control</span>.</p>
+      <br/>
+      <br/>
+      <p id="subtag">A social network designed to guarantee that you stay in control of what you share, and what others can see about you.</p>
+      <br/>
+      <br/>
+      <div id=buttons>
+        <div id="button"><a href="/login" class="tagline_button">Login</a></div>
+        <div id="button"><a href="/signup" class="tagline_button">Signup</a></div>
+        <div id="button"><a onclick="alert('SpeakEasy Premium is built for users looking for a completely ad free experience. Although our ads never (and never will) track you, this removes them altogether for a smoother experience. \n\n SpeakEasy Premium is coming soon. Please check later.')" class="tagline_button golden">Premium</a></div>
+      </div>
+    </div>
+    <div id="divider">&nbsp;</div>
+    <div id="right_wrapper">
+      <table>
+        <tr>
+          <td><img src="images/delete.png"/></td>
+          <td>Easily keep track of and delete any content you’ve shared.</td>
+        </tr>
+        <tr>
+          <td><img src="images/network.png"/></td>
+          <td>Stay in touch with your friends just like you’re used to.</td>
+        </tr>
+        <tr>
+          <td><img src="images/lock.png"/></td>
+          <td>Your data is encrypted, kept private, and we never share it.</td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>
-
 {{> footer }}
