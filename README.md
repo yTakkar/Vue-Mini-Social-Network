@@ -81,6 +81,7 @@ After done with dependencies, we can set up the database. We use MySql as the da
 # Database Structure
 <details><summary>Tables in backend</summary>
 <p>
+  
 1. Table ***users***  
 
 | id | username | email | password | bio | joined |
