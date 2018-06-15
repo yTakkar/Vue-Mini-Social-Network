@@ -35,6 +35,31 @@
     </div>
   </div>
 </template>
+<<<<<<< HEAD
+=======
+<!-- <div class='left'>
+  <table>
+    <router-link to='/' :exact='true' active-class='ha_active'>
+      <tr>
+        <td><ui-icon>home</ui-icon></td>
+        <td>Home</td>
+      </tr>
+    </router-link>
+    <router-link to='/explore' active-class='ha_active'>
+      <tr>
+        <td><ui-icon>public</ui-icon></td>
+        <td>Explore</td>
+      </tr>
+    </router-link>
+    <router-link to='/deactivate' active-class='ha_active' >
+      <tr>
+        <td><ui-icon>delete_forever</ui-icon></td>
+        <td>Deactivate</td>
+      </tr>
+    </router-link>
+  </table>
+</div> -->
+>>>>>>> 7928bdfd5c6fc4081c0fa129fe7344c8e9fa1114
 <script>
   import userMixin from '../../mixins/user-mixin'
   
