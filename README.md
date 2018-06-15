@@ -92,8 +92,8 @@ print("hello world!")
 </p>
 </details>
 
-# Database Structure
-<details><summary>Tables</summary>
+# Database
+<details><summary>Database Tables</summary>
 <p>
 
 <details><summary> <b>users</b> Table </summary>
