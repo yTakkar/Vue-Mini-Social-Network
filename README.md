@@ -83,17 +83,11 @@ After done with dependencies, we can set up the database. We use MySql as the da
 <details><summary>Tables</summary>
 <p>
 
-<details><summary> ***users*** </summary>
-<p>
+1. Table ***users***  
 
 | id | username | email | password | bio | joined |
 | ---------- | ----------- | ---------- | ----------- | ---------- | ----------- |
 | Unique | Unique | Unique | Hash value of user's password | Text | The time when user joined |
-
-
-</p>
-</details> 
-
 
 2. Table ***follow_system***  
 
