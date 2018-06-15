@@ -17,7 +17,7 @@ SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index
 <!-- https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2 -->
 
 # Quick liks
-1. [Usage](#usage)
+1. [Getting Start](#getting-start)
 2. [Common Issues](#common-issues)
 3. [Database](#database)
 4. [Backend Implementation](#backend-implementation)
