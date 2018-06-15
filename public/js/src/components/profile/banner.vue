@@ -5,21 +5,6 @@
     <div class='profile_img_div'>
       <img :src='imgSrc' alt='Your Profile!!' >
     </div>
-
-    <div class='user_buttons'>
-      <template v-if='me'>
-        <router-link :to="{ name: 'create-post', params: { username: user.username } }" class='pri_btn' >New Post</router-link>
-        <router-link :to="{ name: 'edit-profile' }" class='pri_btn' >Edit Profile</router-link>
-        <router-link :to="{ name: 'confirm-followers' }" class='pri_btn' >Confirm Friend Requests</router-link>
-        <!-- <router-link :to="{ name: 'delete-followers' }" class='pri_btn' >Remove Friends</router-link> -->
-      </template>
-      <template v-else >
-        <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Unfriend</a>
-        <a v-else-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Friend request sent</a>
-        <a v-else href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
-      </template>
-    </div>
-
     <div class='user_info'>
       <router-link :to='{ name: "profile", params: { username: user.username } }' class='user_main_link'>{{ user.username }}</router-link>
       <span class='user_no_notes'>{{ user.email }}</span>
@@ -32,7 +17,16 @@
       </div>
       <div class='user_buttons'>
         <template v-if='me'>
+          <router-link :to="{ name: 'create-post', params: { username: user.username } }" class='pri_btn' >New Post</router-link>
+          <router-link :to="{ name: 'edit-profile' }" class='pri_btn' >Edit Profile</router-link>
+          <router-link :to="{ name: 'confirm-followers' }" class='pri_btn' >Confirm Requests</router-link>
+          <router-link :to="{ name: 'delete-followers' }" class='pri_btn' >Remove Friends</router-link>
           <router-link :to="{ name: 'data-page'}" class='pri_btn' color=''>Data Page</router-link>
+        </template>
+        <template v-else >
+          <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Remove friend</a>
+          <a v-else-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Pending</a>
+          <a v-else href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
         </template>
       </div>
       <hr />
