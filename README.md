@@ -19,7 +19,7 @@ SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index
 # Quick liks
 1. [Usage](#usage)
 2. [Common Issues](#common-issues)
-3. [Database Structure](#database)
+3. [Database](#database)
 4. [Backend Implementation](#backend-implementation)
 
 # Getting Start
@@ -37,9 +37,9 @@ SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index
 
 After done with dependencies, we can set up the database. We use MySql as the database for our project.
 
-2. For <b>Windows</b>, Install PhpMyAdmin, import db.sql in repository.
+2. <b>For <i>Windows</i>, Install PhpMyAdmin, import db.sql in repository.</b>
 
-3. For <b>MacOS</b>,
+3. <b>For <i>MacOS</i></b>,
    - [Install MySql](https://dev.mysql.com/downloads/mysql/) and run the MySql server. Remember your password for 'root' 
    - Install the mysql cli using `brew install mysql`
    - Import the database from db.sql. You can run the command whenever you want to reset the database
