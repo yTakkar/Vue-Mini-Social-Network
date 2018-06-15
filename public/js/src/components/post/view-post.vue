@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <Overlay type='colored' />
+    <Overlay type='white' />
 
     <div class='view_note modal'>
       <div class='v_n_header modal_header'>
@@ -16,9 +16,9 @@
             <span class='v_n_time'>{{ post.post_created | timeAgo }}</span>
           </div>
         </div>
-        <span
-          class='v_n_title' :contenteditable='editing' spellCheck='false'>{{ post.title }}</span>
+        <span class='v_n_title' :contenteditable='editing' spellCheck='false'>{{ post.title }}</span>
         <span class='v_n_content' :contenteditable='editing' spellCheck='false'>{{ post.content }}</span>
+        <img v-if="hasPhoto" class='v_n_photo' :src="photoSrc" />
       </div>
       <div class='v_n_bottom modal_bottom'>
         <div class="v_n_int">
@@ -43,7 +43,7 @@
     <Prompt
       v-if='deleting'
       title='Delete post'
-      content="This post will be deleted. There's no undo so you won't be able to find it."
+      content="This post will be deleted permanently from this universe, for all time, and all eyes. Is this what you want? "
       actionText='Delete'
       @back='_toggle("deleting")'
       @action='deletePost'
@@ -62,6 +62,8 @@ import $ from 'jquery'
 import Notify from 'handy-notification'
 import UserMixin from '../../mixins/user-mixin'
 import moduleMixin from '../../mixins/module-mixin'
+import db from '../firebaseInit'
+
 
 export default {
   mixins: [
@@ -73,15 +75,19 @@ export default {
       post: {},
       deleting: false,
       editing: false,
-      liked: false
+      liked: false,
+      photoSrc: ''
     }
   },
   computed: {
-    imgSrc(){
+    imgSrc () {
       return `/users/${this.post.user}/avatar.jpg`
     },
-    likes_len(){
+    likes_len () {
       return this.pi.likes.length
+    },
+    hasPhoto: function () {
+      return this.post.img_id != '' && this.post.img_id !== undefined
     }
   },
   methods: {
@@ -153,6 +159,15 @@ export default {
     this.post = pd
     this.liked = liked
     dispatch('getLikes', post)
+
+    var vm = this;
+
+    if(this.hasPhoto){
+      db.ref().child('images/' + this.post.img_id)
+      .getDownloadURL().then(function(url){
+         vm.photoSrc = url;
+      })
+    }
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
 
-  <div class='modal_items fer_items'>
+  <div v-if='is_on' class='modal_items fer_items'>
     <div class='modal_it_img'>
       <img :src='imgSrc' />
     </div>
@@ -12,8 +12,9 @@
       <div class='modal_ff'>
         <router-link v-if='me' :to='link' class='pri_btn follow'>Profile</router-link>
         <template v-else >
-          <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Unfollow</a>
-          <a v-if='!is_following' href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
+          <a v-if='is_following' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Remove Friend</a>
+          <a v-else-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Pending</a>
+          <a v-else href='#' class='pri_btn follow' @click.prevent='follow' >Add Friend</a>
         </template>
       </div>
     </div>
@@ -24,7 +25,7 @@
 
 <script>
 import moduleMixin from '../../mixins/module-mixin'
-import { follow, unfollow, isFollowing } from '../../utils/functions.js'
+import { follow, unfollow, isFollowing, isPending } from '../../utils/functions.js'
 
 export default {
   mixins: [moduleMixin],
@@ -41,7 +42,9 @@ export default {
         name: "profile",
         params: { username: this.following.follow_to_username }
       },
-      is_following: false
+      is_following: false,
+      is_pending: false,
+      is_on: true
     }
   },
   computed: {
@@ -61,7 +64,7 @@ export default {
         username: follow_to_username,
         update_followings: userDetails.id == session.id,
         commit,
-        done: () => this.is_following = true
+        done: () => this.is_pending = true
       })
     },
     unfollow(){
@@ -74,7 +77,14 @@ export default {
         user: follow_to,
         update_followings: userDetails.id == session.id,
         commit,
-        done: () => this.is_following = false
+        done: () => {
+          if(userDetails.id == session.id){
+            this.is_on=false
+          }else{
+            this.is_following = false
+            this.is_pending = false
+          }
+        }
       })
     }
   },
@@ -82,6 +92,7 @@ export default {
     let { u: { session }, following } = this
     if (session.id != following.follow_to){
       this.is_following = await isFollowing(following.follow_to_username)
+      this.is_pending = await isPending(following.follow_to_username)
     }
   }
 }

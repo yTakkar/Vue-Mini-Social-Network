@@ -7,8 +7,10 @@ import {
   error,
   viewPost,
   editProfile,
+  dataPage,
   deactivate,
   notFound,
+  createAd
 } from './rest-router'
 
 export default [
@@ -18,6 +20,8 @@ export default [
   error,
   viewPost,
   editProfile,
+  dataPage,
   deactivate,
   notFound,
+  createAd
 ]
