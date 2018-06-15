@@ -78,6 +78,20 @@ After done with dependencies, we can set up the database. We use MySql as the da
       mysql> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
     ```
 
+## collapsible markdown?
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
+</details>
+
 # Database Structure
 <details><summary>Tables</summary>
 <p>
