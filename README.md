@@ -12,13 +12,15 @@
 [![Build Status](https://travis-ci.org/dedmeme-2018/SpeakEasy.svg?branch=master)](https://travis-ci.org/dedmeme-2018/SpeakEasy)
 
 
+SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index.html) a javascript library for building the user interface. If you are not familiar with Vue, here are two resources that you can check out. [Official Docs](https://vuejs.org/v2/guide/installation.html#Vue-Devtools) and [Quick Intro](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2).
+
 # Quick liks
-1. [Usage](#usage)
+1. [Getting Start](#getting-start)
 2. [Common Issues](#common-issues)
-3. [Database Structure](#database-structure)
+3. [Database](#database)
 4. [Backend Implementation](#backend-implementation)
 
-# Usage
+# Getting Start
 1. <b>First install all dependencies. Make sure you have Node.js & npm on your machine:</b>
     - Node: https://nodejs.org/en/download/current/ 
     - npm: https://www.npmjs.com/get-npm
@@ -26,16 +28,13 @@
     ```bash
     # with npm
     npm install
-    
-    # or with yarn
-    yarn
     ```
 
 After done with dependencies, we can set up the database. We use MySql as the database for our project.
 
-2. For <b>Windows</b>, Install PhpMyAdmin, import db.sql in repository.
+2. <b>For <i>Windows</i>, Install PhpMyAdmin, import db.sql in repository.</b>
 
-3. For <b>MacOS</b>,
+3. <b>For <i>MacOS</i></b>,
    - [Install MySql](https://dev.mysql.com/downloads/mysql/) and run the MySql server. Remember your password for 'root' 
    - Install the mysql cli using `brew install mysql`
    - Import the database from db.sql. You can run the command whenever you want to reset the database
@@ -74,49 +73,82 @@ After done with dependencies, we can set up the database. We use MySql as the da
       mysql> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
     ```
 
-# Database Structure
-1. Table ***users***  
+## collapsible markdown?
 
-| id | username | email | password | bio | joined |
+<details><summary>CLICK ME</summary>
+<p>
+
+#### yes, even hidden code blocks!
+
+```python
+print("hello world!")
+```
+
+</p>
+</details>
+
+# Database
+<details><summary>Database Tables</summary>
+<p>
+
+<details><summary> <b>users</b> Table </summary>
+
+  | id | username | email | password | bio | joined |
 | ---------- | ----------- | ---------- | ----------- | ---------- | ----------- |
 | Unique | Unique | Unique | Hash value of user's password | Text | The time when user joined |
 
-2. Table ***follow_system***  
+</details>
+
+<details><summary> <b>follow_system</b> Table </summary>
 
 |follow_id|follow_by|follow_by_username|follow_to|follow_to_username|follow_time|confirmed|
 | --- | --- | --- | --- | --- | --- | --- |
 |Unique|Follower's id|Follower's name|Followed's id|Followed's name|When this follow is created|If followed user confirms the follower|
 
-3. Table ***likes***  
+</details>
+
+<details><summary> <b>likes</b> Table </summary>
 
 |like_id|like_by|like_by_username|post_id|like_time|
 | --- | --- | --- | --- | --- |
 |Unique|Id of who does the 'like'|Username of who does the 'like'|Id of the post|When the 'like' happened|
 
-4. Table ***posts***  
+</details>
+
+<details><summary> <b>posts</b> Table </summary>
 
 |post_id|user|username|title|content|post_created|
 | ---- | ---- | ---- | ---- | ---- | ---- |
 |Unique|Id of who makes the post|Name of who makes the post|Title of the post|Content of the post|When the postis published|
 
-5. Table ***profile_views***  
+</details>
+
+<details><summary> <b>profile_views</b> Table </summary>
 
 |view_id|view_by|view_by_username|view_to|view_time|
 | ---- | ---- | ---- | ---- | ---- |
 |Unique|Id of who view the profile|Name of who view the profile|Id of the owner of the profile|When the view happened|
 
-6. Table ***keys_system***  
+</details>
+
+<details><summary> <b>keys_system</b> Table </summary>
 
 | user_id | publickey | privatekey | aeskey |
 | ---- | ---- | ---- | ---- |
 |Id of the user who owns this set of keys|Public key of the user. It is used to encrypt the user's folloings' AES key.|Private key of the user. It is encrypted by user's password by AES.|AES key to encrypt/decrypt this user's posts. It is encrypted by user's public key|
 
-7. Table ***encrypted_keys_system***  
+</details>
+
+<details><summary> <b>encrypted_keys_system</b> Table </summary>
 
 |follow_by|follow_to|encryptedkey|
 | --------- | --------- | ------------ |
 |Follower's id|Followed user's id|The AES key to decrypt Followed user's posts. It is encrypted by follower's public key|
 
+
+</details>
+</p>
+</details>
 
 # Backend Implementation
 
