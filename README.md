@@ -5,12 +5,7 @@
   </a>
 </p>
 <!-- Name -->
-<h1 align="center">
-  <a href="https://github.com/dedmeme-2018/SpeakEasy">SpeakEasy</a> 
-   :rocket:<span style="font-variant-caps: petite-caps;font-size: 10px;">Version 1asdfsad.1 by <img height="20px" src="https://raw.githubusercontent.com/dedmeme-2018/SpeakEasy/master/ddmlogo.png"/></span>:rocket:
-</h3>
 
-  </h1>
   
 [![Build Status](https://travis-ci.org/dedmeme-2018/SpeakEasy.svg?branch=master)](https://travis-ci.org/dedmeme-2018/SpeakEasy)
 
