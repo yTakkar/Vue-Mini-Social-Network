@@ -41,21 +41,31 @@ After done with dependencies, we can set up the database. We use MySql as the da
       ```bash
       $ mysql -u username -p < db.sql
       $ mysql -u username -p
-      $> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
+      mysql> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
       ```
 
 
 4. Create a `.env` file and insert the following code. Replace values with yours!!
 
     ```javascript
-    PORT="YOUR_PORT"
+    PORT=[YOUR_PORT]
     MYSQL_HOST="localhost"
     MYSQL_USER="root"
-    MYSQL_PASSWORD="YOUR_PASSWORD"
+    MYSQL_PASSWORD=[YOUR_PASSWORD]
     MYSQL_DATABASE="peterbook"
-    SESSION_SECRET_LETTER="ANYTHING_SECRET"
+    SESSION_SECRET_LETTER=[ANYTHING_SECRET]
     ```
-    
+
+  Example `.env` file would looks like:
+
+    ```javascript
+    PORT=3000
+    MYSQL_HOST=localhost
+    MYSQL_USER=root
+    MYSQL_PASSWORD=pswd
+    MYSQL_DATABASE=peterbook
+    SESSION_SECRET_LETTER=secret_letter
+    ```
 5. Start the server
     ```javascript
     npm start [OR] yarn start
