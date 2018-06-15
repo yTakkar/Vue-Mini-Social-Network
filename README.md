@@ -12,13 +12,17 @@
 [![Build Status](https://travis-ci.org/dedmeme-2018/SpeakEasy.svg?branch=master)](https://travis-ci.org/dedmeme-2018/SpeakEasy)
 
 
+SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index.html) a javascript library for building the user interface.
+<!-- https://vuejs.org/v2/guide/installation.html#Vue-Devtools -->
+<!-- https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2 -->
+
 # Quick liks
 1. [Usage](#usage)
 2. [Common Issues](#common-issues)
 3. [Database Structure](#database-structure)
 4. [Backend Implementation](#backend-implementation)
 
-# Usage
+# Getting Start
 1. <b>First install all dependencies. Make sure you have Node.js & npm on your machine:</b>
     - Node: https://nodejs.org/en/download/current/ 
     - npm: https://www.npmjs.com/get-npm
@@ -74,7 +78,8 @@ After done with dependencies, we can set up the database. We use MySql as the da
       mysql> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
     ```
 
-# Database Structure
+<details><summary># Database Structure</summary>
+<p>
 1. Table ***users***  
 
 | id | username | email | password | bio | joined |
@@ -116,7 +121,8 @@ After done with dependencies, we can set up the database. We use MySql as the da
 |follow_by|follow_to|encryptedkey|
 | --------- | --------- | ------------ |
 |Follower's id|Followed user's id|The AES key to decrypt Followed user's posts. It is encrypted by follower's public key|
-
+</p>
+</details>
 
 # Backend Implementation
 
