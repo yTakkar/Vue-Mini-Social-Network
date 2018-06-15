@@ -30,9 +30,6 @@ SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index
     ```bash
     # with npm
     npm install
-    
-    # or with yarn
-    yarn
     ```
 
 After done with dependencies, we can set up the database. We use MySql as the database for our project.
