@@ -21,8 +21,8 @@
 
       <div class='notes'>
         <template v-if='posts.length > 0' >
-          <template v-for='post in posts' >
-            <Post :key='post.post_id' :post='post' />
+          <template v-for='dataPost in posts' >
+            <dataPost :key='dataPost.post_id' :post='dataPost' />
           </template>
           <End mssg="Back to Top"></End>
         </template>
@@ -38,6 +38,7 @@
 <script>
 import userMixin from '../../mixins/user-mixin'
 import moduleMixin from '../../mixins/module-mixin'
+import dataPost from '../data_post/data_post.vue'
 import * as fn from '../../utils/functions'
 
 export default {
@@ -71,6 +72,9 @@ export default {
     posts(){
         return this.p.posts
     }
+  },
+  components: {
+    'dataPost': dataPost,
   }
 }
 </script>
