@@ -742,8 +742,11 @@ select:focus {
 }
 
 .data_post_icons span {
-  color: #1b2733;
+  position: relative;
+  top: -7px;
   float: right;
+  right: -10px;
+  color: #1b2733;
 }
 
 #profileicon {
@@ -1184,7 +1187,6 @@ select:focus {
   position: relative;
   top: -7px;
   float: right;
-  right: -10px;
 }
 
 .note .note_title,

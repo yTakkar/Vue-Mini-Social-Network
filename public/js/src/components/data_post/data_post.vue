@@ -5,19 +5,14 @@
         <img :src='imgSrc' alt='Your profile!!' />
         <div display='inline;' class='note_h_left'>
           <span class='note_username'>{{ post.username }}</span>
+          <router-link :to="{ name: 'view-post', params: { post: post.post_id } }" >
+            <span class='data_post_icons'>
+              <ui-icon>delete</ui-icon>
+              <ui-icon>edit</ui-icon>
+            </span>
+          </router-link>
           <span class='note_time'>{{ post.post_created | timeAgo }}</span>
         </div>
-      </div>
-      <div class='note_title'>
-        <router-link :to="{ name: 'view-post', params: { post: post.post_id } }" >
-          <div class='data_post_icons'>
-            <ui-icon>delete</ui-icon>
-            <ui-icon>edit</ui-icon>
-          </div>
-        </router-link>
-        <span>
-          {{ post.title | to-uppercase }}
-        </span>
       </div>
       <div class='note_content'>
         <span>{{ post.content | slice }}</span>
