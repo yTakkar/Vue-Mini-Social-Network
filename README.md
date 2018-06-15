@@ -1,7 +1,7 @@
 <!-- Logo -->
 <p align="center">
   <a href="https://github.com/dedmeme-2018/SpeakEasy">
-    <img height="128" width="128" src="https://github.com/dedmeme-2018/SpeakEasy/logo.png">
+    <img height="128" width="128" src="https://raw.githubusercontent.com/dedmeme-2018/SpeakEasy/master/logo.png">
   </a>
 </p>
 <!-- Name -->
@@ -11,7 +11,7 @@
 
 [![Build Status](https://travis-ci.org/dedmeme-2018/SpeakEasy.svg?branch=master)](https://travis-ci.org/dedmeme-2018/SpeakEasy)
 
-
+<!-- Quick Intro -->
 SpeakEasy is a web application relying on [Vue](https://vuejs.org/v2/guide/index.html) a javascript library for building the user interface. If you are not familiar with Vue, here are two resources that you can check out. [Official Docs](https://vuejs.org/v2/guide/installation.html#Vue-Devtools) and [Quick Intro](https://medium.com/codingthesmartway-com-blog/vue-js-2-quickstart-tutorial-2017-246195cfbdd2).
 
 # Quick liks
@@ -40,6 +40,8 @@ After done with dependencies, we can set up the database. We use MySql as the da
    - Import the database from db.sql. You can run the command whenever you want to reset the database
       ```bash
       $ mysql -u username -p < db.sql
+      $ mysql -u username -p
+      $> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
       ```
 
 
