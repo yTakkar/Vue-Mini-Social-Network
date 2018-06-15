@@ -7,7 +7,7 @@
 <!-- Name -->
 <h1 align="center">
   <a href="https://github.com/dedmeme-2018/SpeakEasy">SpeakEasy</a> 
-   :rocket:<span style="font-variant-caps: petite-caps;">Version 1.1 by <img height="20px" src="https://raw.githubusercontent.com/dedmeme-2018/SpeakEasy/master/ddmlogo.png"/></span>:rocket:
+   :rocket:<span style="font-variant-caps: petite-caps;">Version 1.1 by <img height="20px" src="https://raw.githubusercontent.com/dedmeme-2018/SpeakEasy/master/dmmlogo.png"/></span>:rocket:
   </h1>
   
 [![Build Status](https://travis-ci.org/dedmeme-2018/SpeakEasy.svg?branch=master)](https://travis-ci.org/dedmeme-2018/SpeakEasy)
@@ -88,20 +88,6 @@ After done with dependencies, we can set up the database. We use MySql as the da
       mysql> SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
     ```
 
-## collapsible markdown?
-
-<details><summary>CLICK ME</summary>
-<p>
-
-#### yes, even hidden code blocks!
-
-```python
-print("hello world!")
-```
-
-</p>
-</details>
-
 # Database
 <details><summary>Database Tables</summary>
 <p>
@@ -167,14 +153,19 @@ print("hello world!")
 
 # Backend Implementation
 
-## Sign up
+<details><summary>Sign Up</summary><p>
 User would be asked to provide username, password and email for signing up. The server will verify that there are no replicates of either username or email in the data base and then sign up the user. The server will save username, email and hashed password in the database. Each user will have a set of keys (an random-generated AES key and a pair of RSA keys) and an unique ID. The AES key will be used to encrypt/decrypt the user's posts. And the RSA keys will be used to encrypt/decrypt other users' AES keys. The AES key will be encrypted by the RSA public key and the RSA private key will be encrypted by user's password before they are saved to database. Since only user's password can decrypt the private RSA key and then decrypt the AES keys and then decrypt the posts, there is no way to get user's post even if full access permission to the database is granted because only hash value of user's password is saved in the database and there is no way to convert the hash value to the original password.
+</p></details>
 
-## Log in
+<details><summary>Log In</summary><p>
 User would be asked to provide username and password. Server will verify that the hash value of password matches the record in the database. If it is valid, the server will decrypt user's private RSA key and then AES key for encrypting/decrypting the user's post.
+</p></details>
 
-## Followers system
+<details><summary>Followers System</summary><p>
 Users can only follow others after they get approved by others. After approval, they will get AES keys of others to see others' posts. Users also have permission to drop their followers. After drop, the followers will lose the access to the users' AES keys.  
 For example, Amy wants to follow Bob. Before the steps are completed, Amy cannot see the any posts from Bob. Bob can accept Amy's following request. When the server receives the approval from Bob, it will encrypt Bob's AES key by Amy's public RSA key and save the encrypted key to the database. Now, if Amy wants to see posts from Bob, the server will use Amy's private RSA key to decrypt the encrypted AES key from Bob and use the AES key to decrypt Bob's posts. If Bob does not want Amy to follow him, he can send a drop request to server. Server will delete the following record along with the encrypted AES key from Bob to Amy in the database.
-## Posts system
+</p></details>
+
+<details><summary>Posts System</summary><p>
 When user makes a post, the title and content of the post will be encrypted by user's AES key.
+</p></details>
