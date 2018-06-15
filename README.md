@@ -78,7 +78,7 @@ After done with dependencies, we can set up the database. We use MySql as the da
     localhost:[PORT]
     ```
 
-7. Enjoy!!
+7. <b>Enjoy!!</b>
 
 # Common Issues
 1. ER_MIX_OF_GROUP_FUNC_AND_FIELDS:
