@@ -96,7 +96,7 @@ print("hello world!")
 <details><summary>Tables</summary>
 <p>
 
-<details><summary> <b>users</b> </summary>
+<details><summary> <b>users</b> Table </summary>
 
   | id | username | email | password | bio | joined |
 | ---------- | ----------- | ---------- | ----------- | ---------- | ----------- |
@@ -104,49 +104,54 @@ print("hello world!")
 
 </details>
 
-1. Table ***users***  
-
-| id | username | email | password | bio | joined |
-| ---------- | ----------- | ---------- | ----------- | ---------- | ----------- |
-| Unique | Unique | Unique | Hash value of user's password | Text | The time when user joined |
-
-2. Table ***follow_system***  
+<details><summary> <b>follow_system</b> Table </summary>
 
 |follow_id|follow_by|follow_by_username|follow_to|follow_to_username|follow_time|confirmed|
 | --- | --- | --- | --- | --- | --- | --- |
 |Unique|Follower's id|Follower's name|Followed's id|Followed's name|When this follow is created|If followed user confirms the follower|
 
-3. Table ***likes***  
+</details>
+
+<details><summary> <b>likes</b> Table </summary>
 
 |like_id|like_by|like_by_username|post_id|like_time|
 | --- | --- | --- | --- | --- |
 |Unique|Id of who does the 'like'|Username of who does the 'like'|Id of the post|When the 'like' happened|
 
-4. Table ***posts***  
+</details>
+
+<details><summary> <b>posts</b> Table </summary>
 
 |post_id|user|username|title|content|post_created|
 | ---- | ---- | ---- | ---- | ---- | ---- |
 |Unique|Id of who makes the post|Name of who makes the post|Title of the post|Content of the post|When the postis published|
 
-5. Table ***profile_views***  
+</details>
+
+<details><summary> <b>profile_views</b> Table </summary>
 
 |view_id|view_by|view_by_username|view_to|view_time|
 | ---- | ---- | ---- | ---- | ---- |
 |Unique|Id of who view the profile|Name of who view the profile|Id of the owner of the profile|When the view happened|
 
-6. Table ***keys_system***  
+</details>
+
+<details><summary> <b>keys_system</b> Table </summary>
 
 | user_id | publickey | privatekey | aeskey |
 | ---- | ---- | ---- | ---- |
 |Id of the user who owns this set of keys|Public key of the user. It is used to encrypt the user's folloings' AES key.|Private key of the user. It is encrypted by user's password by AES.|AES key to encrypt/decrypt this user's posts. It is encrypted by user's public key|
 
-7. Table ***encrypted_keys_system***  
+</details>
+
+<details><summary> <b>encrypted_keys_system</b> Table </summary>
 
 |follow_by|follow_to|encryptedkey|
 | --------- | --------- | ------------ |
 |Follower's id|Followed user's id|The AES key to decrypt Followed user's posts. It is encrypted by follower's public key|
 
 
+</details>
 </p>
 </details>
 
