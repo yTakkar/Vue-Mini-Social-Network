@@ -1,5 +1,5 @@
 // API ROUTES
-
+require('../sendgrid.env')
 const
   app = require('express').Router(),
   db = require('../config/db'),
@@ -44,23 +44,23 @@ app.post('/get-explores', async (req, res) => {
 
 app.post ('/submitAdRequest', async (req, res) => {
 
-  let {name, company, email, phone, desc} = req.body
+  let {name, company, email, phone, desc, url} = req.body
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  sgMail.setApiKey(SENDGRID_API_KEY)
   sgMail.setSubstitutionWrappers('{{', '}}')
 
   const msg = {
-    to: 'ajrengar@ucsd.edu',
+    to: 'yuz310@ucsd.edu',
     from: 'ads@SpeakEasy.com',
     subject: 'SpeakEasy Ad Publish Request',
-    html: '<html><h2>SpeakEasy Ad Request</h2><br><h3>Name: {{name}}</h3><h3>Company: {{company}}</h3><h3>Phone: {{phone}}</h3><h3>Email: {{email}}</h3><h3>Description: {{description}}</h3></html>',
-    templateId:'d94c4bfd-74c7-4476-93ea-254ae1316d2a',
+    html: '<html><h2>SpeakEasy Ad Request</h2><br><h3>Name: {{name}}</h3><h3>Company: {{company}}</h3><h3>Phone: {{phone}}</h3><h3>Email: {{email}}</h3><h3>Description: {{desc}}</h3><h3>Image: </h3><br><img src={{url}}/></html>',
     substitutions: {
       'name': name,
       'email': email,
       'company': company,
       'phone': phone,
-      'desc': desc
+      'desc': desc,
+      'url': url
     }
   }
 

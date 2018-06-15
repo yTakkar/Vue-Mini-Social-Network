@@ -79,7 +79,7 @@ email<template>
 
     </ui-textbox>
 
-    <ui-fileupload style="margin-bottom: 20px;" multiple name="file10"></ui-fileupload>
+    <ui-fileupload style="margin-bottom: 20px;" id="adfile" name="file10"></ui-fileupload>
     <br/>
     <ui-button color="green" raised :size="size" v-on:click="createPost">Submit Ad Request</ui-button>
 
@@ -95,6 +95,8 @@ email<template>
 <script>
 import Notify from 'handy-notification'
 import $ from 'jquery'
+import db from '../firebaseInit'
+import uuid from 'uuid'
 
 export default {
     data() {
@@ -114,6 +116,8 @@ export default {
     methods: {
       createPost: async function() {
         console.log (this);
+        let file=document.getElementById('adfile').getElementsByTagName('input')[0].files[0];
+        let imgId="";
         let
           {
             name,
@@ -122,19 +126,38 @@ export default {
             phone,
             desc,
             $http
-          } = this,
-
-          { body } = await $http.post('/api/submitAdRequest', {
-            name: name,
-            company: company,
-            phone: phone,
-            email: email,
-            desc: desc
+          } = this;
+        if (file !== undefined){
+          imgId = uuid() + '.jpg';
+          await db.ref().child('images/' + imgId).put(file).then(function (snapshot) {
+            db.ref().child('images/' + imgId).getDownloadURL().then(function(url){
+              $http.post('/api/submitAdRequest', {
+                name: name,
+                company: company,
+                phone: phone,
+                email: email,
+                desc: desc,
+                url: url
+              })
+              Notify({
+                value: 'Ad Request Submitted!',
+              })
+              return;
+            })
+          });
+        }else{
+            $http.post('/api/submitAdRequest', {
+              name: name,
+              company: company,
+              phone: phone,
+              email: email,
+              desc: desc,
+              url: ""
+            })
+          Notify({
+            value: 'Ad Request Submitted!',
           })
-
-        Notify({
-          value: 'Ad Request Submitted!',
-        })
+        }
       }
     }
 }
@@ -142,9 +165,6 @@ export default {
 
 <style>
   .publish {
-      position: relative;
-    margin-top: 150px;
-    border-radius: 10px;
     background: #fff;
     padding: 20px;
   }
