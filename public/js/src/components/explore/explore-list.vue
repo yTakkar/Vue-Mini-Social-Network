@@ -8,13 +8,13 @@
         <div class='exl_desc'>
           <span class='exl_email'>{{ exp.email }}</span>
           <span class='exl_desc_sep'>•</span>
-          <span class='exl_followers'>{{ no_of_followers }} Followers</span>
+          <span class='exl_followers'>{{ no_of_followers }} Friends</span>
         </div>
       </div>
     </div>
     <div class='exl_ff'>
-      <a v-if='!is_pending' href='#' class='pri_btn follow' @click.prevent='follow' >Follow</a>
-      <a v-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Pending</a>
+      <a v-if='!is_pending' href='#' class='pri_btn follow' @click.prevent='follow' >Add Friend</a>
+      <a v-if='is_pending' href='#' class='pri_btn unfollow' @click.prevent='unfollow' >Friend request sent</a>
     </div>
   </div>
 

@@ -142,6 +142,9 @@ export default {
 
 <style>
   .publish {
+      position: relative;
+    margin-top: 150px;
+    border-radius: 10px;
     background: #fff;
     padding: 20px;
   }

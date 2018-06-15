@@ -1,13 +1,14 @@
 <template>
 
   <div class='home'>
+      <Ad class='ad-container'/>
     <div class='home_info'>
       <h2>Your Feed</h2>
       <!-- <span>{{ feeds_len }} Feeds</span> -->
       <router-link :to='{ name: "create-post-home", params: { username: session.username } }' class='pri_btn'>Create Post</router-link>
     </div>
     <Feeds />
-    <Ad class='ad-container'/>
+
 
     <router-view name='overlay' ></router-view>
 

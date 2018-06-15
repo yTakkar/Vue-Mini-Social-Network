@@ -9,10 +9,10 @@
           <span class='note_time'>{{ post.post_created | timeAgo }}</span>
         </div>
       </div>
-      <div class='note_title'>
+      <!-- <div class='note_title'>
         <span>{{ post.title | to-uppercase }}</span>
       </div>
-      <div id='content' class='note_content'>
+ -->      <div id='content' class='note_content'>
         <span>{{ post.content | slice }}</span>
         <img v-if="hasPhoto" class='note_photo' :src="photoSrc" />
       </div>
@@ -34,7 +34,7 @@ export default {
 
   computed: {
     hasPhoto: function () {
-      return this.post.img_id != ''
+      return this.post.img_id != '' && this.post.img_id !== undefined
     }
   },
 
