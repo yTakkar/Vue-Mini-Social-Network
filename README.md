@@ -96,7 +96,7 @@ print("hello world!")
 <details><summary>Tables</summary>
 <p>
 
-####Table ***users***  
+1. Table ***users***  
 
 | id | username | email | password | bio | joined |
 | ---------- | ----------- | ---------- | ----------- | ---------- | ----------- |
