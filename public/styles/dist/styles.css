@@ -750,7 +750,7 @@ select:focus {
   top: -10px;
 }
 
-#speakeasy {
+.speakeasy {
   position: relative;
   top: 50%;
   font-size: 5em;

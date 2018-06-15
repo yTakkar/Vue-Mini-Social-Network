@@ -13,7 +13,7 @@
       <div id=buttons>
         <div id="button"><a href="/login" class="tagline_button">Login</a></div>
         <div id="button"><a href="/signup" class="tagline_button">Signup</a></div>
-        <div id="button"><a onclick="alert('SpeakEasy Premium is built for users looking for a completely ad free experience. Although our ads never (and never will) track you, this removes them altogether for a smoother experience. \n\n SpeakEasy Premium is coming soon. Please check later.')" class="tagline_button golden">Premium</a></div>
+        <div id="button"><a onClick="premium()" class="tagline_button golden">Premium</a></div>
       </div>
     </div>
     <div id="divider">&nbsp;</div>
@@ -34,5 +34,43 @@
       </table>
     </div>
   </div>
+  <div id="premium_wrapper" onClick="noPremium()" style="width: 100vw; height: 100vh; display: none;">
+    <div id="premium_modal" style="
+      width: 450px;
+      height: 550px;
+      background-color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -webkit-box-shadow: 0px 0px 154px 5px rgba(0,0,0,0.81);
+      -moz-box-shadow: 0px 0px 154px 5px rgba(0,0,0,0.81);
+      box-shadow: 0px 0px 154px 5px rgba(0,0,0,0.81);
+      padding: 20px;">
+      <center style="margin-bottom: 50px">
+        <h1>
+          <span class="speakeasy" style="font-size: 2.5em">SpeakEasy</span>
+          <br/>
+          <span style="font-size: 1.7em; font-weight: 300">Premium</span>
+        </h1>  
+      </center>
+      <p style="font-size: 1.5em; font-weight: 300; line-height: 1.5; margin-bottom: 50px; padding: 0 40px;">
+        SpeakEasy Premium is built for users looking for a completely ad free experience. Although our ads never (and never will) track you, this removes them altogether for a smoother experience.
+      </p>
+      <p style="font-size: 4em; font-weight: bold; color: #f4c06d; text-align: center">$69<span style="font-size: 0.5em">/yr</span></p>
+      <div id="button" style="margin-top: 20px"><a style="margin: 0 auto;" onclick="alert('SpeakEasy Premium is built for users looking for a completely ad free experience. Although our ads never (and never will) track you, this removes them altogether for a smoother experience. \n\n SpeakEasy Premium is coming soon. Please check later.')" class="tagline_button golden">Start Free Trial</a></div>
+    </div>
+  </div>
 </div>
+<script type="text/javascript">
+  function premium() {
+    document.getElementById('premium_wrapper').style.display = "block";
+    document.getElementById('se_hide').style.display = "none";
+  }
+
+  function noPremium() {
+    document.getElementById('premium_wrapper').style.display = "none";
+    document.getElementById('se_hide').style.display = "block";
+  }
+</script>
 {{> footer }}
