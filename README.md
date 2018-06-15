@@ -55,7 +55,6 @@ After done with dependencies, we can set up the database. We use MySql as the da
     MYSQL_DATABASE="peterbook"
     SESSION_SECRET_LETTER=[ANYTHING_SECRET]
 ```
-
   - Example `.env` file would looks like:
 
 ```javascript
