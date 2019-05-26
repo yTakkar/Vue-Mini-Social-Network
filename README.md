@@ -1,6 +1,8 @@
 # Single-Page-Social-Network
 A reactive mini-social-network created with Vue!!
 
+**No longer maintained. But it works**
+
 # Another Versions
 **[React Version](https://github.com/yTakkar/React-Mini-Social-Network)**
 
