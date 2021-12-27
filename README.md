@@ -3,7 +3,9 @@ A reactive mini-social-network created with Vue!!
 
 **No longer maintained. But it works**
 
+---
 ### 🛒 Launch your online store with [OwnStore](https://ownstore.dev).
+---
 
 # Another Versions
 **[React Version](https://github.com/yTakkar/React-Mini-Social-Network)**
