@@ -54,7 +54,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.10",
-    "eslint": "^4.5.0",
+    "eslint": "^4.18.2",
     "eslint-plugin-vue": "^3.12.0",
     "vue": "^2.5.13",
     "vue-loader": "^14.1.1",
